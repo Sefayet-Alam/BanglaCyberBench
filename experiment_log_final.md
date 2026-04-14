@@ -1,7 +1,7 @@
 # BanglaCyberBench — Experiment Log
 
 **Project:** BanglaCyberBench: Transformer Ensemble for Cyberbullying Detection in Bengali  
-**Author:** Sefayet Alam (sefayetalam14@gmail.com)  
+**Author:** Sefayet Alam (sefayetalam14@gmail.com) , Arafat Hossain 
 **Date:** April 2026  
 **Repo:** github.com/Sefayet-Alam/CyberBully_Detection_Paper  
 **Target Venue:** Q1 journal (IPM / ESWA) or ACL/EMNLP findings  
