@@ -1189,8 +1189,92 @@ Do not claim:
 - that duplicates cannot affect scores.
 
 ---
+## 33. Detailed Comparison with Prior Work
 
-## 31. Final Handoff Checklist
+This section provides a comprehensive comparison of our research against all significant prior work on Bengali cyberbullying/hate-speech detection, organized chronologically. Papers are grouped into tiers: foundational work, recent competitive work, and concurrent/latest work.
+
+
+
+### Master Comparison Table
+
+| # | Study | Year | Venue | Dataset | Size | Sources | Scripts | Task | Classes | Binary Best | Multi Best | Robustness | Multi-Task | Ensemble |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| P1 | Ahmed et al. | 2021 | arXiv | facebook_44001 | 44K | 1 | Bangla | Single | 5 | 87.91% acc | 85.00% acc | ✗ | ✗ | SVM |
+| P2 | Emon et al. | 2022 | ICACDS | facebook_44001 | 44K | 1 | Bangla | Single | 5 | — | 85% acc, 86% F1 | ✗ | ✗ | ✗ |
+| P3 | Aurpa et al. | 2022 | SNAM | facebook_44001 | 44K | 1 | Bangla | Single | 5 | — | 85.00% acc | ✗ | ✗ | ✗ |
+| P4 | Akhter et al. | 2023 | NLP Journal | facebook_44001 | 44K | 1 | Bangla | Single | 5 | 98.57% acc† | 98.82% acc† | ✗ | ✗ | ✗ |
+| P5 | Sihab-Us-Sakib | 2024 | NLP Journal | CBD | 2.7K | 1 | Mixed | Single | 5 | 82.61% acc | — | ✗ | ✗ | ✗ |
+| P6 | Saifullah et al. | 2024 | EAI INIS | facebook_44001 | 44K | 1 | Bangla | Single | 5 | 88.04% acc | — | ✗ | ✗ | ✗ |
+| P7 | Nath et al. | 2024 | AETiC | Custom | 12K | 1 | Mixed | Single | 2 | 95.08% acc | — | ✗ | ✗ | ✗ |
+| P8 | Saha et al. | 2023 | IEEE STI | Custom | ~5K | 1 | Bangla | Single | 2 | 90% acc | — | ✗ | ✗ | ✗ |
+| P9 | Hoque & Seddiqui | 2024a | IJAI | facebook_44001 | 44K | 1 | Bangla | Single | 5 | 80.17% acc | — | ✗ | ✗ | ✗ |
+| P10 | Prova & Basak | 2025 | Springer LNNS | Balanced subset | 10K | 1 | Bangla | Single | 5 | — | 78.25% acc | ✗ | ✗ | ✗ |
+| P11 | Hoque & Seddiqui | 2025 | Frontiers AI | facebook_44001 + 2 ext. | 44K | 1(+2) | Bangla | Single | 5 | **93.62% acc** | **89.23% acc** | Partial‡ | ✗ | Stacking |
+| P12 | Azhar et al. | 2026 | Discover Comp. | HateCorpBN-XL | 65K | 1 | Bangla | Single (HS) | 5 | 92% F1 | 90% F1 | ✗ | ✗ | Fusion |
+| P13 | Raquib et al. | 2026 | arXiv | Multi-label CB | ~12K | 1 | Bangla | Multi-label | 4 | — | 94.31% acc | ✗ | ✗ | Fusion |
+| P14 | Hossain et al. | 2025 | PeerJ CS | Kaggle Bengali | ~5K | 1 | Mixed | Single | 2 | 98.17% acc† | — | ✗ | ✗ | Fusion |
+| P15 | BanCyB/HTLFF | 2025 | Preprint | BanCyB | 10K | 1 | Bangla | Multi-label | 4 | 92.37% F1 | 87.05% macro-F1 | ✗ | ✗ | Fusion |
+| **Ours** | **BanglaCyberBench** | **2026** | **—** | **4 merged sources** | **135K** | **4** | **Both** | **Multi-task** | **9** | **92.47% F1** | **77.46% macro-F1** | **✓ (6 splits, all ≥0.93)** | **✓** | **Weighted logit** |
+
+**†** Results likely inflated by evaluation protocol (data augmentation, aggressive resampling, or potential leakage). Not directly comparable.  
+**‡** Hoque & Seddiqui (2025) tested on 2 external datasets for scalability, but did not perform systematic source-holdout or script-holdout robustness evaluation as our research does.
+
+---
+
+### Why Direct Accuracy/F1 Comparison Is Misleading
+
+Most prior work evaluates on a single dataset (usually the 44K Facebook dataset). Our research evaluates on a **fundamentally different and harder problem**:
+
+| Dimension | Prior Work (typical) | Our Research |
+|---|---|---|
+| Dataset size | 2.7K – 44K | 135,575 |
+| Number of sources | 1 | 4 (merged benchmark) |
+| Scripts | Bangla only | Bangla + Romanized |
+| Class granularity | 2 or 5 classes | 9 classes (finer-grained) |
+| Label complexity | Clean labels | Compound labels requiring priority resolution |
+| Evaluation | Single random test split | Random test + 4 source holdouts + 1 script holdout |
+| Architecture | Single model or simple ensemble | Multi-task (binary + 9-class jointly) with 9-model weighted ensemble |
+
+A model achieving 93% on a clean 5-class single-source dataset is solving an **easier problem** than one achieving 92% on a noisy 9-class multi-source dual-script benchmark with compound labels.
+
+---
+
+### Our Key Contributions vs the Field
+
+| Contribution | Novelty Level | Closest Prior Work | How We Differ |
+|---|---|---|---|
+| **135K multi-source benchmark** | Novel — no prior work combines 4 sources | Azhar et al. (65K, but single source, hate speech not CB) | 4 sources with cross-source robustness testing |
+| **Dual-script coverage** | Novel — no prior work evaluates on both scripts | Ahmed et al. 2021 (Bangla-only), some have Romanized-only | 54.6% romanized + 45.4% Bangla, with script-holdout evaluation |
+| **9-class taxonomy with priority resolution** | Novel — all prior work uses 2 or 5 classes | Hoque 2025 (5 classes), Raquib 2026 (4 multi-label) | Priority-based compound label resolution (89 → 9 classes) |
+| **Multi-task architecture** | Novel for Bengali CB — no prior work does joint binary + abuse-type | Raquib 2026 (multi-label, but different formulation) | Shared encoder with 2 task-specific heads, joint focal loss |
+| **Cross-source & cross-script robustness** | Novel — no prior work tests this | Hoque 2025 (tested on 2 external datasets, but not holdout) | Systematic holdout: 4 source + 1 script, all ≥ 0.93 F1 |
+| **Weighted ensemble (Nelder-Mead)** | Incremental — ensemble is common, but optimised weights are novel for this domain | Hoque 2025 (stacking with MLP), Ahmed 2021 (SVM ensemble) | 9-model weighted logit average with non-uniform optimised weights |
+| **Ablation study** | Novel for Bengali CB — no prior work provides systematic ablations | — | 5 ablations covering multi-task, focal loss, LR decay, preprocessing |
+
+---
+
+### Papers to Cite in Related Work Section
+
+**Must cite (directly relevant, same task):**
+1. Ahmed et al. (2021) — foundational dataset, our source
+2. Emon et al. (2022) — first transformer work on 44K
+3. Hoque & Seddiqui (2025) — current SOTA, strongest competitor
+4. Saifullah et al. (2024) — BullyFilterNeT, BanglaBERT baseline
+
+**Should cite (recent, strong results):**
+5. Raquib et al. (2026) — BanglaBERT-LSTM fusion, multi-label
+6. Azhar et al. (2026) — HateBertBN, largest Bengali HS dataset
+7. Sihab-Us-Sakib et al. (2024) — XLM-R on new CBD dataset
+8. Hossain et al. (2025) — Transformer-XL fusion
+
+**Can cite (context, older work):**
+9. Aurpa et al. (2022) — BERT/ELECTRA on 44K
+10. Akhter et al. (2023) — hybrid ML (cite with caveats about inflated metrics)
+11. Nath et al. (2024) — BiLSTM baseline
+12. Prova & Basak (2025) — low-accuracy transformer baseline
+
+---
+## 32. Final Handoff Checklist
 
 | Item | Status |
 |---|---|
