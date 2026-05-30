@@ -1,6 +1,0 @@
-,best_val_f1,best_val_f1,binary_accuracy,binary_accuracy,binary_macro_f1,binary_macro_f1,binary_weighted_f1,binary_weighted_f1,binary_mcc,binary_mcc,abuse_type_accuracy,abuse_type_accuracy,abuse_type_macro_f1,abuse_type_macro_f1,abuse_type_weighted_f1,abuse_type_weighted_f1,abuse_type_mcc,abuse_type_mcc
-,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std,mean,std
-model,,,,,,,,,,,,,,,,,,
-banglabert,0.9236,0.0018,0.9262,0.0004,0.9253,0.0004,0.9262,0.0004,0.8505,0.0008,0.0097,0.001,0.0013,0.0002,0.0048,0.0024,0.0061,0.0033
-muril,0.9168,0.0018,0.9191,0.0003,0.918,0.0002,0.9191,0.0002,0.8361,0.0004,0.0007,0.0004,0.0019,0.0017,0.0006,0.0007,0.0003,0.0007
-xlmr,0.9159,0.0014,0.9165,0.0011,0.9157,0.0011,0.9166,0.0011,0.8317,0.0022,0.0096,0.0029,0.0019,0.0003,0.004,0.0067,0.0029,0.0017

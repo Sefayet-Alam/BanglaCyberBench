@@ -1,103 +1,105 @@
 ﻿text,label_binary,label_type,source,script,original_file,text_clean
-Why pinaki called you bikas noor???,1,Personal Offense,banth,romanized,val.csv,Why pinaki called you bikas noor??
-Thik bolcen. Akhon ki kora jai sei Bisoyer paramorso diben.,0,none,banth,romanized,train.csv,Thik bolcen. Akhon ki kora jai sei Bisoyer paramorso diben.
-Bir so ik,0,none,banth,romanized,full_with_stats.csv,Bir so ik
-Mashallah Alhamdulillah Nurul hoq saheb ke allah amader Bangladesh er pm banaye daw o tar hayate tayyeba dan korun amin,0,none,banth,romanized,test.csv,Mashallah Alhamdulillah Nurul hoq saheb ke allah amader Bangladesh er pm banaye daw o tar hayate tayyeba dan korun amin
-Kono kotha hbe na... Jento kobor dewa hok......,0,none,banth,romanized,full_with_stats.csv,Kono kotha hbe na.. Jento kobor dewa hok..
-যেই নারী সুখ পায়না স্বামীর খাটে সেই নারী দেহ দেখায় টিকটকের মাঠে,1,sexual,multilabel_12557,bangla,Multilablel_Cyberbully_Data.csv,যেই নারী সুখ পায়না স্বামীর খাটে সেই নারী দেহ দেখায় টিকটকের মাঠে
-"koto gulo kaj miss hoise,,,,,   r nijer jonno internet siloi ... sob jaigai agun dilo r personal internet a agun dilo na.... vaota baji bad den .... apnake onek sonman kortam ,,,je video deksi tate vasa hariye felesi",0,none,banth,romanized,train.csv,"koto gulo kaj miss hoise,, r nijer jonno internet siloi .. sob jaigai agun dilo r personal internet a agun dilo na.. vaota baji bad den .. apnake onek sonman kortam ,,je video deksi tate vasa hariye felesi"
-"আহারে ফেসবুকের জন্য রাতারাতি আস্তিক হয়ে,আবার আল্লাহ র কাছে বিচার ও চাইছে যে কিনা গতকাল পর্যন্ত পরকালে বিশ্বাস করতো না।",1,sexual,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"আহারে ফেসবুকের জন্য রাতারাতি আস্তিক হয়ে,আবার আল্লাহ র কাছে বিচার ও চাইছে যে কিনা গতকাল পর্যন্ত পরকালে বিশ্বাস করতো না।"
-Pitar avab tur,0,none,banth,romanized,test.csv,Pitar avab tur
-খুব সুন্দৱ হইছে,0,none,multilabel_12557,bangla,Multilablel_Cyberbully_Data.csv,খুব সুন্দৱ হইছে
-Beti Tui to Ekta medical er aya houar o joggota rakhish na,0,none,banth,romanized,val.csv,Beti Tui to Ekta medical er aya houar o joggota rakhish na
-ওমাই গড,1,none,multilabel_12557,bangla,Multilablel_Cyberbully_Data.csv,ওমাই গড
-Tui to beshi kharap,0,none,banth,romanized,train.csv,Tui to beshi kharap
-"Bolsilo je hasina ke niye kotha bolle tar pokkhe nai.. Akn abr ki koi.
-
- Subidha badi.. Lov a sotota nosto kore felese",0,none,banth,romanized,full_with_stats.csv,Bolsilo je hasina ke niye kotha bolle tar pokkhe nai.. Akn abr ki koi. Subidha badi.. Lov a sotota nosto kore felese
-"হিরো অালম যে সুন্দর করে কথাগুলা বলেছে, জায়েদত তার কাছেও নেই কারন সে ভদ্রতা জানে না। অারেকটা কথা এই দুজন মিশা এবং জায়েদ ভিলেনের অভিনয় করতে করতে বাস্তবেও ভিলেন হয়ে গেছে। এদেরকে উচিৎ শিক্ষা দিয়ে  বি এফ ডিসি থেকে বের করে দেওয়া দরকার এদের মুখোশ উন্মোচন হয়ে গেছে।",0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"হিরো অালম যে সুন্দর করে কথাগুলা বলেছে, জায়েদত তার কাছেও নেই কারন সে ভদ্রতা জানে না। অারেকটা কথা এই দুজন মিশা এবং জায়েদ ভিলেনের অভিনয় করতে করতে বাস্তবেও ভিলেন হয়ে গেছে। এদেরকে উচিৎ শিক্ষা দিয়ে বি এফ ডিসি থেকে বের করে দেওয়া দরকার এদের মুখোশ উন্মোচন হয়ে গেছে।"
-Ei full show ta kothay pabo??,0,none,banth,romanized,full_with_stats.csv,Ei full show ta kothay pabo??
-Ekhon pith bachate ulto kotha boltece.eraei hasinar golam chilo,1,"Political,Personal Offense",banth,romanized,full_with_stats.csv,Ekhon pith bachate ulto kotha boltece.eraei hasinar golam chilo
-বন্ধু এটা তোর বউ,1,none,multilabel_12557,bangla,Multilablel_Cyberbully_Data.csv,বন্ধু এটা তোর বউ
-বাইনচোত ফেক নিউজ ছাড়া আর কাজ নাইমাদার চোত,1,slander,bd_shs,bangla,test.csv,বাইনচোত ফেক নিউজ ছাড়া আর কাজ নাইমাদার চোত
-"Kobe chili, dalal, durniti bas, tore bangladesh er manush kono din believe korbe na. Ja kisu korcho ta nije ke high light korar jonno korcho. 😅😂",1,Personal Offense,banth,romanized,train.csv,"Kobe chili, dalal, durniti bas, tore bangladesh er manush kono din believe korbe na. Ja kisu korcho ta nije ke high light korar jonno korcho. [EMOJI]"
-তাতে কার চুল ফ্যালানো গেছে।,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,তাতে কার চুল ফ্যালানো গেছে।
-Aii beta to gazakhor,0,none,banth,romanized,test.csv,Aii beta to gazakhor
+"আল্লাহুম্মা আমিন,",0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"আল্লাহুম্মা আমিন,"
+"একজন ভদ্র ছেলে তাই কিছু খারাপ কথা বললাম না, নইলে খানকি মাগি, বেশ্যাচুদা, আবালচুদা, বলদচুদা, গর্দভচুদা, খচ্চরচুদা, শাউয়াচুদা, ভোদাচুদা, গর্তচুদা, খালচুদা, পুটকিচুদা, বেগুনচুদা, মূলাচুদা, গাজরচুদা, শসাচুদা, কলাচুদা, ধোনচুদা, বাড়াচুদা, কুত্তাচুদা, শূকরচুদা, ভালুকচুদা, গরুচুদা, ছাগলচুদা, মহিষচুদা, ঘোড়াচুদা, উটচুদা, ভেড়াচুদা, হরিণচুদা, মুরগীচুদা, গাধাচুদা, শকুনচুদা, বানরচুদা, গারোয়াচুদা, শেয়ালচুদা, হাতিচুদা, গরিলাচুদা, বেজীচুদা, খাটাসচুদা, পেঁচাচুদা, কাকচুদা, বিড়ালচুদা, ইন্দুরচুদা, তিমিচুদা, হাঙ্গরচুদা বলিয়া গালি দিতাম..মাগি",1,sexual,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"একজন ভদ্র ছেলে তাই কিছু খারাপ কথা বললাম না, নইলে খানকি মাগি, বেশ্যাচুদা, আবালচুদা, বলদচুদা, গর্দভচুদা, খচ্চরচুদা, শাউয়াচুদা, ভোদাচুদা, গর্তচুদা, খালচুদা, পুটকিচুদা, বেগুনচুদা, মূলাচুদা, গাজরচুদা, শসাচুদা, কলাচুদা, ধোনচুদা, বাড়াচুদা, কুত্তাচুদা, শূকরচুদা, ভালুকচুদা, গরুচুদা, ছাগলচুদা, মহিষচুদা, ঘোড়াচুদা, উটচুদা, ভেড়াচুদা, হরিণচুদা, মুরগীচুদা, গাধাচুদা, শকুনচুদা, বানরচুদা, গারোয়াচুদা, শেয়ালচুদা, হাতিচুদা, গরিলাচুদা, বেজীচুদা, খাটাসচুদা, পেঁচাচুদা, কাকচুদা, বিড়ালচুদা, ইন্দুরচুদা, তিমিচুদা, হাঙ্গরচুদা বলিয়া গালি দিতাম..মাগি"
+Apne desh se aasan,0,none,banth,romanized,full_with_stats.csv,Apne desh se aasan
+"Eta police na,,eta,,ku,, ,baccha",0,none,banth,romanized,full_with_stats.csv,"Eta police na,,eta,,ku,, ,baccha"
+ASOLE ARA STUDENT NAMER KOLONKO BNP JAMAT SEBIR AR DALAL...,1,"Political,Misc",banth,romanized,full_with_stats.csv,ASOLE ARA STUDENT NAMER KOLONKO BNP JAMAT SEBIR AR DALAL..
+আসসালামু আলাইকুম হুজুর আপনি মালয়েশিয়া কোন জায়গায় আছেন ।আমি মালয়েশিয়া আছি ।যদি সুযোগ হয় আপনার সাথে একটু দেখা করার জন্য।,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,আসসালামু আলাইকুম হুজুর আপনি মালয়েশিয়া কোন জায়গায় আছেন ।আমি মালয়েশিয়া আছি ।যদি সুযোগ হয় আপনার সাথে একটু দেখা করার জন্য।
+Apnara atoo subidhabadii hoyee gelen.... Vabtei parii nii,0,none,banth,romanized,full_with_stats.csv,Apnara atoo subidhabadii hoyee gelen.. Vabtei parii nii
+Tuy kim jon naki sobai network pabena tuy chalabi sudhu,0,none,banth,romanized,full_with_stats.csv,Tuy kim jon naki sobai network pabena tuy chalabi sudhu
+যারা বাজে কমেন্ট করছিস মাদারচুদেরা আগে ওনার মতো হয়ে দেক দেকি কত কর মার মাং ধন কি করতেছিস,1,slander,bd_shs,bangla,test.csv,যারা বাজে কমেন্ট করছিস মাদারচুদেরা আগে ওনার মতো হয়ে দেক দেকি কত কর মার মাং ধন কি করতেছিস
+দূর বেইমান নি,0,,bd_shs,bangla,test.csv,দূর বেইমান নি
+ahare ki vhala manush..dekhleii pidaite iccha kore..,0,none,banth,romanized,full_with_stats.csv,ahare ki vhala manush..dekhleii pidaite iccha kore..
+বলার ভাষা হারিয়ে পেলেছি,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,বলার ভাষা হারিয়ে পেলেছি
+ক্ষনে ক্ষনে কবর ডাকে mane.,1,religious,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,ক্ষনে ক্ষনে কবর ডাকে mane.
+আমার নতুন আইডি সবাই একটু সাপোর্ট করবেন প্লিজ প্লিজ প্লিজ,0,spam,multilabel_12557,bangla,Multilablel_Cyberbully_Data.csv,আমার নতুন আইডি সবাই একটু সাপোর্ট করবেন প্লিজ প্লিজ প্লিজ
+Facebook and telegram off korli keno are akto jolok dekhti,0,none,banth,romanized,full_with_stats.csv,Facebook and telegram off korli keno are akto jolok dekhti
+সাপা কবিরকে কুত্তা দিযে এভাবে মারানো হোক,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,সাপা কবিরকে কুত্তা দিযে এভাবে মারানো হোক
+Hospital cil kore dite hobe,0,none,banth,romanized,full_with_stats.csv,Hospital cil kore dite hobe
+"তোমাকে না আমি হিজাব পরিয়ে দিলাম,সেটা কি করছো? নাহ তোমায় নিয়ে আর পারি না।",1,religious,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"তোমাকে না আমি হিজাব পরিয়ে দিলাম,সেটা কি করছো? নাহ তোমায় নিয়ে আর পারি না।"
+JALANI TELER DAM KOMBY KOBY,0,none,banth,romanized,full_with_stats.csv,JALANI TELER DAM KOMBY KOBY
+"আবাল একটা, অভিনয় রে পুরাই ধর্ষন করে ছাড়ছে।",1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"আবাল একটা, অভিনয় রে পুরাই ধর্ষন করে ছাড়ছে।"
+লাভ গুরু মেয়েটাকে পাগল বানিয়ে গেলো,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,লাভ গুরু মেয়েটাকে পাগল বানিয়ে গেলো
+Opare valo teko,0,none,banth,romanized,full_with_stats.csv,Opare valo teko
+দয়া কইরা আর ঈদের নাটকে চেহারা দেখাইয়েন না...,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,দয়া কইরা আর ঈদের নাটকে চেহারা দেখাইয়েন না..
+সাফা কবির খানকি মাগির নাটক বাংলাদেশে ব্যান করতে হবে না করলে জেই চেনেল এ পাব্লিশ করা হবে ওই টা আন সাবস্ক্রাইব করা হবে,1,sexual,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,সাফা কবির খানকি মাগির নাটক বাংলাদেশে ব্যান করতে হবে না করলে জেই চেনেল এ পাব্লিশ করা হবে ওই টা আন সাবস্ক্রাইব করা হবে
+শুধু তোমারই জন্ন,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,শুধু তোমারই জন্ন
+যে কাহিনী করতেছো বের হয়ে দেখা যাবে রসকষহীন ল্যাংরা ত্যানা,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,যে কাহিনী করতেছো বের হয়ে দেখা যাবে রসকষহীন ল্যাংরা ত্যানা
+Police chata mangu sala,1,Personal Offense,banth,romanized,full_with_stats.csv,Police chata mangu sala
+হেতিরে জুতা মারেন।,1,threat,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,হেতিরে জুতা মারেন।
+তোরা জুতা পেটা করা দরকার,1,threat,multilabel_12557,bangla,Multilablel_Cyberbully_Data.csv,তোরা জুতা পেটা করা দরকার
+বাংলা দেশে জত শব পাগল চাগলের কার খানা নায়াক বড় ওবাভ,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,বাংলা দেশে জত শব পাগল চাগলের কার খানা নায়াক বড় ওবাভ
+Shalar pute ra...moja boj aebar......,1,Personal Offense,banth,romanized,full_with_stats.csv,Shalar pute ra..moja boj aebar..
+"কুত্তার বাচ্চা,ধোয়া তুলসি পাতা মারাও,তোর বিচার আমরাই করমু,খাড়া।",1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"কুত্তার বাচ্চা,ধোয়া তুলসি পাতা মারাও,তোর বিচার আমরাই করমু,খাড়া।"
+কুত্তার বাচ্চা তুই নামাজ নিয়া কথা বললি কেন তরে পাইলে তোর জিহ্বা টাইনা ছিড়ে তোর কুত্তারে খাওয়ামু,1,callToViolence_slander,bd_shs,bangla,test.csv,কুত্তার বাচ্চা তুই নামাজ নিয়া কথা বললি কেন তরে পাইলে তোর জিহ্বা টাইনা ছিড়ে তোর কুত্তারে খাওয়ামু
+শালা কি বলতো যাসনি তুই,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,শালা কি বলতো যাসনি তুই
+Magir beti tui to korechis sob,1,Personal Offense,banth,romanized,full_with_stats.csv,Magir beti tui to korechis sob
+উফফফ বডি দেখে ফিদা হয়ে গেছে,0,none,multilabel_12557,bangla,Multilablel_Cyberbully_Data.csv,উফফ বডি দেখে ফিদা হয়ে গেছে
+Kire khangkir pola,1,Abusive/Violence,banth,romanized,full_with_stats.csv,Kire khangkir pola
+Chatthro undolon ar noy sorkarer songge alusona kora hok davi dewa tula hok  undulon niroson hok desher ounnion hok,0,none,banth,romanized,full_with_stats.csv,Chatthro undolon ar noy sorkarer songge alusona kora hok davi dewa tula hok undulon niroson hok desher ounnion hok
+"সে দোষ স্বীকার করছে, মাফ চাইছে তারপও বাজে কথা বলার মানে হয়না! আর নাস্তিক হলে সমস্যা কি? বাংলাদেশের কোন আইনে আছে নাস্তিক হলে জেল হবে? এটা অন্যায় হ্যা??? তুমি কি নামাজ পরো পাচ ওয়াক্ত? কয়জন নামাজ পরে মসজিদ গুলা সবসময় এত ফাকা কেন থাকে? এই যুগে কে কেমন সেগুলা খোজ নিতে হয়না এমনি বোঝা যাই! নামাজ নাই রোজা নাই আল্লাহ ডাক নাই হুডাই নিজেরে আস্তিক ভাবে! অন্যেরে গালাগাল দেয় অথচ নিজেই ঠিক নাই? ইসলাম গালাগাল সমর্থন করে? আর কেমন ফ্যামিলি এদের যারা গালাগাল করতেছে???",1,religious,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"সে দোষ স্বীকার করছে, মাফ চাইছে তারপও বাজে কথা বলার মানে হয়না! আর নাস্তিক হলে সমস্যা কি? বাংলাদেশের কোন আইনে আছে নাস্তিক হলে জেল হবে? এটা অন্যায় হ্যা?? তুমি কি নামাজ পরো পাচ ওয়াক্ত? কয়জন নামাজ পরে মসজিদ গুলা সবসময় এত ফাকা কেন থাকে? এই যুগে কে কেমন সেগুলা খোজ নিতে হয়না এমনি বোঝা যাই! নামাজ নাই রোজা নাই আল্লাহ ডাক নাই হুডাই নিজেরে আস্তিক ভাবে! অন্যেরে গালাগাল দেয় অথচ নিজেই ঠিক নাই? ইসলাম গালাগাল সমর্থন করে? আর কেমন ফ্যামিলি এদের যারা গালাগাল করতেছে??"
+পরিমনি কে নিয়ে আসতাছি,1,sexual,multilabel_12557,bangla,Multilablel_Cyberbully_Data.csv,পরিমনি কে নিয়ে আসতাছি
+পাগল  #arnab,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,পাগল [HASHTAG] arnab
+"Most intelligent person in Bangladesh 
+1.Khaled Muhiuddin 
+2.Dr. Kamal Hossain
+3.Golam Maola Rabbani",0,none,banth,romanized,full_with_stats.csv,Most intelligent person in Bangladesh 1.Khaled Muhiuddin 2.Dr. Kamal Hossain 3.Golam Maola Rabbani
+Police der marbenna,0,none,banth,romanized,full_with_stats.csv,Police der marbenna
+Sob thaka boro sotru..porasuna nosto korace,0,none,banth,romanized,full_with_stats.csv,Sob thaka boro sotru..porasuna nosto korace
+ওরে জবাই দেয়,1,threat,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,ওরে জবাই দেয়
+Mentally somossa acea doctor sahev er😂😂😂,1,Personal Offense,banth,romanized,full_with_stats.csv,Mentally somossa acea doctor sahev er[EMOJI]
+Varoteo ae papir paper jholkanitae kapchae varot.,0,none,banth,romanized,full_with_stats.csv,Varoteo ae papir paper jholkanitae kapchae varot.
+আইন সবার জন্য সমান না,0,none,multilabel_12557,bangla,Multilablel_Cyberbully_Data.csv,আইন সবার জন্য সমান না
+পুরাপুরি নাস্তিক,1,religious,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,পুরাপুরি নাস্তিক
+Ahare vai jokhon satro  vaider marso tokhon tader poribarer kotha mathai silo na...,0,none,banth,romanized,full_with_stats.csv,Ahare vai jokhon satro vaider marso tokhon tader poribarer kotha mathai silo na..
+Tumi bujona 😂 je amra tomake chaina😅😅,0,none,banth,romanized,full_with_stats.csv,Tumi bujona [EMOJI] je amra tomake chaina[EMOJI]
+sob bichar hobe,0,none,banth,romanized,full_with_stats.csv,sob bichar hobe
+তোই কি মরবি না মাগি নিজে তো নষ্ট..! সমাজ টা ও নষ্ট করতেছদ,1,sexual,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,তোই কি মরবি না মাগি নিজে তো নষ্ট..! সমাজ টা ও নষ্ট করতেছদ
+"তাজবিদ,,,,রাইট রে,,,,হেতি,,নাস্তিক,,???",1,religious,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"তাজবিদ,,রাইট রে,,হেতি,,নাস্তিক,,??"
+জায়েত তরে কে চিনে বুদার বাল,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,জায়েত তরে কে চিনে বুদার বাল
+Pitiye zele dukanu huk,0,none,banth,romanized,full_with_stats.csv,Pitiye zele dukanu huk
+"তুই আগে তওবা কর,,,,তারপর এইসব পোস্ট,,,, তুই কার  আঘাত দিবি,, তোকে কেউ বিশ্বাস করে,,,,,,,নব্য নাস্তিক",1,religious,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"তুই আগে তওবা কর,,তারপর এইসব পোস্ট,, তুই কার আঘাত দিবি,, তোকে কেউ বিশ্বাস করে,,নব্য নাস্তিক"
+ki ovinoyre baba😂😂,0,none,banth,romanized,full_with_stats.csv,ki ovinoyre baba[EMOJI]
+Biplob   kothay. Ok dhoro,0,none,banth,romanized,full_with_stats.csv,Biplob kothay. Ok dhoro
+সে তোমার মতো একটা বেয়াবপ মহিলার সাতে সম্পর্ক করতে জাবে কেনো এখোনো সময় আচে বালো হয়ে জা,1,sexual,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,সে তোমার মতো একটা বেয়াবপ মহিলার সাতে সম্পর্ক করতে জাবে কেনো এখোনো সময় আচে বালো হয়ে জা
+অচেনা কলিজার আপনার সাপোর্ট আমার খুব দরকার প্লিজ অবহেলা করবেন না কষ্ট করে হলে ছোট ইউজার কে একটু সাপোর্ট করবেন আপনার সাপোর্ট পাওয়া জন্য অপেক্ষা আছি আমি,0,spam,multilabel_12557,bangla,Multilablel_Cyberbully_Data.csv,অচেনা কলিজার আপনার সাপোর্ট আমার খুব দরকার প্লিজ অবহেলা করবেন না কষ্ট করে হলে ছোট ইউজার কে একটু সাপোর্ট করবেন আপনার সাপোর্ট পাওয়া জন্য অপেক্ষা আছি আমি
+এই নাস্তিক এর বাচ্চার পেজ থেকে সবাই আনলাইক দেন ইউটিউব চ্যানেল থেকে আনসাবস্ক্রাইব করেন না,1,religious,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,এই নাস্তিক এর বাচ্চার পেজ থেকে সবাই আনলাইক দেন ইউটিউব চ্যানেল থেকে আনসাবস্ক্রাইব করেন না
+"বাল ফালান গেলো,,,,তুই বিশ্বাস না করলে।।।।।",1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"বাল ফালান গেলো,,তুই বিশ্বাস না করলে।।"
+তাকে নিয়ে বাজে কথা না বলাই ভালো,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,তাকে নিয়ে বাজে কথা না বলাই ভালো
+ভাল লাগছে পোশাকে।,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,ভাল লাগছে পোশাকে।
+Amar onek kosto hy,0,none,banth,romanized,full_with_stats.csv,Amar onek kosto hy
+কালো ব্রা ,1,sexual,multilabel_12557,bangla,Multilablel_Cyberbully_Data.csv,কালো ব্রা
+তুষার ইমরান বন্ধু করছিলি নাকি ডিজাইন ???,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,তুষার ইমরান বন্ধু করছিলি নাকি ডিজাইন ??
+natok kom koro priyo🖕,0,none,banth,romanized,full_with_stats.csv,natok kom koro priyo[EMOJI]
+"মুফতী রিজওয়ান রফিকী হযরত,,,, আমার মনে হয় ও(চোরের বেটি) পাবলিকের ফিডা খাওয়ার ভয়ে এই কথা বলছে এখন",1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"মুফতী রিজওয়ান রফিকী হযরত,, আমার মনে হয় ও(চোরের বেটি) পাবলিকের ফিডা খাওয়ার ভয়ে এই কথা বলছে এখন"
+মানুষ  পাগল  হলে  বানদে রশি দিয়া  জায়েদ পাগল  হলে বানবেন কি দিয়া,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,মানুষ পাগল হলে বানদে রশি দিয়া জায়েদ পাগল হলে বানবেন কি দিয়া
+Aiber boji posla,0,none,banth,romanized,full_with_stats.csv,Aiber boji posla
+দেখাতো জায় চোরের মতো,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,দেখাতো জায় চোরের মতো
+"no bnp,no Awami League",0,none,banth,romanized,full_with_stats.csv,"no bnp,no Awami League"
+রাইট সরকারী চরগুলোরে লাথি মেরে বের করেন,1,threat,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,রাইট সরকারী চরগুলোরে লাথি মেরে বের করেন
+Akhon bujo knna koro kn,0,none,banth,romanized,full_with_stats.csv,Akhon bujo knna koro kn
+তোমার পিছনে মাল ফেলে দেই??,1,sexual,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,তোমার পিছনে মাল ফেলে দেই??
+বেশি বেশি গালি দেয়া ঈমানী দায়িত্ব। গালি যত বেশি সুন্দর দিতে পারবে তত অাগে চ্যালচ্যালাইয়া জান্নাতে যেতে পারবে। কাধের ফেরেশতা সাওয়াব লিখতেছে তোমার একটা একটা গালির জন্য। বাহ মুসলমান।,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,বেশি বেশি গালি দেয়া ঈমানী দায়িত্ব। গালি যত বেশি সুন্দর দিতে পারবে তত অাগে চ্যালচ্যালাইয়া জান্নাতে যেতে পারবে। কাধের ফেরেশতা সাওয়াব লিখতেছে তোমার একটা একটা গালির জন্য। বাহ মুসলমান।
+3 ta meyek rape kora bekti k jodi army protect kore rapiest k tahole je kono manush e chetbe. Meyeta kono beadobi kore nai,0,none,banth,romanized,full_with_stats.csv,3 ta meyek rape kora bekti k jodi army protect kore rapiest k tahole je kono manush e chetbe. Meyeta kono beadobi kore nai
+তোর একজন পাগলা ভক্ত ছিলাম   কিন্তু বুঝি নি তোর জন্ম টা বেশ্যালয়ে হয়েছে আজ থেকে তোরে চুদে বাদ দিয়ে দিলাম বিদাই বেশ্যা মাগির মেয়ে,1,sexual,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,তোর একজন পাগলা ভক্ত ছিলাম কিন্তু বুঝি নি তোর জন্ম টা বেশ্যালয়ে হয়েছে আজ থেকে তোরে চুদে বাদ দিয়ে দিলাম বিদাই বেশ্যা মাগির মেয়ে
+কিরে চুদানির পোলা সাহস থাকলে এইগুলা বাংলায় বল (3),1,sexual,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,কিরে চুদানির পোলা সাহস থাকলে এইগুলা বাংলায় বল (3)
+Tor jamai na tor maar jamai😂,1,Personal Offense,banth,romanized,full_with_stats.csv,Tor jamai na tor maar jamai[EMOJI]
+Lalbag thanar sobike ki gupalgonjer itihas abr mne korie dibe senabahini?,0,none,banth,romanized,full_with_stats.csv,Lalbag thanar sobike ki gupalgonjer itihas abr mne korie dibe senabahini?
+আল্লাহু তোমাকে হেদায়েত দি,1,religious,multilabel_12557,bangla,Multilablel_Cyberbully_Data.csv,আল্লাহু তোমাকে হেদায়েত দি
+"ভাই শ্রমিকদের বেতন নিয়া একটা পোস্ট করেন,বিষয় টা সাধারণ মানুষের কাছে ক্লিয়ার করেন",0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"ভাই শ্রমিকদের বেতন নিয়া একটা পোস্ট করেন,বিষয় টা সাধারণ মানুষের কাছে ক্লিয়ার করেন"
+চুতমারানি তরে আর তর মায়রে টুট টুট টুট..........,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,চুতমারানি তরে আর তর মায়রে টুট টুট টুট..
+"Ai seri ato chillay keno 
+Mathay somossa asy",1,Personal Offense,banth,romanized,full_with_stats.csv,Ai seri ato chillay keno Mathay somossa asy
+পরীমনির মতো পোশাক বর্তমান সময়ে বাংলাদেশের মুসলিম নারীদের ফ্যাশান হয়েছে ..পোশাকের কোনো ঠিক নাই ..পরীমনি তাদের আদর্শ বলাই যায় ..আর বর্তমান মেয়েদের অবস্থা এমন হয়েছে যে তারা অন্যের দেখে নিজেকে সামলে না রেখে তারা নিজেকে অন্যের সাথে নিজেকে পাল্লা দিয়ে চলেছে এটাই বর্তমান বাংলাদেশের ডিজিটাল..অনেক জন কমেন্ট করে লিখেছেন যে বাংলাদেশের মানুষ এত গরিব যে তারা নিজেদের শরীর ঢাকার জন্য পোশাক কিনতে পারে না ..কিন্তু বর্তমান সময়ে বাংলাদেশের হাজারো মেয়েরা পরীমনির মতো পোশাক পরে চলাফেরা করছে আমার তো মনে হয় না তারা কোনো গরীব ঘরের সন্তান ..মুসলিম নারীদের সুশীল পোশাকে সুন্দর দেখায় এলোমেলো নোংরা পোশাকে নয় এটা হয়তো বর্তমান সময়ে বাংলাদেশের মুসলিম নারীরা ভুলেই গেছে হয়তো ..পোশাক দেখে বোঝা যায় না কোন দেশ ধনী আর কোন দেশ গরীব কেউ যদি পোশাক দেখে দেশকে গরীব বলে আমি মনে করি আপনি ভুল বুঝেছেন. ভালোবাসা.আর জনপ্রিয়তা অর্জন করতে হলে খারাপ কিছু করতে হয় না এটা বর্তমান সময়ের মেয়েদের ভাবতে হবে ...বাংলাদেশ চলচ্চিত্রে এক আলোচিত নাম আর কেউ নেই সবাই কে ছাড়িয়ে এখন পরীমনি..বর্তমান সময়ে খারাপের মুল কারন বিদেশী সংস্কৃতির অংশ ..,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,পরীমনির মতো পোশাক বর্তমান সময়ে বাংলাদেশের মুসলিম নারীদের ফ্যাশান হয়েছে ..পোশাকের কোনো ঠিক নাই ..পরীমনি তাদের আদর্শ বলাই যায় ..আর বর্তমান মেয়েদের অবস্থা এমন হয়েছে যে তারা অন্যের দেখে নিজেকে সামলে না রেখে তারা নিজেকে অন্যের সাথে নিজেকে পাল্লা দিয়ে চলেছে এটাই বর্তমান বাংলাদেশের ডিজিটাল..অনেক জন কমেন্ট করে লিখেছেন যে বাংলাদেশের মানুষ এত গরিব যে তারা নিজেদের শরীর ঢাকার জন্য পোশাক কিনতে পারে না ..কিন্তু বর্তমান সময়ে বাংলাদেশের হাজারো মেয়েরা পরীমনির মতো পোশাক পরে চলাফেরা করছে আমার তো মনে হয় না তারা কোনো গরীব ঘরের সন্তান ..মুসলিম নারীদের সুশীল পোশাকে সুন্দর দেখায় এলোমেলো নোংরা পোশাকে নয় এটা হয়তো বর্তমান সময়ে বাংলাদেশের মুসলিম নারীরা ভুলেই গেছে হয়তো ..পোশাক দেখে বোঝা যায় না কোন দেশ ধনী আর কোন দেশ গরীব কেউ যদি পোশাক দেখে দেশকে গরীব বলে আমি মনে করি আপনি ভুল বুঝেছেন. ভালোবাসা.আর জনপ্রিয়তা অর্জন করতে হলে খারাপ কিছু করতে হয় না এটা বর্তমান সময়ের মেয়েদের ভাবতে হবে ..বাংলাদেশ চলচ্চিত্রে এক আলোচিত নাম আর কেউ নেই সবাই কে ছাড়িয়ে এখন পরীমনি..বর্তমান সময়ে খারাপের মুল কারন বিদেশী সংস্কৃতির অংশ ..
+অাপনি যতটা সুন্দর ছবি অাপ দিছেন কিন্তু অাপনি ততোটাও সুন্দর না,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,অাপনি যতটা সুন্দর ছবি অাপ দিছেন কিন্তু অাপনি ততোটাও সুন্দর না
+নতুন নাস্তিকের আরেকটা জন্ম হলো,1,religious,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,নতুন নাস্তিকের আরেকটা জন্ম হলো
+একটু হরেন দেহি মুইও হিছু কমু.......অভিনেত্রী মানেই সেচ্ছায় ধর্ষিতা এবং মর্ডান বেশ্যা !!  তারা পরকাল বিশ্বাস করলেই কি আর না করলেই কি _??এটা নিয়ে রাজনীতি করার কিছু নাই _,1,sexual,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,একটু হরেন দেহি মুইও হিছু কমু..অভিনেত্রী মানেই সেচ্ছায় ধর্ষিতা এবং মর্ডান বেশ্যা !! তারা পরকাল বিশ্বাস করলেই কি আর না করলেই কি _??এটা নিয়ে রাজনীতি করার কিছু নাই _
+Jaroj ligkay akon takay sadaron satrora ak jut hoay jaroj ligkay kaympas Sara korthay hobay ora jayno ar kaympasay duktay parayna jokon dukbay gonodulai deay odayr hol Sara korthay hobay,1,Political,banth,romanized,full_with_stats.csv,Jaroj ligkay akon takay sadaron satrora ak jut hoay jaroj ligkay kaympas Sara korthay hobay ora jayno ar kaympasay duktay parayna jokon dukbay gonodulai deay odayr hol Sara korthay hobay
+Sabbash vai Dhanybad,0,none,banth,romanized,full_with_stats.csv,Sabbash vai Dhanybad
+Bangladesh  a tayri  akhon hoya gessey  Pakistani,0,none,banth,romanized,full_with_stats.csv,Bangladesh a tayri akhon hoya gessey Pakistani
+Ascha uni ki chokh bondho kore kotha bolteche???!!!!.......bujhlam na emon kno dekha jasche....,0,none,banth,romanized,full_with_stats.csv,Ascha uni ki chokh bondho kore kotha bolteche??!!..bujhlam na emon kno dekha jasche..
+Police Mara gele allahumullialh,0,none,banth,romanized,full_with_stats.csv,Police Mara gele allahumullialh
+আমি খালি কমেন্টস দেখবার আইছি ,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,আমি খালি কমেন্টস দেখবার আইছি
 "হোম এর আগে টু বসে না, মিঃ ম্যানসিসটার।",0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"হোম এর আগে টু বসে না, মিঃ ম্যানসিসটার।"
-তুইতো পরকালেই বিশ্বাস করিস না তাইলে আল্লাহর কাছে আবার ক্ষমা চাস কেনো রে মাগি? তোর পতন শুরু!,1,sexual,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,তুইতো পরকালেই বিশ্বাস করিস না তাইলে আল্লাহর কাছে আবার ক্ষমা চাস কেনো রে মাগি? তোর পতন শুরু!
-"সব জারজ সন্তান গুলো যে নাস্তিক আগে না জানলেও এখন জেনেছি,",1,religious,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"সব জারজ সন্তান গুলো যে নাস্তিক আগে না জানলেও এখন জেনেছি,"
-আল্লাহর জন্যই আপনাকে ভালোবাসি। আল্লাহ আপনাকে সুস্থ রাখুক...!! আমিন,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,আল্লাহর জন্যই আপনাকে ভালোবাসি। আল্লাহ আপনাকে সুস্থ রাখুক..!! আমিন
-vooter mukhe ram ram....,0,none,banth,romanized,train.csv,vooter mukhe ram ram..
-jamairr taka ace tobu she eto rata rati boro hoy ki vabe .valo vabe a gulo khotiye dekhun .manush k thokano hosche tar rup dekhiye o pet dud bogol dekhiye she tony manush k hat korce,0,none,banth,romanized,train.csv,jamairr taka ace tobu she eto rata rati boro hoy ki vabe .valo vabe a gulo khotiye dekhun .manush k thokano hosche tar rup dekhiye o pet dud bogol dekhiye she tony manush k hat korce
-Ai stupid propagandar ar Bhat nai,1,Personal Offense,banth,romanized,test.csv,Ai stupid propagandar ar Bhat nai
-"Ami West Bengal India theke bolchi eya desh ka onek tyg dia Sir Bango Bondhu abong tar sanga jara chelo Tara eya desh ka sadhinata Diya cha abong aj jara bangla k tukro , tukro korte chaiche Tara jokhon Pakistan k sahajjo korbar jonno astro pathia chilo kintu Bango bondhu diro echa sokti Bharat er Indra Gandhi sankolpe amra sonar bangla sadhin hoache eya Moulobadi o soyrotanra birudhe r ekbar sobai k jhapate hobe bondhu....",0,none,banth,romanized,full_with_stats.csv,"Ami West Bengal India theke bolchi eya desh ka onek tyg dia Sir Bango Bondhu abong tar sanga jara chelo Tara eya desh ka sadhinata Diya cha abong aj jara bangla k tukro , tukro korte chaiche Tara jokhon Pakistan k sahajjo korbar jonno astro pathia chilo kintu Bango bondhu diro echa sokti Bharat er Indra Gandhi sankolpe amra sonar bangla sadhin hoache eya Moulobadi o soyrotanra birudhe r ekbar sobai k jhapate hobe bondhu.."
-আজকে নামাজ পইড়া আল্লাহ্ কাছে ক্ষমা চান..(নিশ্চই তিনি পরম ক্ষমাশীল),0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,আজকে নামাজ পইড়া আল্লাহ্ কাছে ক্ষমা চান..(নিশ্চই তিনি পরম ক্ষমাশীল)
-Ligare kotare bascara bajonmare jat,1,Political,banth,romanized,train.csv,Ligare kotare bascara bajonmare jat
-Ai policeluage k ......,0,none,banth,romanized,train.csv,Ai policeluage k ..
-"জাহেদেরে কয়জনে চিনে সালা ফাজিল অহংকার কারি কে আল্লাহ পছন্দ করেনা """" আলম ভাই আপনাকে সেলুট!!",1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"জাহেদেরে কয়জনে চিনে সালা ফাজিল অহংকার কারি কে আল্লাহ পছন্দ করেনা """" আলম ভাই আপনাকে সেলুট!!"
-আগের চাইতে সুন্দর হয়ে গেলে আপু কোয়ান্টান এ থেকে,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,আগের চাইতে সুন্দর হয়ে গেলে আপু কোয়ান্টান এ থেকে
-লাভ ইউ শাকিব খান,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,লাভ ইউ শাকিব খান
-Akjon sot manus somon,0,none,banth,romanized,train.csv,Akjon sot manus somon
-Sobai mile halka dele r kono din dalal e korte ashbe na,0,none,banth,romanized,full_with_stats.csv,Sobai mile halka dele r kono din dalal e korte ashbe na
-এই ফকিন্নিটা অর্থ বিত্তের জন্য নিজের ইজ্জত সম্মান নির্দ্বিধায় বিক্রি করে দিতে পারে ।,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,এই ফকিন্নিটা অর্থ বিত্তের জন্য নিজের ইজ্জত সম্মান নির্দ্বিধায় বিক্রি করে দিতে পারে ।
-ভালোবাতারি নুনুবেল,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,ভালোবাতারি নুনুবেল
-আবালনী একটা� ভাইরাল হওয়া জন্য কি না করতে পারে ।,1,slander,bd_shs,bangla,test.csv,আবালনী একটা[EMOJI] ভাইরাল হওয়া জন্য কি না করতে পারে ।
-"বাউলের সাজে খূব সুন্দর লাগছে আপু,ঈদ মোবারক।",0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"বাউলের সাজে খূব সুন্দর লাগছে আপু,ঈদ মোবারক।"
-Bhai tara duijoni thik ase ami monehoy pagol hoya gese😑😒amk plz hospital le neya jao kew😐🫤🙃,1,Personal Offense,banth,romanized,train.csv,Bhai tara duijoni thik ase ami monehoy pagol hoya gese[EMOJI]amk plz hospital le neya jao kew[EMOJI]🫤[EMOJI]
-Kotha bola sohoj,0,none,banth,romanized,train.csv,Kotha bola sohoj
-গান শুনে আমার সাউয়া অজ্ঞান হয়ে গেছে ,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,গান শুনে আমার সাউয়া অজ্ঞান হয়ে গেছে
-Khankirpolar asol rup ber hoiya gece. Uskai dise,1,Personal Offense,banth,romanized,full_with_stats.csv,Khankirpolar asol rup ber hoiya gece. Uskai dise
-আপু একদিন লাইভে আসেন।,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,আপু একদিন লাইভে আসেন।
-Egula banoyat khobor. Bangladesh er manush pagol sagol na,0,none,banth,romanized,train.csv,Egula banoyat khobor. Bangladesh er manush pagol sagol na
-"Ami Desh,Taktam Police kajan Martam,Allah cara ,ku Jantna,, Allah,oder, k. ,Bacice,or mar,,Bitare ,Bare Ditam,,,",0,none,banth,romanized,full_with_stats.csv,"Ami Desh,Taktam Police kajan Martam,Allah cara ,ku Jantna,, Allah,oder, k. ,Bacice,or mar,,Bitare ,Bare Ditam,,"
-মুরগি চোরের বংশধরদের এ দেশ থেকে বিতাড়িত করা দরকার,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,মুরগি চোরের বংশধরদের এ দেশ থেকে বিতাড়িত করা দরকার
-জানোয়ারের বাচ্চা একটা ওরে জনসমোক্ষে গলা কেটে ফেলা উচিত যে বাবা জন্ম দিছেসে বাবারই উচিত চাক্কু দিয়ে জানুয়ারের গলা কাটা,1,callToViolence_slander,bd_shs,bangla,test.csv,জানোয়ারের বাচ্চা একটা ওরে জনসমোক্ষে গলা কেটে ফেলা উচিত যে বাবা জন্ম দিছেসে বাবারই উচিত চাক্কু দিয়ে জানুয়ারের গলা কাটা
-"কত বড় বড় দেশের মসলিস মেয়েরা বোরকা পরতেছে, তারা কুটি টাকার উপর সুয়ে রইছে, কিন্ত তারা জানে মৃত্য হবে এটাই সত্য, কুটি টাকা সঙ্গে যাবে না,,,",1,religious,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"কত বড় বড় দেশের মসলিস মেয়েরা বোরকা পরতেছে, তারা কুটি টাকার উপর সুয়ে রইছে, কিন্ত তারা জানে মৃত্য হবে এটাই সত্য, কুটি টাকা সঙ্গে যাবে না,,"
-Ufff neta ekhon shobar taka marbe shala,1,Personal Offense,banth,romanized,train.csv,Uff neta ekhon shobar taka marbe shala
-আল্লাহ তুমি সবাই কে হেদায়ত কর আল্লাহ আমি তোমার কাছে হেদায়ত দান চাইতেছি তুমি সবাই কে হেদায়ত দান করো।আমিন,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,আল্লাহ তুমি সবাই কে হেদায়ত কর আল্লাহ আমি তোমার কাছে হেদায়ত দান চাইতেছি তুমি সবাই কে হেদায়ত দান করো।আমিন
-ঠিক কাজ করছেন পাছায়ে দুুইটা বারি দিলে আরো ভালো হইতো,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,ঠিক কাজ করছেন পাছায়ে দুুইটা বারি দিলে আরো ভালো হইতো
-ওরে দেশে আসতে বলেন,1,threat,multilabel_12557,bangla,Multilablel_Cyberbully_Data.csv,ওরে দেশে আসতে বলেন
-"Sala  re dor,,   doira pita laga",1,Abusive/Violence,banth,romanized,train.csv,"Sala re dor,, doira pita laga"
-আমি তোমাকে ভালোবাসি পরী অপু তোমার বিডিও দেখাতে ভাল লাগে এক,1,none,multilabel_12557,bangla,Multilablel_Cyberbully_Data.csv,আমি তোমাকে ভালোবাসি পরী অপু তোমার বিডিও দেখাতে ভাল লাগে এক
-এরা  মানুষ  নামের জানোয়ার,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,এরা মানুষ নামের জানোয়ার
-কিসের কথা বলে,0,none,multilabel_12557,bangla,Multilablel_Cyberbully_Data.csv,কিসের কথা বলে
-"অশিক্ষিত মূর্খ বর্বর ফক্কিনী তিন বেলা ভাত খাস । তুই কি বুঝবি । তুই বিশ্বাস না করিস, তোর পাঁচায় তুই বাঁশ দে ।",1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"অশিক্ষিত মূর্খ বর্বর ফক্কিনী তিন বেলা ভাত খাস । তুই কি বুঝবি । তুই বিশ্বাস না করিস, তোর পাঁচায় তুই বাঁশ দে ।"
-বিএনপি জামাত দুর্নীতি ছাড়া কিছুই বুঝেনা.. তারা দেশকে নাশকতার বস্তু হিসাবে ব্যবহার করে .. এইসব  শক্তি যদি ক্ষমতায় যায় দেশে আবারো সন্ত্রাসবাদ সৃষ্টি হবে,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,বিএনপি জামাত দুর্নীতি ছাড়া কিছুই বুঝেনা.. তারা দেশকে নাশকতার বস্তু হিসাবে ব্যবহার করে .. এইসব শক্তি যদি ক্ষমতায় যায় দেশে আবারো সন্ত্রাসবাদ সৃষ্টি হবে
-সালা তুই একটা পাগল।,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,সালা তুই একটা পাগল।
-Ai 15 bosore ja pareni ta 24 ghontay kmne somvob? Ontoto 7 din to somoy dite hobe...,0,none,banth,romanized,val.csv,Ai 15 bosore ja pareni ta 24 ghontay kmne somvob? Ontoto 7 din to somoy dite hobe..
-Hacinare ai rastay dorkar sob lokre akai samal dite parbo,0,none,banth,romanized,train.csv,Hacinare ai rastay dorkar sob lokre akai samal dite parbo
-😂😂😂😂😂 big LOL,0,none,banth,romanized,train.csv,[EMOJI] big LOL
-24 gontar modde apne sob bepod dekhe palasen apnara o paren,0,none,banth,romanized,full_with_stats.csv,24 gontar modde apne sob bepod dekhe palasen apnara o paren
-bostir meyera hate phone peye celebrity 😂😂😂😂,1,Gender,banth,romanized,full_with_stats.csv,bostir meyera hate phone peye celebrity [EMOJI]
-"পৃথিবীর শুরু থেকে আজ পর্যন্ত হাজার হাজার রুপসী ললনা আগমন করেছে এই ধরায়। তাদের রুপের মুগ্ধতায় বুঁদ হয়ে ছিলো তখনকার দুনিয়া। তাদের কেউ আজ পৃথিবীতে নেই ,কালের পরিক্রমায় হারিয়ে গেছে সবাই।তাদের কাউকে আজ মনে রাখেনি এই দুনিয়া । তাদের সেই ভূবন জুড়ানো সৌন্দয্য আজ মাটির গর্ভে বিলীন। তাই মানুষকে রুপ দিয়ে মুগ্ধ না করে নিজের দেহের সৌন্দর্যের পিছে এতো মেহনত না করে ,কবরের জন্য নিজের আত্মাকে সাজান। প্রস্তুতি নিন সেই পরকালে সফরের । ভালো থাকুন",1,religious,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"পৃথিবীর শুরু থেকে আজ পর্যন্ত হাজার হাজার রুপসী ললনা আগমন করেছে এই ধরায়। তাদের রুপের মুগ্ধতায় বুঁদ হয়ে ছিলো তখনকার দুনিয়া। তাদের কেউ আজ পৃথিবীতে নেই ,কালের পরিক্রমায় হারিয়ে গেছে সবাই।তাদের কাউকে আজ মনে রাখেনি এই দুনিয়া । তাদের সেই ভূবন জুড়ানো সৌন্দয্য আজ মাটির গর্ভে বিলীন। তাই মানুষকে রুপ দিয়ে মুগ্ধ না করে নিজের দেহের সৌন্দর্যের পিছে এতো মেহনত না করে ,কবরের জন্য নিজের আত্মাকে সাজান। প্রস্তুতি নিন সেই পরকালে সফরের । ভালো থাকুন"
-মহান আল্লাহ পাক আপনাকে হ্মমা ও হেদায়েত করুক।আমিন শুধু এই টুকু বলার ছিলো।,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,মহান আল্লাহ পাক আপনাকে হ্মমা ও হেদায়েত করুক।আমিন শুধু এই টুকু বলার ছিলো।
-খাংকি মাগি তকে শুউর দিয়ে চুদামু,1,sexual,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,খাংকি মাগি তকে শুউর দিয়ে চুদামু
-এই গুলোরে কী বলা উচিত,1,none,multilabel_12557,bangla,Multilablel_Cyberbully_Data.csv,এই গুলোরে কী বলা উচিত
-Ghosh Khatie vhalo lagche .sontrashke bachaite vhalo lagche .akhon kamon lagteche amader obosthao atodin amon chilo,1,Personal Offense,banth,romanized,full_with_stats.csv,Ghosh Khatie vhalo lagche .sontrashke bachaite vhalo lagche .akhon kamon lagteche amader obosthao atodin amon chilo
-khubei lojja jonok obostha...,0,none,banth,romanized,train.csv,khubei lojja jonok obostha..
-অনেক সেক্সি লাগে,1,sexual,multilabel_12557,bangla,Multilablel_Cyberbully_Data.csv,অনেক সেক্সি লাগে
-ইনশা আল্লাহ্,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,ইনশা আল্লাহ্
-Chacha re ken upodeshta banailona! Chachar ghum gese ga,0,none,banth,romanized,train.csv,Chacha re ken upodeshta banailona! Chachar ghum gese ga
-সব ধর্মেই মা বাবা সন্তানের জন্য একটি বড় নেয়ামত সে যেই হোক হোক মুসলিম কিংবা হিন্দু অথবা অন্য কিছু যে বাবা লালন পালন করছে আর এই জানোয়ার সেই বাবার গায়ে হাত তুলছে জানোয়ার টা কে যতক্ষণ না পর্যন্ত নড়াচড়া করে ততক্ষণ মারা উচিৎ,1,slander,bd_shs,bangla,test.csv,সব ধর্মেই মা বাবা সন্তানের জন্য একটি বড় নেয়ামত সে যেই হোক হোক মুসলিম কিংবা হিন্দু অথবা অন্য কিছু যে বাবা লালন পালন করছে আর এই জানোয়ার সেই বাবার গায়ে হাত তুলছে জানোয়ার টা কে যতক্ষণ না পর্যন্ত নড়াচড়া করে ততক্ষণ মারা উচিৎ
-Ai dini Jodi r Akbar ai banglar pobitro matite Ase  tahole banglar manos take kocho kata korbe asok daini,0,none,banth,romanized,train.csv,Ai dini Jodi r Akbar ai banglar pobitro matite Ase tahole banglar manos take kocho kata korbe asok daini
-Minimum lojja toko jodi thakto....ghrina lage ader k dhekle....,0,none,banth,romanized,train.csv,Minimum lojja toko jodi thakto..ghrina lage ader k dhekle..
-আল্লাহ তোমাকে হেদায়েত দান করুক আমিন,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,আল্লাহ তোমাকে হেদায়েত দান করুক আমিন
-Ai shob bhua doctor der kothin shasti dea uchit,1,Personal Offense,banth,romanized,full_with_stats.csv,Ai shob bhua doctor der kothin shasti dea uchit
-Ethiri Pradhanmantri Bane then,0,none,banth,romanized,train.csv,Ethiri Pradhanmantri Bane then
-বাংলা সাবানের মতো চেহারা,1,none,multilabel_12557,bangla,Multilablel_Cyberbully_Data.csv,বাংলা সাবানের মতো চেহারা
-Yah besharm Tai raja kar,1,Political,banth,romanized,full_with_stats.csv,Yah besharm Tai raja kar
-"Desher manush Roktoshikto ,apni oshrushikto tate ki?AZAIRA.......",0,none,banth,romanized,full_with_stats.csv,"Desher manush Roktoshikto ,apni oshrushikto tate ki?AZAIRA.."
-মাসাললাহ,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,মাসাললাহ
-Ata khete khawa manuser pesa manus bikri keno bolche srom bikri bollai parten avabe bolle tader choto kora hoi na tara avabe kaj na korle to r akbela apnara taderke bosia bosia khawate parben na,0,none,banth,romanized,train.csv,Ata khete khawa manuser pesa manus bikri keno bolche srom bikri bollai parten avabe bolle tader choto kora hoi na tara avabe kaj na korle to r akbela apnara taderke bosia bosia khawate parben na
-Magir ji kotti,1,Personal Offense,banth,romanized,val.csv,Magir ji kotti
-তুইকি আয়নার সাহায্য ছাড়া তোর কপালটা দেখতে পাসরে বেয়াদব মেয়ে,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,তুইকি আয়নার সাহায্য ছাড়া তোর কপালটা দেখতে পাসরে বেয়াদব মেয়ে
-"আলহামদুলিল্লাহ রিলিজ হলো মাওলানা হাফিজুর রহমান সিদ্দিক(কুয়াকাটা) হুজুরের কথা,সুর। আমি মোঃ জান্নাতুন নাঈম এর কন্ঠে একটি মরমি সংগীত #লা_ইলাহা_ইল্লাল্লাহ||আশাকরি ভালো লাগবে। ভালো লাগলে শেয়ার করুন। চ্যানেলটি একদম নতুন সুতরাং আপনার একটি সাবস্ক্রাইব, লাইক,কমেন্ট ও সেয়ারে আমাদের অনেকদুর এগুতে সাহায্য করবেনতুন নতুন ইসলামি সংগীত পেতে চ্যানেলটি  সাবস্ক্রাইব করুন ❤❤❤https://youtu.be/U5B5hV2yQQg",0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"আলহামদুলিল্লাহ রিলিজ হলো মাওলানা হাফিজুর রহমান সিদ্দিক(কুয়াকাটা) হুজুরের কথা,সুর। আমি মোঃ জান্নাতুন নাঈম এর কন্ঠে একটি মরমি সংগীত [HASHTAG] লা_ইলাহা_ইল্লাল্লাহ||আশাকরি ভালো লাগবে। ভালো লাগলে শেয়ার করুন। চ্যানেলটি একদম নতুন সুতরাং আপনার একটি সাবস্ক্রাইব, লাইক,কমেন্ট ও সেয়ারে আমাদের অনেকদুর এগুতে সাহায্য করবেনতুন নতুন ইসলামি সংগীত পেতে চ্যানেলটি সাবস্ক্রাইব করুন [EMOJI][URL]"
-Hasina r birudde bal falaisen,1,Personal Offense,banth,romanized,train.csv,Hasina r birudde bal falaisen
-বস্তির পোলা কি জানে,1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,বস্তির পোলা কি জানে
-Ai Younus eder ke marar adesh dicche,1,Personal Offense,banth,romanized,full_with_stats.csv,Ai Younus eder ke marar adesh dicche
-শুভ কামনা সব সময় ,0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,শুভ কামনা সব সময়
-Chandabaaz der gono dholai din.,0,none,banth,romanized,full_with_stats.csv,Chandabaaz der gono dholai din.
-Amar bangla porikka karap hoiche,0,none,banth,romanized,train.csv,Amar bangla porikka karap hoiche
-ও আল্লাহ । সাপা কবির বাংলায় পোস্ট দিসে দুঃখিত আমি পোস্ট এর বাংলা জানি না আমি মুরুক্ষ,1,religious,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,ও আল্লাহ । সাপা কবির বাংলায় পোস্ট দিসে দুঃখিত আমি পোস্ট এর বাংলা জানি না আমি মুরুক্ষ
-"আপনি তো অনেক সুন্দর কিন্তু প্রোফাইল পিক টা এতো নোংরা না দিলেও পারতেন,, সিনামা জগতের সবথেকে সুন্দরী আপনি,, আপনার পিকগুলো সবাই সুন্দর আশা করে,,,",0,not bully,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"আপনি তো অনেক সুন্দর কিন্তু প্রোফাইল পিক টা এতো নোংরা না দিলেও পারতেন,, সিনামা জগতের সবথেকে সুন্দরী আপনি,, আপনার পিকগুলো সবাই সুন্দর আশা করে,,"
-Ato   bocor ke marse pakhir moto ko,0,none,banth,romanized,full_with_stats.csv,Ato bocor ke marse pakhir moto ko
+Dalal Morle alhamduillah,0,none,banth,romanized,full_with_stats.csv,Dalal Morle alhamduillah
+"একজন বীর সাহসী মানুষ । সকলের অাপদ বিপদে, গরীর দুঃখের যে কোন সময় কাছে দাড়ান ভাই।তাকে সেলুট। অাওয়ামীলীগের চাল চোরের চেয়ে ১০০ গুন ভালো",1,troll,facebook_44001,bangla,bangla_online_comments_dataset.xlsx,"একজন বীর সাহসী মানুষ । সকলের অাপদ বিপদে, গরীর দুঃখের যে কোন সময় কাছে দাড়ান ভাই।তাকে সেলুট। অাওয়ামীলীগের চাল চোরের চেয়ে ১০০ গুন ভালো"

@@ -1,6 +1,0 @@
-tag,best_val_score,binary_macro_f1,binary_accuracy,binary_mcc,binary_weighted_f1,abuse_type_macro_f1,abuse_type_accuracy,abuse_type_mcc,abuse_type_weighted_f1,delta_binary,delta_abuse
-full_multitask,0.8381,0.9081,0.909,0.8166,0.9091,0.7424,0.8439,0.7554,0.8452,0.0,0.0
-binary_only,0.913,0.9138,0.9147,0.8278,0.9148,,,,,0.0057,-0.7424
-no_focal,0.8394,0.9109,0.9119,0.8219,0.912,0.7444,0.8502,0.7631,0.8503,0.0028,0.002
-no_lrdecay,0.8587,0.9266,0.9275,0.8533,0.9275,0.7826,0.872,0.7981,0.8723,0.0185,0.0402
-no_preprocessing,0.8291,0.9067,0.9076,0.8137,0.9077,0.7349,0.8355,0.7421,0.8368,-0.0014,-0.0075

@@ -1,8 +1,0 @@
-{
-  "tag": "binary_only",
-  "best_val_score": 0.913,
-  "binary_macro_f1": 0.9138,
-  "binary_accuracy": 0.9147,
-  "binary_mcc": 0.8278,
-  "binary_weighted_f1": 0.9148
-}

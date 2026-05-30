@@ -1,4 +1,0 @@
-Model,abuse_type Macro-F1,abuse_type W-F1
-BanglaBERT,0.7407+/-0.0025,0.8436+/-0.0029
-MuRIL,0.7303+/-0.0042,0.8409+/-0.0014
-XLM-RoBERTa,0.7114+/-0.0041,0.8300+/-0.0037
