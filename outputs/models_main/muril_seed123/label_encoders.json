@@ -1,0 +1,17 @@
+{
+  "binary": {
+    "0": 0,
+    "1": 1
+  },
+  "abuse_type": {
+    "abusive": 0,
+    "gender": 1,
+    "none": 2,
+    "other": 3,
+    "personal": 4,
+    "political": 5,
+    "religious": 6,
+    "sexual": 7,
+    "threat": 8
+  }
+}

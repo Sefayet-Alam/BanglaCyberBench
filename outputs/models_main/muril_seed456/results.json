@@ -1,0 +1,21 @@
+{
+  "model": "muril",
+  "seed": 456,
+  "best_val_monitor_score": 0.7945,
+  "test_metrics": {
+    "binary": {
+      "macro_f1": 0.8627,
+      "weighted_f1": 0.8627,
+      "accuracy": 0.8627,
+      "mcc": 0.7256,
+      "auroc": 0.9411
+    },
+    "abuse_type": {
+      "macro_f1": 0.6234,
+      "weighted_f1": 0.7759,
+      "accuracy": 0.7717,
+      "mcc": 0.6708,
+      "auroc": 0.9544
+    }
+  }
+}
