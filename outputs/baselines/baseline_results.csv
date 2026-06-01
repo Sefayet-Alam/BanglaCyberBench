@@ -1,0 +1,4 @@
+model,macro_f1,weighted_f1,accuracy,mcc,auroc
+TFIDF(word)+LogReg,0.5025,0.6142,0.6025,0.4273,0.846
+TFIDF(word+char)+LinearSVM,0.7674,0.7889,0.7933,0.6788,0.9418
+BiLSTM,0.685,0.7106,0.7065,0.5663,0.9052
