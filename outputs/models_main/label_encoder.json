@@ -1,0 +1,7 @@
+{
+  "abusive": 0,
+  "none": 1,
+  "religious": 2,
+  "sexual": 3,
+  "threat": 4
+}
