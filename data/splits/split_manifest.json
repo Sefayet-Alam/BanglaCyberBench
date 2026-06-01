@@ -1,0 +1,44 @@
+{
+  "seed": 42,
+  "label_col": "label5",
+  "n_total": 94323,
+  "random": {
+    "train": 66026,
+    "val": 9432,
+    "test": 18865
+  },
+  "source_holdout": {
+    "banth": {
+      "train": 49865,
+      "val": 7124,
+      "test": 37334
+    },
+    "bd_shs": {
+      "train": 78132,
+      "val": 11162,
+      "test": 5029
+    },
+    "facebook_44001": {
+      "train": 44839,
+      "val": 6406,
+      "test": 43078
+    },
+    "multilabel_12557": {
+      "train": 74760,
+      "val": 10681,
+      "test": 8882
+    }
+  },
+  "script_holdout": {
+    "bangla": {
+      "train": 32667,
+      "val": 4667,
+      "test": 56989
+    },
+    "romanized": {
+      "train": 49865,
+      "val": 7124,
+      "test": 37334
+    }
+  }
+}

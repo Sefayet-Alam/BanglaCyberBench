@@ -1,0 +1,8 @@
+﻿dataset_folder,relative_path,filename,rows,cols,columns,missing_values_total,duplicate_rows
+banth,banth\full_with_stats.csv,full_with_stats.csv,36649,26,author | updated_at | comment_like_count | Text | video_id | timestamp | Label | Political | Religious | Gender | Personal Offense | Abusive/Violence | Origin | Body Shaming | Misc | title | category_id | category_name | channel_id | channel_name | channel_subscribers | channel_description | view_count | video_like_count | comment_count | publish_date,1696,0
+banth,banth\test.csv,test.csv,3735,12,Text | Label | Political | Religious | Gender | Personal Offense | Abusive/Violence | Origin | Body Shaming | Misc | bangla | english,0,0
+banth,banth\train.csv,train.csv,29879,12,Text | Label | Political | Religious | Gender | Personal Offense | Abusive/Violence | Origin | Body Shaming | Misc | bangla | english,0,0
+banth,banth\val.csv,val.csv,3736,12,Text | Label | Political | Religious | Gender | Personal Offense | Abusive/Violence | Origin | Body Shaming | Misc | bangla | english,0,0
+bd_shs,bd_shs\test.csv,test.csv,5029,4,sentence | target | type | hate speech,5226,0
+facebook_44001,facebook_44001\bangla_online_comments_dataset.xlsx,bangla_online_comments_dataset.xlsx,44001,5,comment | Category | Gender | comment react number | label,3,140
+multilabel_12557,multilabel_12557\Multilablel_Cyberbully_Data.csv,Multilablel_Cyberbully_Data.csv,12546,8,Gender | Profession | comment | bully | sexual | religious | threat | spam,0,1291

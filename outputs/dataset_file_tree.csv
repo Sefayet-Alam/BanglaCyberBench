@@ -1,0 +1,8 @@
+﻿dataset_folder,relative_path,filename,suffix,size_kb
+banth,banth\full_with_stats.csv,full_with_stats.csv,.csv,47193.98
+banth,banth\test.csv,test.csv,.csv,995.44
+banth,banth\train.csv,train.csv,.csv,8035.49
+banth,banth\val.csv,val.csv,.csv,1020.47
+bd_shs,bd_shs\test.csv,test.csv,.csv,982.05
+facebook_44001,facebook_44001\bangla_online_comments_dataset.xlsx,bangla_online_comments_dataset.xlsx,.xlsx,4591.26
+multilabel_12557,multilabel_12557\Multilablel_Cyberbully_Data.csv,Multilablel_Cyberbully_Data.csv,.csv,1650.32
