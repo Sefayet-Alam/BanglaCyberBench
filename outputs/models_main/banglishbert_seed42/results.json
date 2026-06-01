@@ -1,0 +1,12 @@
+{
+  "model": "banglishbert",
+  "seed": 42,
+  "best_val_macro_f1": 0.8024,
+  "test_metrics": {
+    "macro_f1": 0.8101,
+    "weighted_f1": 0.8203,
+    "accuracy": 0.8202,
+    "mcc": 0.7255,
+    "auroc": 0.9459
+  }
+}
