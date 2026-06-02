@@ -1,0 +1,111 @@
+{
+  "pass": false,
+  "flags": [
+    "component '+focal+CW' hurts: \u0394macroF1=-0.0125 \u2192 revise/drop it",
+    "component '+sampler' hurts: \u0394macroF1=-0.0078 \u2192 revise/drop it",
+    "component '+MSD' hurts: \u0394macroF1=-0.0051 \u2192 revise/drop it",
+    "component '+RDrop' hurts: \u0394macroF1=-0.0033 \u2192 revise/drop it",
+    "component '+EMA(full)' hurts: \u0394macroF1=-0.0155 \u2192 revise/drop it",
+    "full method (0.7512) below peak config '+FGM' (0.7667) \u2192 trim to the peak"
+  ],
+  "best_single": 0.7524,
+  "ensemble": {
+    "macro_f1": 0.7649,
+    "weighted_f1": 0.7649,
+    "accuracy": 0.764,
+    "mcc": 0.7054,
+    "auroc": 0.9459
+  },
+  "component_ablation": [
+    {
+      "macro_f1": 0.7643,
+      "weighted_f1": 0.7643,
+      "accuracy": 0.7648,
+      "mcc": 0.7062,
+      "auroc": 0.9305,
+      "config": "base",
+      "minutes": 4.8,
+      "delta_macro_f1": NaN
+    },
+    {
+      "macro_f1": 0.7518,
+      "weighted_f1": 0.7518,
+      "accuracy": 0.754,
+      "mcc": 0.693,
+      "auroc": 0.9316,
+      "config": "+focal+CW",
+      "minutes": 4.4,
+      "delta_macro_f1": -0.0125
+    },
+    {
+      "macro_f1": 0.744,
+      "weighted_f1": 0.744,
+      "accuracy": 0.7448,
+      "mcc": 0.6811,
+      "auroc": 0.9318,
+      "config": "+sampler",
+      "minutes": 4.4,
+      "delta_macro_f1": -0.0078
+    },
+    {
+      "macro_f1": 0.7389,
+      "weighted_f1": 0.7389,
+      "accuracy": 0.74,
+      "mcc": 0.6757,
+      "auroc": 0.9302,
+      "config": "+MSD",
+      "minutes": 4.4,
+      "delta_macro_f1": -0.0051
+    },
+    {
+      "macro_f1": 0.7356,
+      "weighted_f1": 0.7356,
+      "accuracy": 0.7332,
+      "mcc": 0.6673,
+      "auroc": 0.9334,
+      "config": "+RDrop",
+      "minutes": 4.2,
+      "delta_macro_f1": -0.0033
+    },
+    {
+      "macro_f1": 0.7667,
+      "weighted_f1": 0.7667,
+      "accuracy": 0.768,
+      "mcc": 0.7103,
+      "auroc": 0.9406,
+      "config": "+FGM",
+      "minutes": 10.2,
+      "delta_macro_f1": 0.0311
+    },
+    {
+      "macro_f1": 0.7512,
+      "weighted_f1": 0.7512,
+      "accuracy": 0.7508,
+      "mcc": 0.6886,
+      "auroc": 0.94,
+      "config": "+EMA(full)",
+      "minutes": 9.7,
+      "delta_macro_f1": -0.0155
+    }
+  ],
+  "taxonomy": [
+    {
+      "macro_f1": 0.7512,
+      "weighted_f1": 0.7512,
+      "accuracy": 0.7508,
+      "mcc": 0.6886,
+      "auroc": 0.94,
+      "config": "5-class(full)",
+      "minutes": 9.7
+    },
+    {
+      "macro_f1": 0.4345,
+      "weighted_f1": 0.6185,
+      "accuracy": 0.6116,
+      "mcc": 0.5473,
+      "auroc": 0.8833,
+      "config": "9-class(full)",
+      "minutes": 10.1
+    }
+  ]
+}

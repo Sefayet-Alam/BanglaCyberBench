@@ -1,0 +1,13 @@
+{
+  "model": "xlmr",
+  "seed": 42,
+  "eval_scope": "full",
+  "best_val_macro_f1": 0.713,
+  "test_metrics": {
+    "macro_f1": 0.7283,
+    "weighted_f1": 0.7283,
+    "accuracy": 0.7356,
+    "mcc": 0.6737,
+    "auroc": 0.9352
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "weights": {
+    "banglishbert_seed42": 0.4879554961732411,
+    "banglabert_seed42": 0.024961150430725224,
+    "muril_seed42": 0.3922210052624158,
+    "xlmr_seed42": 0.09486234813361791
+  },
+  "metrics": {
+    "macro_f1": 0.7649,
+    "weighted_f1": 0.7649,
+    "accuracy": 0.764,
+    "mcc": 0.7054,
+    "auroc": 0.9459
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "model": "muril",
+  "seed": 42,
+  "eval_scope": "full",
+  "best_val_macro_f1": 0.7275,
+  "test_metrics": {
+    "macro_f1": 0.737,
+    "weighted_f1": 0.737,
+    "accuracy": 0.738,
+    "mcc": 0.6786,
+    "auroc": 0.9393
+  }
+}

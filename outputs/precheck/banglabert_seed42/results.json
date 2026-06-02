@@ -1,0 +1,13 @@
+{
+  "model": "banglabert",
+  "seed": 42,
+  "eval_scope": "bangla_only",
+  "best_val_macro_f1": 0.6795,
+  "test_metrics": {
+    "macro_f1": 0.7063,
+    "weighted_f1": 0.7341,
+    "accuracy": 0.7252,
+    "mcc": 0.6546,
+    "auroc": 0.9273
+  }
+}
