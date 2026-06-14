@@ -1,0 +1,32 @@
+{
+  "ours": {
+    "macro_f1": 0.8679,
+    "weighted_f1": 0.8736,
+    "accuracy": 0.8737,
+    "mcc": 0.8314,
+    "macro_auroc": 0.9747,
+    "per_class_f1": {
+      "Not Bully": 0.8891,
+      "Religious": 0.9302,
+      "Sexual": 0.872,
+      "Threat": 0.8292,
+      "Troll": 0.8192
+    }
+  },
+  "base_paper": {
+    "macro_f1": 0.8923,
+    "per_class": {
+      "Not Bully": 0.9151,
+      "Sexual": 0.8845,
+      "Troll": 0.8446,
+      "Religious": 0.9374,
+      "Threat": 0.7579
+    }
+  },
+  "weights": {
+    "banglishbert42": 0.4599547714972132,
+    "banglabert42": 0.07634898917585738,
+    "muril42": 0.27978601772000156,
+    "xlmr42": 0.18391022160692794
+  }
+}
