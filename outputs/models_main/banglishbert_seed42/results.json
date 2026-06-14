@@ -1,12 +1,18 @@
 {
   "model": "banglishbert",
   "seed": 42,
-  "best_val_macro_f1": 0.8024,
+  "eval_scope": "full",
+  "best_val_macro_f1": 0.8043,
   "test_metrics": {
-    "macro_f1": 0.8101,
-    "weighted_f1": 0.8203,
-    "accuracy": 0.8202,
-    "mcc": 0.7255,
-    "auroc": 0.9459
-  }
+    "macro_f1": 0.8069,
+    "weighted_f1": 0.8201,
+    "accuracy": 0.8206,
+    "mcc": 0.7252,
+    "auroc": 0.9567
+  },
+  "n_train_rows": 66026,
+  "n_val_eval_rows": 9432,
+  "n_test_eval_rows": 18865,
+  "n_val_total_rows": 9432,
+  "n_test_total_rows": 18865
 }

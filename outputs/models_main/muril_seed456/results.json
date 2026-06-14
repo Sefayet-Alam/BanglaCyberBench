@@ -1,14 +1,14 @@
 {
   "model": "muril",
-  "seed": 42,
+  "seed": 456,
   "eval_scope": "full",
-  "best_val_macro_f1": 0.8012,
+  "best_val_macro_f1": 0.8014,
   "test_metrics": {
-    "macro_f1": 0.8055,
-    "weighted_f1": 0.8177,
-    "accuracy": 0.8185,
-    "mcc": 0.7231,
-    "auroc": 0.9521
+    "macro_f1": 0.8066,
+    "weighted_f1": 0.8198,
+    "accuracy": 0.821,
+    "mcc": 0.7259,
+    "auroc": 0.9523
   },
   "n_train_rows": 66026,
   "n_val_eval_rows": 9432,

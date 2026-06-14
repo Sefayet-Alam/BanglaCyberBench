@@ -1,14 +1,14 @@
 {
-  "model": "muril",
+  "model": "xlmr",
   "seed": 42,
   "eval_scope": "full",
-  "best_val_macro_f1": 0.8012,
+  "best_val_macro_f1": 0.7989,
   "test_metrics": {
-    "macro_f1": 0.8055,
-    "weighted_f1": 0.8177,
-    "accuracy": 0.8185,
-    "mcc": 0.7231,
-    "auroc": 0.9521
+    "macro_f1": 0.8052,
+    "weighted_f1": 0.8159,
+    "accuracy": 0.8161,
+    "mcc": 0.7199,
+    "auroc": 0.9538
   },
   "n_train_rows": 66026,
   "n_val_eval_rows": 9432,
