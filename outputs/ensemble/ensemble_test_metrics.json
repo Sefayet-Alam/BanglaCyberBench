@@ -1,0 +1,36 @@
+{
+  "system": "weighted+LA",
+  "weights": {
+    "banglabert_seed123": 0.013742698200773265,
+    "banglabert_seed42": 0.04629652168710268,
+    "banglabert_seed456": 0.12444866849590126,
+    "banglishbert_seed123": 0.03361092455627349,
+    "banglishbert_seed42": 0.05141773205779943,
+    "banglishbert_seed456": 0.09385342912208189,
+    "muril_seed123": 0.1336509630599997,
+    "muril_seed42": 0.0799441036783522,
+    "muril_seed456": 0.02830360611034433,
+    "xlmr_seed123": 0.3131713870509167,
+    "xlmr_seed42": 0.052045644106076296,
+    "xlmr_seed456": 0.02951432187437886
+  },
+  "logit_adjust_tau": 0.0,
+  "eval_split": "pure_test_20pct",
+  "n_test": 18865,
+  "macro_f1": 0.8225,
+  "weighted_f1": 0.8332,
+  "accuracy": 0.8339,
+  "mcc": 0.7452,
+  "macro_auroc": 0.9626,
+  "none_class_f1_as_binary": 0.8771,
+  "binary_equiv_f1": 0.8745,
+  "binary_equiv_acc": 0.8745,
+  "binary_equiv_mcc": 0.7495,
+  "per_class_f1": {
+    "abusive": 0.7397,
+    "none": 0.8771,
+    "religious": 0.9031,
+    "sexual": 0.8238,
+    "threat": 0.7689
+  }
+}
