@@ -1,0 +1,7 @@
+config,held_out,n_test,macro_f1,weighted_f1,accuracy,mcc
+script_holdout_bangla,bangla,56989,0.1631,0.2617,0.3898,0.1088
+script_holdout_romanized,romanized,37334,0.2165,0.6051,0.6425,0.0845
+source_holdout_banth,banth,37334,0.2165,0.6051,0.6425,0.0845
+source_holdout_bd_shs,bd_shs,5029,0.4549,0.5657,0.5383,0.3943
+source_holdout_facebook_44001,facebook_44001,43078,0.5828,0.6256,0.6344,0.5186
+source_holdout_multilabel_12557,multilabel_12557,8882,0.5579,0.564,0.5907,0.4444

@@ -1,0 +1,15 @@
+\begin{tabular}{lllllll}
+\toprule
+System & Type & Macro-F1 & Weighted-F1 & Accuracy & MCC & AUROC \\
+\midrule
+TFIDF(word)+LogReg & baseline & 0.502500 & 0.614200 & 0.602500 & 0.427300 & 0.846000 \\
+TFIDF(word+char)+LinearSVM & baseline & 0.767400 & 0.788900 & 0.793300 & 0.678800 & 0.941800 \\
+BiLSTM & baseline & 0.685000 & 0.710600 & 0.706500 & 0.566300 & 0.905200 \\
+banglabert & transformer (mean±std) & 0.8136±0.0027 & 0.8198±0.0018 & 0.8204 & 0.7583 & 0.9605 \\
+banglishbert & transformer (mean±std) & 0.8049±0.0047 & 0.8175±0.0044 & 0.8193 & 0.7221 & 0.9561 \\
+muril & transformer (mean±std) & 0.8068±0.0015 & 0.8197±0.0020 & 0.8206 & 0.7258 & 0.9515 \\
+xlmr & transformer (mean±std) & 0.8034±0.0018 & 0.8159±0.0015 & 0.8162 & 0.7193 & 0.9514 \\
+Ensemble (weighted+LA) & ours & 0.822500 & 0.833200 & 0.833900 & 0.745200 & 0.962600 \\
+BanglishBERT full-stack (alt, seed-ens) & ours-alt & 0.813500 & 0.822400 & 0.822200 & 0.729100 & 0.953400 \\
+\bottomrule
+\end{tabular}
