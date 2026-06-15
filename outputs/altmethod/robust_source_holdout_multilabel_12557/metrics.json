@@ -1,0 +1,22 @@
+{
+  "macro_f1": 0.5579,
+  "weighted_f1": 0.564,
+  "accuracy": 0.5907,
+  "mcc": 0.4444,
+  "macro_auroc": 0.8524,
+  "per_class_f1": {
+    "abusive": 0.4564,
+    "none": 0.6742,
+    "religious": 0.4085,
+    "sexual": 0.496,
+    "threat": 0.7542
+  },
+  "best_single_macro_f1": 0.5579,
+  "n_test": 8882,
+  "seeds": [
+    42
+  ],
+  "ensemble_weights": {
+    "s42": 1.0
+  }
+}

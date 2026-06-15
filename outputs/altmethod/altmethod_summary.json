@@ -1,0 +1,200 @@
+{
+  "benchmark": {
+    "macro_f1": 0.8135,
+    "weighted_f1": 0.8224,
+    "accuracy": 0.8222,
+    "mcc": 0.7291,
+    "macro_auroc": 0.9534,
+    "per_class_f1": {
+      "abusive": 0.7214,
+      "none": 0.8675,
+      "religious": 0.8953,
+      "sexual": 0.8226,
+      "threat": 0.7608
+    },
+    "best_single_macro_f1": 0.8086,
+    "n_test": 18865,
+    "seeds": [
+      42,
+      123,
+      456
+    ],
+    "ensemble_weights": {
+      "s42": 0.141863166324147,
+      "s123": 0.16964031904802646,
+      "s456": 0.6884965146278266
+    }
+  },
+  "robustness": [
+    {
+      "macro_f1": 0.1631,
+      "weighted_f1": 0.2617,
+      "accuracy": 0.3898,
+      "mcc": 0.1088,
+      "macro_auroc": 0.671,
+      "per_class_f1": {
+        "abusive": 0.2139,
+        "none": 0.551,
+        "religious": 0.0424,
+        "sexual": 0.0083,
+        "threat": 0.0
+      },
+      "best_single_macro_f1": 0.1631,
+      "n_test": 56989,
+      "seeds": [
+        42
+      ],
+      "ensemble_weights": {
+        "s42": 1.0
+      },
+      "config": "script_holdout_bangla",
+      "held_out": "bangla"
+    },
+    {
+      "macro_f1": 0.2165,
+      "weighted_f1": 0.6051,
+      "accuracy": 0.6425,
+      "mcc": 0.0845,
+      "macro_auroc": NaN,
+      "per_class_f1": {
+        "abusive": 0.1233,
+        "none": 0.7973,
+        "religious": 0.1414,
+        "sexual": 0.0205,
+        "threat": 0.0
+      },
+      "best_single_macro_f1": 0.2165,
+      "n_test": 37334,
+      "seeds": [
+        42
+      ],
+      "ensemble_weights": {
+        "s42": 1.0
+      },
+      "config": "script_holdout_romanized",
+      "held_out": "romanized"
+    },
+    {
+      "macro_f1": 0.2165,
+      "weighted_f1": 0.6051,
+      "accuracy": 0.6425,
+      "mcc": 0.0845,
+      "macro_auroc": NaN,
+      "per_class_f1": {
+        "abusive": 0.1233,
+        "none": 0.7973,
+        "religious": 0.1414,
+        "sexual": 0.0205,
+        "threat": 0.0
+      },
+      "best_single_macro_f1": 0.2165,
+      "n_test": 37334,
+      "seeds": [
+        42
+      ],
+      "ensemble_weights": {
+        "s42": 1.0
+      },
+      "config": "source_holdout_banth",
+      "held_out": "banth"
+    },
+    {
+      "macro_f1": 0.4549,
+      "weighted_f1": 0.5657,
+      "accuracy": 0.5383,
+      "mcc": 0.3943,
+      "macro_auroc": 0.8153,
+      "per_class_f1": {
+        "abusive": 0.4878,
+        "none": 0.6871,
+        "religious": 0.3168,
+        "sexual": 0.4,
+        "threat": 0.3825
+      },
+      "best_single_macro_f1": 0.4549,
+      "n_test": 5029,
+      "seeds": [
+        42
+      ],
+      "ensemble_weights": {
+        "s42": 1.0
+      },
+      "config": "source_holdout_bd_shs",
+      "held_out": "bd_shs"
+    },
+    {
+      "macro_f1": 0.5828,
+      "weighted_f1": 0.6256,
+      "accuracy": 0.6344,
+      "mcc": 0.5186,
+      "macro_auroc": 0.8466,
+      "per_class_f1": {
+        "abusive": 0.5635,
+        "none": 0.741,
+        "religious": 0.731,
+        "sexual": 0.4525,
+        "threat": 0.4261
+      },
+      "best_single_macro_f1": 0.5828,
+      "n_test": 43078,
+      "seeds": [
+        42
+      ],
+      "ensemble_weights": {
+        "s42": 1.0
+      },
+      "config": "source_holdout_facebook_44001",
+      "held_out": "facebook_44001"
+    },
+    {
+      "macro_f1": 0.5579,
+      "weighted_f1": 0.564,
+      "accuracy": 0.5907,
+      "mcc": 0.4444,
+      "macro_auroc": 0.8524,
+      "per_class_f1": {
+        "abusive": 0.4564,
+        "none": 0.6742,
+        "religious": 0.4085,
+        "sexual": 0.496,
+        "threat": 0.7542
+      },
+      "best_single_macro_f1": 0.5579,
+      "n_test": 8882,
+      "seeds": [
+        42
+      ],
+      "ensemble_weights": {
+        "s42": 1.0
+      },
+      "config": "source_holdout_multilabel_12557",
+      "held_out": "multilabel_12557"
+    }
+  ],
+  "basepaper": {
+    "macro_f1": 0.867,
+    "weighted_f1": 0.8703,
+    "accuracy": 0.8703,
+    "mcc": 0.8266,
+    "macro_auroc": 0.9719,
+    "per_class_f1": {
+      "Not Bully": 0.8813,
+      "Religious": 0.9366,
+      "Sexual": 0.8711,
+      "Threat": 0.8337,
+      "Troll": 0.8122
+    },
+    "best_single_macro_f1": 0.8602,
+    "n_test": 6467,
+    "seeds": [
+      42,
+      123,
+      456
+    ],
+    "ensemble_weights": {
+      "s42": 0.501859989732471,
+      "s123": 0.37063867618683344,
+      "s456": 0.1275013340806955
+    }
+  }
+}
