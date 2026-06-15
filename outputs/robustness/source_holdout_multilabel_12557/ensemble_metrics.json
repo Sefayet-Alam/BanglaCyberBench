@@ -1,0 +1,10 @@
+{
+  "macro_f1": 0.5576,
+  "weighted_f1": 0.5577,
+  "accuracy": 0.5894,
+  "mcc": 0.4506,
+  "macro_auroc": 0.8694,
+  "config": "source_holdout_multilabel_12557",
+  "held_out": "multilabel_12557",
+  "n_test": 8882
+}

@@ -1,0 +1,10 @@
+{
+  "macro_f1": 0.4603,
+  "weighted_f1": 0.5814,
+  "accuracy": 0.554,
+  "mcc": 0.411,
+  "macro_auroc": 0.8225,
+  "config": "source_holdout_bd_shs",
+  "held_out": "bd_shs",
+  "n_test": 5029
+}
