@@ -1,0 +1,10 @@
+{
+  "macro_f1": 0.2761,
+  "weighted_f1": 0.6833,
+  "accuracy": 0.6784,
+  "mcc": 0.2278,
+  "macro_auroc": NaN,
+  "config": "script_holdout_romanized",
+  "held_out": "romanized",
+  "n_test": 37334
+}
