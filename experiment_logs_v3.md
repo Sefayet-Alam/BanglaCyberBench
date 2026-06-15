@@ -3,7 +3,7 @@
 **Project:** BanglaCyberBench — A Multi-Source, Dual-Script Benchmark and Two Script-Aware Transformer Ensembles for Robust Fine-Grained Bengali Cyberbullying Detection  
 **Authors:** Sefayet Alam (sefayetalam14@gmail.com),  Naim Parvez and A. F. M. Minhazur Rahman  
 **Date:** June 2026  
-**Repo:** github.com/Sefayet-Alam/Sarcasm_detection  (outputs under `04_outputs/`)  
+**Repo:** github.com/Sefayet-Alam/CyberBully_Detection_Paper  (outputs under `outputs/`)  
 **Target venue:** Q1/Q2 — IP&M / ESWA / Neurocomputing, or ACL/EMNLP Findings  
 **Status:** all experiments complete; uploaded result files have been inserted into this log.
 
@@ -165,7 +165,7 @@ benchmark sample count.
 reported runs differ slightly because the validation/ensemble optimisation path is recorded separately.
 
 **Figure — Class distribution (5-class benchmark)**
-![Class distribution](https://raw.githubusercontent.com/Sefayet-Alam/Sarcasm_detection/main/04_outputs/finalized_outputs/figures/01_class_distribution.png)
+![Class distribution](outputs/paper/fig_class_distribution.png)
 
 **Plain summary:** The benchmark is dominated by `none`, with `threat` the rarest class. This is the
 core difficulty of the task: Macro-F1 (which weights every class equally) is governed by the rare
@@ -325,19 +325,6 @@ re-normalised per row. BanglishBERT is the bilingual workhorse; MuRIL and XLM-R 
 
 **Final Model A ensemble result:** Macro-F1 **0.8225**, Weighted-F1 **0.8332**, Accuracy **0.8339**, MCC **0.7452**, Macro-AUROC **0.9626** on `pure_test_20pct` (`n_test=18,865`). `logit_adjust_tau = 0.0`.
 
-**Model A binary-equivalent / metadata outputs:**
-
-| Metric | Value |
-| --- | --- |
-| System | weighted+LA |
-| Eval split | pure_test_20pct |
-| n_test | 18,865 |
-| logit_adjust_tau | 0.0 |
-| none_class_f1_as_binary | 0.8771 |
-| binary_equiv_f1 | 0.8745 |
-| binary_equiv_acc | 0.8745 |
-| binary_equiv_mcc | 0.7495 |
-
 **Model A final ensemble weights:**
 
 | Run | Weight |
@@ -449,7 +436,7 @@ full stack:
 | 9-class(ours) | 0.6096 | 0.8018 | 0.8076 | 0.7079 | 0.9456 | 17.6 |
 
 **Figure — Component ablation**
-![Ablation](https://raw.githubusercontent.com/Sefayet-Alam/Sarcasm_detection/main/04_outputs/finalized_outputs/figures/04_ablation.png)
+![Ablation](outputs/paper/fig_ablation.png)
 
 **Plain summary:** Each bar shows what adding one component does on top of the CE+FGM reference. In
 this run, R-Drop is the strongest single add-on (+0.0051 Macro-F1), EMA and MSD also help slightly,
@@ -475,7 +462,7 @@ single headline system.
 | **Model A — Script-Aware Ensemble** | **0.8225** | **0.8332** | **0.8339** | **0.7452** | **0.9626** |
 | **Model B — Full-Stack BanglishBERT** | 0.8135 | 0.8224 | 0.8222 | 0.7291 | 0.9534 |
 
-Per-encoder single-model scores for Model A, from `04_outputs/models_main/per_run_summary.csv`:
+Per-encoder single-model scores for Model A, from `outputs/models_main/per_run_summary.csv`:
 
 | Model | Seed | Macro-F1 | Weighted-F1 | Accuracy | MCC | AUROC |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -506,7 +493,7 @@ to 0.8135 (best single seed 0.8086).
 | threat | 0.7689 | 0.7608 |
 
 **Figure — Per-class F1**
-![Per-class F1](https://raw.githubusercontent.com/Sefayet-Alam/Sarcasm_detection/main/04_outputs/finalized_outputs/figures/03_per_class_f1.png)
+![Per-class F1](outputs/paper/fig_per_class_f1.png)
 
 **Plain summary:** `religious` and `none` are the strongest; `abusive` is the hardest in our scheme
 because it is the catch-all bucket that absorbs many heterogeneous behaviours (troll, personal,
@@ -517,7 +504,7 @@ uploaded benchmark outputs.
 ### 14.2 Confusion matrix — Model A ensemble, 20% test
 
 **Figure — Confusion matrix (ensemble, 20% test)**
-![Confusion matrix](https://raw.githubusercontent.com/Sefayet-Alam/Sarcasm_detection/main/04_outputs/finalized_outputs/figures/02_confusion_matrix.png)
+![Confusion matrix](outputs/paper/fig_confusion_matrix.png)
 
 Numeric matrix, read from the final confusion-matrix output (`true` rows × `predicted` columns):
 
@@ -552,17 +539,6 @@ Model B held-out evaluation uses one seed per shifted config, while the in-domai
 | source_holdout_bd_shs | bd_shs | 5,029 | 0.4549 | 0.5657 | 0.5383 | 0.3943 | 0.8153 |
 | source_holdout_facebook_44001 | facebook_44001 | 43,078 | 0.5828 | 0.6256 | 0.6344 | 0.5186 | 0.8466 |
 | source_holdout_multilabel_12557 | multilabel_12557 | 8,882 | 0.5579 | 0.5640 | 0.5907 | 0.4444 | 0.8524 |
-
-**Model B held-out per-class F1:**
-
-| Split | abusive | none | religious | sexual | threat |
-| --- | --- | --- | --- | --- | --- |
-| script_holdout_bangla | 0.2139 | 0.5510 | 0.0424 | 0.0083 | 0.0000 |
-| script_holdout_romanized | 0.1233 | 0.7973 | 0.1414 | 0.0205 | 0.0000 |
-| source_holdout_banth | 0.1233 | 0.7973 | 0.1414 | 0.0205 | 0.0000 |
-| source_holdout_bd_shs | 0.4878 | 0.6871 | 0.3168 | 0.4000 | 0.3825 |
-| source_holdout_facebook_44001 | 0.5635 | 0.7410 | 0.7310 | 0.4525 | 0.4261 |
-| source_holdout_multilabel_12557 | 0.4564 | 0.6742 | 0.4085 | 0.4960 | 0.7542 |
 
 ### 15.2 Model A — Script-Aware Ensemble held-out evaluation
 
@@ -605,7 +581,7 @@ Model A robustness results are filled from the uploaded `robustness_summary(1).c
    so we split the work between a Bangla specialist (BanglaBERT) and bilingual/multilingual encoders.
 
 **Figure — Robustness across held-out splits**
-![Robustness](https://raw.githubusercontent.com/Sefayet-Alam/Sarcasm_detection/main/04_outputs/finalized_outputs/figures/05_robustness.png)
+![Robustness](outputs/paper/fig_robustness.png)
 
 **Plain summary:** The drop from in-domain to script-held-out is the paper's most important empirical
 message: dual-script generalisation, not in-domain accuracy, is the real frontier for Bengali
@@ -655,7 +631,7 @@ Model A: Weighted-F1 0.8736, Accuracy 0.8737, MCC 0.8314, Macro-AUROC 0.9747.
 | s456 | 0.127501 |
 
 **Figure — Base-paper comparison**
-![Base-paper comparison](https://raw.githubusercontent.com/Sefayet-Alam/Sarcasm_detection/main/04_outputs/finalized_outputs/figures/06_basepaper.png)
+![Base-paper comparison](outputs/paper/fig_basepaper.png)
 
 **Plain summary:** On the base paper's own dataset our general-purpose systems are a touch below on
 overall Macro-F1 (Model A 0.8679, Model B 0.8670 vs base 0.8923) but **both beat it on the hardest class, `Threat`** — Model A by 0.0713 and Model B by 0.0758. We frame this honestly: the base paper is tuned to one clean source; our value is breadth (four sources, two scripts) and robustness, not a single-dataset win.
@@ -763,9 +739,9 @@ flowchart TD
   N4 & N6 & N7 & N7b & N8 & N9 --> N10["NB10 tables + figures"]
 ```
 
-**Output tree (`04_outputs/`, per `output_dir.txt`):**
+**Output tree (`outputs/`, per `output_dir.txt`):**
 ```text
-04_outputs/
+outputs/
 ├── baselines/baseline_results.csv
 ├── models_main/                 # NB05: 4 enc × 3 seeds (results.json), per_run_summary.csv
 ├── ensemble/                    # NB06 (Model A): ensemble_test_metrics.json, test_pred/proba.npy, cm_ensemble_20pct.png
@@ -775,7 +751,7 @@ flowchart TD
 ├── basepaper/comparison.json    # NB09 (Model A) vs base paper
 ├── fig_label5_distribution.png
 ├── paper/                       # NB10: table1..6 (.csv/.tex), fig_per_class/ablation/robustness/basepaper.png
-└── finalized_outputs/figures/   # curated, renamed figures (01_..06_) used in this log
+└── paper/                       # NB10: final tables and curated figures used in this log
 ```
 
 **Uploaded result files inserted into this updated log:**
@@ -802,16 +778,16 @@ flowchart TD
 
 ## 22. Asset Index (figures used above)
 
-| # | Figure | Source file (`04_outputs/…`) | Status |
+| # | Figure | Source file (`outputs/…`) | Status |
 |---|---|---|---|
-| 01 | Class distribution | `fig_label5_distribution.png` | exists |
-| 02 | Confusion matrix (ensemble, 20%) | `ensemble/cm_ensemble_20pct.png` | exists; numeric table inserted in Section 14.2 |
-| 03 | Per-class F1 | `paper/fig_per_class_f1.png` | exists |
-| 04 | Component ablation | `paper/fig_ablation.png` | exists; values inserted in Section 13 |
-| 05 | Robustness | `paper/fig_robustness.png` | exists; Model A and B tables inserted in Section 15 |
-| 06 | Base-paper comparison | `paper/fig_basepaper.png` | exists; Model A and B values inserted in Section 16 |
+| 01 | Class distribution | `outputs/paper/fig_class_distribution.png` | exists |
+| 02 | Confusion matrix (ensemble, 20%) | `outputs/paper/fig_confusion_matrix.png` | exists; numeric table inserted in Section 14.2 |
+| 03 | Per-class F1 | `outputs/paper/fig_per_class_f1.png` | exists |
+| 04 | Component ablation | `outputs/paper/fig_ablation.png` | exists; values inserted in Section 13 |
+| 05 | Robustness | `outputs/paper/fig_robustness.png` | exists; Model A and B tables inserted in Section 15 |
+| 06 | Base-paper comparison | `outputs/paper/fig_basepaper.png` | exists; Model A and B values inserted in Section 16 |
 
-Figures are embedded from `…/04_outputs/finalized_outputs/figures/0N_*.png`. If your curated filenames
+Figures are embedded from repo-relative `outputs/paper/fig_*.png` paths. If your curated filenames
 differ, adjust the six URLs (or point them at the source paths in the table above). All **diagrams**
 in this log are Mermaid placeholders to be replaced with rendered PNGs later.
 
