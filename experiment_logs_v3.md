@@ -106,198 +106,26 @@ coverage + robustness evaluation + the two-system comparison**, which are new ev
 paper does not address.
 
 ---
-```md
+
 ---
 
 ## 3A. Literature Review Summary
 
-The table below positions BanglaCyberBench against closely related Bengali/Bangla cyberbullying,
-hate-speech, and online-harassment studies. The main pattern is that prior studies usually evaluate
-on one source, one script, one distribution, or binary/coarse labels. BanglaCyberBench addresses this
-by building a deduplicated four-source, dual-script benchmark with 5-class labels and robustness tests.
+The table below positions BanglaCyberBench against related Bengali/Bangla cyberbullying, hate-speech, and online-harassment studies.
 
-<table>
-<thead>
-<tr>
-<th>Paper / Resource</th>
-<th>Dataset / Coverage</th>
-<th>Task / Labels</th>
-<th>Main Method(s)</th>
-<th>Reported Metrics / Numbers</th>
-<th>Main Gap / Limitation</th>
-</tr>
-</thead>
+| Paper / Resource | Dataset / Coverage | Task / Labels | Main Method(s) | Reported Metrics / Numbers | Main Gap / Limitation |
+|---|---|---|---|---|---|
+| Ahmed et al. (2021), *Bangla Text Dataset and Exploratory Analysis for Online Harassment Detection* | 44,001 Bangla Facebook comments; Bangla script | Online harassment / cyberbullying detection with harassment-category labels | Dataset construction, annotation, and exploratory analysis | Dataset size: **44,001** comments. Classifier metric: dataset-focused paper, mainly corpus statistics and exploratory analysis | Single-source Facebook dataset; Bangla-script only; no Romanized Bangla; no source-held-out or script-held-out robustness |
+| Hoque & Seddiqui (2025/2026), *Advancing Cyberbullying Detection in Low-Resource Languages* | Facebook-44K Bengali cyberbullying dataset; Bangla script | Binary cyberbullying detection and 5-class multiclass cyberbullying detection | Transformer stacking with XLM-R, mBERT, Bangla-BERT-Base, and MLP meta-classifier | Dataset size: **44,001**. Binary F1: **93.61%**. Binary Accuracy: **93.62%**. Multiclass F1: **89.23%**. Multiclass Accuracy: **89.23%** | Strong single-dataset result, but only one clean Bangla-script source; no dual-script benchmark; no source/script-held-out robustness |
+| Romim et al. (2021), *HS-BAN* | 50,000+ Bangla social-media comments; Bangla script | Binary hate / non-hate classification | Traditional ML and neural models; best model uses BiLSTM with informal FastText embeddings | Dataset size: **50,000+**. Hate ratio: **40.17%**. Best F1: **86.78%** | Binary hate-speech framing; not fine-grained cyberbullying; Bangla-script only; no Romanized Bangla or cross-script robustness |
+| Nath et al. (2024), *Deep Learning Based Cyberbullying Detection in Bangla Language* | 12,282 Bangla comments from social-media platforms; Bangla script | Cyberbullying detection in Bangla | Two-layer BiLSTM with multiple optimizers and 5-fold cross-validation | Dataset size: **12,282** comments. Evaluation: **5-fold cross-validation**. Reported metric type: accuracy and F1-style classification results | Deep-learning focused but still Bangla-script only; limited benchmark unification; no explicit source-held-out or script-held-out transfer |
+| Mendeley Multilabel Cyberbullying Dataset | Bangla social-media comments with multilabel abuse annotations | Multilabel categories including cyberbully, sexual harassment, religious hate speech, threat, and spam | Dataset resource for multilabel Bangla abuse detection | Dataset type: **multilabel Bangla abuse dataset**. Labels include cyberbully, sexual harassment, religious hate speech, threat, and spam | Label schema differs from other Bengali cyberbullying datasets, so direct comparison requires label unification |
+| Kaggle Bangla Cyber Bullying Dataset | 6,010 Bangla text samples; Bangla script | 5 categories including political, sexual, troll, threat, and neutral/non-bully labels | Dataset resource used by ML/DL studies | Dataset size: **6,010** samples. Categories: **5**. Official model score: not fixed, dataset/resource mainly | Small single-source and single-script setup; limited Romanized Bangla coverage; limited robustness evaluation |
+| BIDWESH (2025), *A Bangla Regional Based Hate Speech Detection Dataset* | 9,183 instances in regional Bangla dialects including Barishal, Noakhali, and Chittagong | Hate/non-hate detection, hate type, and target-group annotation | Dataset construction for dialect-sensitive Bangla hate-speech detection | Dataset size: **9,183**. Dialects: **3**. Hate-type categories: **13**. Target classes: **7** | Strong for dialect variation, but not focused on Romanized Bangla cyberbullying or multi-source cyberbullying robustness |
+| BanglaMultiHate (2025/2026), *LLM-Based Multi-Task Bangla Hate Speech Detection* | Large manually annotated Bangla hate-speech dataset | Multi-task hate-speech detection: type, severity, and target | Classical baselines, monolingual pretrained models, zero-shot LLM prompting, and LoRA fine-tuned LLMs | Task setup: **3-task** hate-speech framework. Reported finding: LoRA-tuned LLMs are competitive, while Bangla-specific pretrained models remain important | Broader hate-speech framing; focuses on multi-task hate labels, not cyberbullying-specific source/script-held-out robustness |
+| **This work: BanglaCyberBench** | **Four-source Bengali cyberbullying benchmark; Bangla + Romanized Bangla; deduplicated from 135,575 raw comments to 94,337 unique comments** | **5-class taxonomy: none, abusive, sexual, religious, threat. Also includes 9-class taxonomy ablation** | **Model A: script-aware weighted-logit ensemble of BanglishBERT, BanglaBERT, MuRIL, and XLM-R with CE + FGM. Model B: full-stack BanglishBERT seed ensemble** | **Model A 20% test:** Macro-F1 **0.8225**, Weighted-F1 **0.8332**, Accuracy **0.8339**, MCC **0.7452**, Macro-AUROC **0.9626**. **Model B 20% test:** Macro-F1 **0.8135**, Weighted-F1 **0.8224**, Accuracy **0.8222**, MCC **0.7291**, Macro-AUROC **0.9534**. **Base-paper protocol Model A:** Macro-F1 **0.8679**, Accuracy **0.8737**. **Base-paper protocol Model B:** Macro-F1 **0.8670**, Accuracy **0.8703** | Addresses the main gaps jointly: multi-source data, dual-script coverage, deduplication, fine-grained labels, direct base-paper comparison, and explicit source-held-out plus script-held-out robustness |
 
-<tbody>
-
-<tr>
-<td><b>Ahmed et al. (2021)</b><br><i>Bangla Text Dataset and Exploratory Analysis for Online Harassment Detection</i></td>
-<td>44,001 Bangla Facebook comments; Bangla script; public social-media comments.</td>
-<td>Online harassment / cyberbullying detection with harassment-category labels.</td>
-<td>Dataset construction, annotation, and exploratory analysis.</td>
-<td>
-Dataset size: <b>44,001</b> comments.<br>
-Performance metric: <b>not a classifier-focused paper</b>; mainly reports dataset statistics and exploratory analysis.
-</td>
-<td>Single-source Facebook dataset; Bangla-script only; no Romanized Bangla; no cross-source or cross-script robustness test.</td>
-</tr>
-
-<tr>
-<td><b>Hoque &amp; Seddiqui (2025/2026)</b><br><i>Advancing Cyberbullying Detection in Low-Resource Languages: A Transformer-Stacking Framework for Bengali</i></td>
-<td>Facebook-44K Bengali cyberbullying dataset; Bangla script.</td>
-<td>Sub-task A: binary cyberbullying detection.<br>Sub-task B: 5-class multiclass cyberbullying detection.</td>
-<td>Transformer stacking using XLM-R, mBERT, Bangla-BERT-Base, and an MLP meta-classifier.</td>
-<td>
-Dataset size: <b>44,001</b> samples.<br>
-Binary F1: <b>93.61%</b>.<br>
-Binary Accuracy: <b>93.62%</b>.<br>
-Multiclass F1: <b>89.23%</b>.<br>
-Multiclass Accuracy: <b>89.23%</b>.
-</td>
-<td>Strong result on one clean Bangla-script dataset, but no dual-script benchmark and no systematic source-held-out or script-held-out robustness study.</td>
-</tr>
-
-<tr>
-<td><b>Romim et al. (2021)</b><br><i>HS-BAN: A Benchmark Dataset of Social Media Comments for Hate Speech Detection in Bangla</i></td>
-<td>50,000+ Bangla social-media comments; Bangla script.</td>
-<td>Binary hate / non-hate classification.</td>
-<td>Traditional linguistic features and neural models; best model uses BiLSTM with informal FastText embeddings.</td>
-<td>
-Dataset size: <b>50,000+</b> labeled comments.<br>
-Hate ratio: <b>40.17%</b> hate speech.<br>
-Best F1-score: <b>86.78%</b>.
-</td>
-<td>Binary hate-speech framing; not fine-grained cyberbullying; Bangla-script only; no Romanized Bangla or cross-script robustness.</td>
-</tr>
-
-<tr>
-<td><b>Nath et al. (2024)</b><br><i>Deep Learning Based Cyberbullying Detection in Bangla Language</i></td>
-<td>12,282 Bangla comments collected from multiple social-media platforms; Bangla script.</td>
-<td>Cyberbullying detection in Bangla.</td>
-<td>Two-layer BiLSTM with multiple optimizers and 5-fold cross-validation.</td>
-<td>
-Dataset size: <b>12,282</b> comments.<br>
-Evaluation: <b>5-fold cross-validation</b>.<br>
-Reported metric type: accuracy / F1-style classification evaluation.
-</td>
-<td>Deep-learning focused but still Bangla-script only; limited benchmark unification; no explicit source-held-out or script-held-out transfer study.</td>
-</tr>
-
-<tr>
-<td><b>Mendeley Multilabel Cyberbullying Dataset</b><br><i>Bangla Multilabel Cyberbully, Sexual Harassment, Threat, and Spam Detection Dataset</i></td>
-<td>Bangla social-media comments with multilabel abuse annotations.</td>
-<td>Multilabel detection of cyberbullying, sexual harassment, religious hate speech, threat, and spam.</td>
-<td>Dataset resource for multilabel Bangla abuse detection.</td>
-<td>
-Dataset type: <b>multilabel Bangla abuse dataset</b>.<br>
-Labels include: <b>cyberbully, sexual harassment, religious hate speech, threat, spam</b>.<br>
-Performance metric: <b>dataset/resource only</b>; no single benchmark metric to compare directly.
-</td>
-<td>Useful dataset, but its multilabel schema is not directly comparable with other Bengali cyberbullying datasets without label unification.</td>
-</tr>
-
-<tr>
-<td><b>Kaggle Bangla Cyber Bullying Dataset</b></td>
-<td>6,010 Bangla text samples; Bangla script.</td>
-<td>5 categories: political, sexual, troll, threat, and neutral/non-bully style labels.</td>
-<td>Dataset resource used by ML/DL studies.</td>
-<td>
-Dataset size: <b>6,010</b> samples.<br>
-Categories: <b>5</b>.<br>
-Performance metric: <b>dataset/resource only</b>; no single official model score.
-</td>
-<td>Small single-source and single-script dataset; limited Romanized Bangla coverage; limited robustness evaluation.</td>
-</tr>
-
-<tr>
-<td><b>BIDWESH (2025)</b><br><i>A Bangla Regional Based Hate Speech Detection Dataset</i></td>
-<td>9,183 instances translated and annotated into regional Bangla dialects such as Barishal, Noakhali, and Chittagong.</td>
-<td>Hate/non-hate detection, hate type, and target-group annotation.</td>
-<td>Dataset construction for dialect-sensitive Bangla hate-speech detection.</td>
-<td>
-Dataset size: <b>9,183</b> instances.<br>
-Dialects: <b>3</b> major regional dialects.<br>
-Type labels: <b>13</b> hate-type categories.<br>
-Target labels: <b>7</b> target classes.
-</td>
-<td>Strong contribution for dialect variation, but not focused on Romanized Bangla cyberbullying or multi-source cyberbullying robustness.</td>
-</tr>
-
-<tr>
-<td><b>BanglaMultiHate (2025/2026)</b><br><i>LLM-Based Multi-Task Bangla Hate Speech Detection: Type, Severity, and Target</i></td>
-<td>Large manually annotated Bangla hate-speech dataset.</td>
-<td>Multi-task hate-speech detection: hate type, severity, and target.</td>
-<td>Classical baselines, monolingual pretrained models, zero-shot LLM prompting, and LoRA fine-tuned LLMs.</td>
-<td>
-Task setup: <b>3-task</b> hate-speech identification framework.<br>
-Reported finding: LoRA-tuned LLMs are competitive, but Bangla-specific pretrained models remain important.<br>
-Exact metric values depend on task/model setting.
-</td>
-<td>Broader hate-speech framing; focuses on multi-task hate labels rather than cyberbullying-specific source/script-held-out robustness.</td>
-</tr>
-
-<tr>
-<td><b>This work: BanglaCyberBench</b><br><i>A Multi-Source, Dual-Script Benchmark and Two Script-Aware Transformer Ensembles for Robust Fine-Grained Bengali Cyberbullying Detection</i></td>
-<td>Four-source Bengali cyberbullying benchmark; Bangla + Romanized Bangla; deduplicated from 135,575 raw comments to 94,337 unique comments.</td>
-<td>5-class cyberbullying taxonomy: none, abusive, sexual, religious, threat. Also includes a 9-class taxonomy ablation.</td>
-<td>
-Model A: script-aware weighted-logit ensemble of BanglishBERT, BanglaBERT, MuRIL, and XLM-R with CE + FGM.<br>
-Model B: full-stack BanglishBERT seed ensemble with focal loss, class weighting, balanced sampler, MSD, R-Drop, FGM, and EMA.
-</td>
-<td>
-<b>Benchmark, 20% test — Model A:</b><br>
-Macro-F1: <b>0.8225</b>.<br>
-Weighted-F1: <b>0.8332</b>.<br>
-Accuracy: <b>0.8339</b>.<br>
-MCC: <b>0.7452</b>.<br>
-Macro-AUROC: <b>0.9626</b>.<br><br>
-
-<b>Benchmark, 20% test — Model B:</b><br>
-Macro-F1: <b>0.8135</b>.<br>
-Weighted-F1: <b>0.8224</b>.<br>
-Accuracy: <b>0.8222</b>.<br>
-MCC: <b>0.7291</b>.<br>
-Macro-AUROC: <b>0.9534</b>.<br><br>
-
-<b>Base-paper protocol — Model A:</b><br>
-Macro-F1: <b>0.8679</b>.<br>
-Weighted-F1: <b>0.8736</b>.<br>
-Accuracy: <b>0.8737</b>.<br>
-MCC: <b>0.8314</b>.<br>
-Macro-AUROC: <b>0.9747</b>.<br><br>
-
-<b>Base-paper protocol — Model B:</b><br>
-Macro-F1: <b>0.8670</b>.<br>
-Weighted-F1: <b>0.8703</b>.<br>
-Accuracy: <b>0.8703</b>.<br>
-MCC: <b>0.8266</b>.<br>
-Macro-AUROC: <b>0.9719</b>.<br><br>
-
-<b>Held-out robustness — Model B:</b><br>
-source_holdout_facebook_44001 Macro-F1: <b>0.5828</b>.<br>
-source_holdout_multilabel_12557 Macro-F1: <b>0.5579</b>.<br>
-source_holdout_bd_shs Macro-F1: <b>0.4549</b>.<br>
-source_holdout_banth / script_holdout_romanized Macro-F1: <b>0.2165</b>.<br>
-script_holdout_bangla Macro-F1: <b>0.1631</b>.
-</td>
-<td>
-Addresses the main gaps jointly: multi-source data, dual-script coverage, deduplication, 5-class fine-grained taxonomy, direct base-paper comparison, and explicit source-held-out plus script-held-out robustness evaluation.
-</td>
-</tr>
-
-</tbody>
-</table>
-
-**Synthesis.** Existing Bengali/Bangla abuse-detection studies show clear progress in dataset creation,
-classical/deep-learning baselines, transformer modelling, and multilingual or LLM-based modelling.
-However, most prior evaluations remain tied to a single source, a single Bangla-script distribution,
-or binary/coarse labels. This leaves three important gaps: heterogeneous datasets are rarely unified
-into one deduplicated benchmark, Romanized Bangla is under-tested, and models are rarely evaluated
-under source-held-out and script-held-out transfer. BanglaCyberBench is designed around these gaps by
-merging four sources, normalising incompatible label schemas into a 5-class taxonomy, removing
-duplicate leakage, and evaluating both in-domain and distribution-shift performance.
-```
-
+**Synthesis.** Existing Bengali/Bangla abuse-detection studies show clear progress in dataset creation, classical/deep-learning baselines, transformer modelling, and multilingual or LLM-based modelling. However, most prior evaluations remain tied to a single source, a single Bangla-script distribution, or binary/coarse labels. This leaves three important gaps: heterogeneous datasets are rarely unified into one deduplicated benchmark, Romanized Bangla is under-tested, and models are rarely evaluated under source-held-out and script-held-out transfer. BanglaCyberBench is designed around these gaps by merging four sources, normalising incompatible label schemas into a 5-class taxonomy, removing duplicate leakage, and evaluating both in-domain and distribution-shift performance.
 
 ---
 ## 4. Dataset: BanglaCyberBench
