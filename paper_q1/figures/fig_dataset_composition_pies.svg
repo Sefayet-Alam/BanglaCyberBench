@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="958.271685pt" height="300.921pt" viewBox="0 0 958.271685 300.921" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-03T10:53:21.170253</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.0, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 300.921 
+L 958.271685 300.921 
+L 958.271685 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 178.856873 272.787038 
+C 195.849594 268.047257 210.561272 257.304675 220.249607 242.561739 
+C 229.937943 227.818802 233.961088 210.052238 231.569107 192.573779 
+C 229.177126 175.095321 220.528496 159.062924 207.235339 147.465075 
+C 193.942185 135.867227 176.885187 129.472286 159.243814 129.472286 
+L 159.243817 202.471714 
+z
+" style="fill: #377eb8; stroke: #ffffff; stroke-width: 1.15; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 100.872072 158.635014 
+C 91.714589 170.828864 86.604238 185.591023 86.262698 200.836769 
+C 85.921162 216.082516 90.365311 231.058722 98.967537 243.650429 
+C 107.569763 256.242135 119.905128 265.827323 134.231616 271.052369 
+C 148.558106 276.277411 164.168011 276.884199 178.856873 272.787038 
+L 159.243817 202.471714 
+z
+" style="fill: #009e73; stroke: #ffffff; stroke-width: 1.15; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 135.243885 133.530292 
+C 128.433188 135.901235 122.011259 139.26839 116.187627 143.521895 
+C 110.363995 147.7754 105.202684 152.868491 100.872072 158.635014 
+L 159.243817 202.471714 
+z
+" style="fill: #e69f00; stroke: #ffffff; stroke-width: 1.15; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 159.243783 129.472286 
+C 155.165612 129.472286 151.094604 129.814035 147.073508 130.493938 
+C 143.052411 131.173842 139.095353 132.189516 135.243885 133.530292 
+L 159.243817 202.471714 
+z
+" style="fill: #7b61a8; stroke: #ffffff; stroke-width: 1.15; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 248.496306 191.99532 
+Q 222.890071 192.431862 222.890071 193.761534 
+" style="fill: none; stroke: #d1d5db; stroke-width: 0.75; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(250.493103 189.79477)">Facebook-44K</text>
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(250.493103 197.908188)">43,078 (45.7%)</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 69.991563 246.358436 
+Q 106.200697 244.747319 106.200697 238.708994 
+" style="fill: none; stroke: #d1d5db; stroke-width: 0.75; stroke-linecap: round"/>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(41.886328 244.957564)">BANTH</text>
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(9.690234 253.070982)">37,334 (39.6%)</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 69.997181 139.360826 
+Q 121.354368 141.363733 121.354368 150.595874 
+" style="fill: none; stroke: #d1d5db; stroke-width: 0.75; stroke-linecap: round"/>
+   </g>
+   <g id="text_3">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(7.2 136.818729)">Multilabel-12.5K</text>
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(19.233984 144.932147)">8,882 (9.4%)</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 69.996176 124.997343 
+Q 148.533945 126.676402 148.533945 139.131273 
+" style="fill: none; stroke: #d1d5db; stroke-width: 0.75; stroke-linecap: round"/>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(39.205078 122.748539)">BD-SHS</text>
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(19.233984 130.861957)">5,029 (5.3%)</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 7.7px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6b7280" x="159.243817" y="105.971098" transform="rotate(-0 159.243817 105.971098)">Four merged datasets</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 10.7px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f2937" x="159.243817" y="95.222429" transform="rotate(-0 159.243817 95.222429)">By source</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_10">
+    <path d="M 435.933287 260.379579 
+C 445.135704 267.442971 455.890648 272.212069 467.303677 274.290244 
+C 478.716706 276.368419 490.462407 275.696417 501.563945 272.330128 
+C 512.665482 268.963839 522.806322 262.99924 531.1431 254.932383 
+C 539.479878 246.865525 545.774892 236.926414 549.504611 225.941642 
+C 553.23433 214.95687 554.292415 203.239627 552.590863 191.764403 
+C 550.889311 180.28918 546.476647 169.383158 539.719846 159.95333 
+C 532.963046 150.523502 524.054767 142.838745 513.735863 137.538155 
+C 503.416959 132.237565 491.981648 129.472286 480.380957 129.472286 
+L 480.38096 202.471714 
+z
+" style="fill: #377eb8; stroke: #ffffff; stroke-width: 1.15; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 480.380961 129.472286 
+C 465.131388 129.472286 450.258477 134.25073 437.862588 143.132815 
+C 425.466699 152.0149 416.160181 164.561859 411.257313 179.00178 
+C 406.354444 193.441703 406.097424 209.061289 410.52255 223.654704 
+C 414.947676 238.248118 423.83634 251.094464 435.933287 260.379579 
+L 480.38096 202.471714 
+z
+" style="fill: #e69f00; stroke: #ffffff; stroke-width: 1.15; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 569.63023 227.370202 
+Q 541.209769 226.367416 541.209769 223.125259 
+" style="fill: none; stroke: #d1d5db; stroke-width: 0.75; stroke-linecap: round"/>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(571.630246 225.832068)">Bangla script</text>
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(571.630246 233.945486)">56,989 (60.4%)</text>
+   </g>
+   <g id="patch_13">
+    <path d="M 391.1331 177.668357 
+Q 419.552151 178.722415 419.552151 181.818172 
+" style="fill: none; stroke: #d1d5db; stroke-width: 0.75; stroke-linecap: round"/>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(319.298471 175.137007)">Romanized Bangla</text>
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(330.827377 183.250425)">37,334 (39.6%)</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 7.7px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6b7280" x="480.38096" y="105.971098" transform="rotate(-0 480.38096 105.971098)">Bangla + Romanized Bangla</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 10.7px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f2937" x="480.38096" y="95.222429" transform="rotate(-0 480.38096 95.222429)">By script</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_14">
+    <path d="M 800.786282 275.467475 
+C 810.402783 275.563882 819.944223 273.759027 828.861099 270.156847 
+C 837.777975 266.554667 845.895754 261.225664 852.746925 254.476752 
+C 859.598097 247.72784 865.048565 239.69111 868.784424 230.82941 
+C 872.520283 221.967708 874.468407 212.454487 874.516613 202.837623 
+C 874.564819 193.22076 872.712153 183.688486 869.065323 174.78978 
+C 865.418492 165.891074 860.048863 157.800107 853.265694 150.982852 
+C 846.482526 144.165597 838.418584 138.755486 829.538268 135.064095 
+C 820.657952 131.372705 811.135084 129.472286 801.518099 129.472286 
+L 801.518103 202.471714 
+z
+" style="fill: #009e73; stroke: #ffffff; stroke-width: 1.15; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 728.898848 195.031278 
+C 727.864111 205.130422 728.94738 215.335246 732.079283 224.992087 
+C 735.211187 234.648928 740.323379 243.547081 747.088411 251.116607 
+C 753.853444 258.686133 762.12372 264.761864 771.369483 268.954623 
+C 780.615246 273.147383 790.634777 275.365703 800.786282 275.467475 
+L 801.518103 202.471714 
+z
+" style="fill: #e15759; stroke: #ffffff; stroke-width: 1.15; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 751.876306 148.949677 
+C 745.428356 154.930162 740.11389 162.026923 736.18955 169.897234 
+C 732.26521 177.767545 729.795219 186.282635 728.898848 195.031278 
+L 801.518103 202.471714 
+z
+" style="fill: #e69f00; stroke: #ffffff; stroke-width: 1.15; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 786.103386 131.118348 
+C 779.731102 132.494977 773.571838 134.719044 767.790116 137.731157 
+C 762.008394 140.743271 756.656148 144.516366 751.876306 148.949677 
+L 801.518103 202.471714 
+z
+" style="fill: #377eb8; stroke: #ffffff; stroke-width: 1.15; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 801.518104 129.472286 
+C 798.928888 129.472286 796.341504 129.610042 793.766926 129.884966 
+C 791.192347 130.159891 788.634218 130.571605 786.103386 131.118348 
+L 801.518103 202.471714 
+z
+" style="fill: #7b61a8; stroke: #ffffff; stroke-width: 1.15; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 890.765262 202.858802 
+Q 865.75679 202.842555 865.75679 202.79372 
+" style="fill: none; stroke: #d1d5db; stroke-width: 0.75; stroke-linecap: round"/>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(892.767388 200.879725)">none</text>
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(892.767388 208.993143)">47,312 (50.2%)</text>
+   </g>
+   <g id="patch_20">
+    <path d="M 712.267357 254.425273 
+Q 753.619986 252.626738 753.619986 245.27923 
+" style="fill: none; stroke: #d1d5db; stroke-width: 0.75; stroke-linecap: round"/>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(681.113739 253.021036)">abusive</text>
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(651.96452 261.134454)">24,963 (26.5%)</text>
+   </g>
+   <g id="patch_21">
+    <path d="M 712.266553 167.837136 
+Q 744.028975 169.177072 744.028975 173.806171 
+" style="fill: none; stroke: #d1d5db; stroke-width: 0.75; stroke-linecap: round"/>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(686.006317 165.304097)">sexual</text>
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(651.96452 173.417515)">10,822 (11.5%)</text>
+   </g>
+   <g id="patch_22">
+    <path d="M 712.271603 132.915234 
+Q 771.837475 134.720862 771.837475 145.500025 
+" style="fill: none; stroke: #d1d5db; stroke-width: 0.75; stroke-linecap: round"/>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(678.478192 130.564733)">religious</text>
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(661.50827 138.678151)">8,032 (8.5%)</text>
+   </g>
+   <g id="patch_23">
+    <path d="M 712.26859 124.321945 
+Q 794.697098 125.95981 794.697098 138.595374 
+" style="fill: none; stroke: #d1d5db; stroke-width: 0.75; stroke-linecap: round"/>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(687.509833 122.090843)">threat</text>
+    <text style="font-size: 7.5px; font-family: 'DejaVu Sans'; fill: #1f2937" transform="translate(661.50827 130.204261)">3,194 (3.4%)</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 7.7px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6b7280" x="801.518103" y="105.971098" transform="rotate(-0 801.518103 105.971098)">Five-class taxonomy</text>
+   </g>
+   <g id="text_17">
+    <text style="font-weight: 700; font-size: 10.7px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f2937" x="801.518103" y="95.222429" transform="rotate(-0 801.518103 95.222429)">By class</text>
+   </g>
+  </g>
+  <g id="text_18">
+   <text style="font-weight: 700; font-size: 13.4px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #1f2937" x="478.998817" y="17.381906" transform="rotate(-0 478.998817 17.381906)">Dataset composition of BanglaCyberBench</text>
+  </g>
+  <g id="text_19">
+   <text style="font-size: 9.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #6b7280" x="478.998817" y="34.308625" transform="rotate(-0 478.998817 34.308625)">Final deduplicated benchmark: 94,323 unique comments</text>
+  </g>
+ </g>
+</svg>
