@@ -1,3 +1,0 @@
-config,macro_f1,weighted_f1,accuracy,mcc
-5-class(ours),0.8071,0.8194,0.8207,0.7249
-9-class(ours),0.6096,0.8018,0.8076,0.7079

@@ -1,7 +1,0 @@
-Class,Base paper,Ours (CE+FGM ens),Ours-alt (full-stack)
-Not Bully,0.9151,0.8891,0.8813
-Religious,0.9374,0.9302,0.9366
-Sexual,0.8845,0.872,0.8711
-Threat,0.7579,0.8292,0.8337
-Troll,0.8446,0.8192,0.8122
-MACRO-F1,0.8923,0.8679,0.867

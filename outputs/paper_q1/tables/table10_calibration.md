@@ -1,0 +1,5 @@
+| Metric       |   Value |
+|:-------------|--------:|
+| ECE (15-bin) |  0.5174 |
+| Brier score  |  1.115  |
+| Macro-AUROC  |  0.5003 |
