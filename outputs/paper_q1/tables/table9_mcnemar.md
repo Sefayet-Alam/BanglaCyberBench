@@ -1,3 +1,0 @@
-| Comparison                | b (prop✓/base✗)   | c (prop✗/base✓)   | chi2   | p                                             | p_exact   | significant@0.05   |
-|:--------------------------|:------------------|:------------------|:-------|:----------------------------------------------|:----------|:-------------------|
-| Proposed vs best baseline | —                 | —                 | —      | requires outputs/baselines/test_pred_best.npy | —         | pending            |
