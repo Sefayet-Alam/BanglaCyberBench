@@ -1,0 +1,10 @@
+macro_f1,weighted_f1,accuracy,mcc,macro_auroc,config,held_out,seed,n_test
+0.5778,0.6238,0.6389,0.5266,0.8701,source_holdout_facebook_44001,facebook_44001,42,43078
+0.5844,0.6263,0.6371,0.5211,0.8708,source_holdout_facebook_44001,facebook_44001,123,43078
+0.5928,0.6382,0.6497,0.5395,0.88,source_holdout_facebook_44001,facebook_44001,456,43078
+0.5703,0.5739,0.6012,0.4617,0.8647,source_holdout_multilabel_12557,multilabel_12557,42,8882
+0.5464,0.536,0.5751,0.4365,0.8655,source_holdout_multilabel_12557,multilabel_12557,123,8882
+0.5637,0.5682,0.5971,0.4563,0.8668,source_holdout_multilabel_12557,multilabel_12557,456,8882
+0.462,0.5836,0.5564,0.4098,0.8328,source_holdout_bd_shs,bd_shs,42,5029
+0.4646,0.5841,0.5582,0.4134,0.8315,source_holdout_bd_shs,bd_shs,123,5029
+0.457,0.5701,0.5446,0.4033,0.8298,source_holdout_bd_shs,bd_shs,456,5029

@@ -1,0 +1,4 @@
+held_out,n_test,macro_f1_mean,macro_f1_std,weighted_f1_mean,accuracy_mean,mcc_mean,auroc_mean
+facebook_44001,43078,0.585,0.0075,0.6294,0.6419,0.5291,0.8736
+multilabel_12557,8882,0.5601,0.0123,0.5594,0.5911,0.4515,0.8657
+bd_shs,5029,0.4612,0.0039,0.5793,0.5531,0.4088,0.8314

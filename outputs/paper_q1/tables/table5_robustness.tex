@@ -1,0 +1,15 @@
+\begin{table}[!htbp]
+\centering
+\caption{Source-held-out robustness of the proposed model, three Bangla-script sources, four encoders, three seeds per configuration (mean $\pm$ std on Macro-F1). Each row trains on the other two Bangla-script sources and tests on the held-out one. In-domain reference Macro-F1 $= 0.8225$.}
+\label{tab:robustness}
+\small
+\begin{tabular}{@{}llccccc@{}}
+\toprule
+\textbf{Held-out source} & \textbf{$n_{\mathrm{test}}$} & \textbf{Macro-F1} & \textbf{Weighted-F1} & \textbf{Accuracy} & \textbf{MCC} & \textbf{AUROC} \\
+\midrule
+Facebook-44K & 43,078 & 0.5850 $\pm$ 0.0075 & 0.6294 & 0.6419 & 0.5291 & 0.8736 \\
+Multilabel-12.5K & 8,882 & 0.5601 $\pm$ 0.0123 & 0.5594 & 0.5911 & 0.4515 & 0.8657 \\
+BD-SHS & 5,029 & 0.4612 $\pm$ 0.0039 & 0.5793 & 0.5531 & 0.4088 & 0.8314 \\
+\bottomrule
+\end{tabular}
+\end{table}
