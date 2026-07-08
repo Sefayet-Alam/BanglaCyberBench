@@ -1,0 +1,45 @@
+{
+  "protocol": "3 Bangla-script sources; banth entirely excluded from the pool",
+  "bangla_sources": [
+    "facebook_44001",
+    "multilabel_12557",
+    "bd_shs"
+  ],
+  "val_frac": 0.125,
+  "split_seed": 42,
+  "configs": {
+    "source_holdout_facebook_44001": {
+      "train_n": 12172,
+      "val_n": 1739,
+      "test_n": 43078,
+      "train_sources": [
+        "bd_shs",
+        "multilabel_12557"
+      ],
+      "held_out_source": "facebook_44001",
+      "banth_in_training": false
+    },
+    "source_holdout_multilabel_12557": {
+      "train_n": 42093,
+      "val_n": 6014,
+      "test_n": 8882,
+      "train_sources": [
+        "bd_shs",
+        "facebook_44001"
+      ],
+      "held_out_source": "multilabel_12557",
+      "banth_in_training": false
+    },
+    "source_holdout_bd_shs": {
+      "train_n": 45465,
+      "val_n": 6495,
+      "test_n": 5029,
+      "train_sources": [
+        "facebook_44001",
+        "multilabel_12557"
+      ],
+      "held_out_source": "bd_shs",
+      "banth_in_training": false
+    }
+  }
+}
