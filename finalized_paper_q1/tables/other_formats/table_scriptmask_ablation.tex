@@ -1,0 +1,14 @@
+\begin{table}[!htbp]
+\centering
+\caption{Script-mask ablation. Masking the Bangla-script specialist (BanglaBERT) off Romanized rows is compared against letting every backbone vote on every comment.}
+\label{tab:scriptmask}
+\small
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Setting} & \textbf{Romanized Macro-F1} & \textbf{Overall Macro-F1} \\
+\midrule
+No script mask (all vote) & 0.4568 & 0.8183 \\
+Script-aware mask (proposed) & 0.4774 & 0.8176 \\
+\bottomrule
+\end{tabular}
+\end{table}

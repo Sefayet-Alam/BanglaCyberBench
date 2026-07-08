@@ -1,0 +1,4 @@
+Fusion method,Test Macro-F1,Note
+Best single backbone,0.8073,banglishbert
+Uniform average,0.8196,equal weights
+Nelder–Mead weighted,0.8193,validation-optimised

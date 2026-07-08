@@ -1,0 +1,6 @@
+True / Predicted,abusive,none,religious,sexual,threat
+abusive,3628,1081,28,195,61
+none,856,8446,45,91,25
+religious,60,78,1421,26,21
+sexual,225,143,17,1758,22
+threat,48,48,30,33,479
