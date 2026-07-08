@@ -1,0 +1,14 @@
+\begin{table}[!htbp]
+\centering
+\caption{Taxonomy ablation under the proposed CE+FGM recipe. The finer nine-class scheme crashes Macro-F1 while leaving Weighted-F1 nearly unchanged, exposing unlearnable rare classes.}
+\label{tab:taxonomy}
+\small
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Taxonomy} & \textbf{Macro-F1} & \textbf{Weighted-F1} & \textbf{Accuracy} & \textbf{MCC} & \textbf{AUROC} \\
+\midrule
+5-class & 0.8073 & 0.8203 & 0.8214 & 0.7255 & 0.9556 \\
+9-class & 0.614 & 0.802 & 0.8069 & 0.7071 & 0.946 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,3 @@
+config,macro_f1,weighted_f1,accuracy,mcc,auroc
+5-class,0.8073,0.8203,0.8214,0.7255,0.9556
+9-class,0.614,0.802,0.8069,0.7071,0.946

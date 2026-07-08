@@ -1,0 +1,15 @@
+\begin{table}[!htbp]
+\centering
+\caption{Fusion ablation on the 20\% test split. Validation-optimised weighted-logit fusion is compared against a uniform average and the best single backbone.}
+\label{tab:fusion}
+\small
+\begin{tabular}{@{}lcc@{}}
+\toprule
+\textbf{Fusion method} & \textbf{Test Macro-F1} & \textbf{Note} \\
+\midrule
+Best single backbone & 0.8073 & banglishbert \\
+Uniform average & 0.8196 & equal weights \\
+Nelder–Mead weighted & 0.8193 & validation-optimised \\
+\bottomrule
+\end{tabular}
+\end{table}
