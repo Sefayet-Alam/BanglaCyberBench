@@ -1,0 +1,6 @@
+Measure,Value,Interpretation
+Cohen's $\kappa$ (annotator 1 vs.\ 2),0.709,substantial
+Percent agreement (1 vs.\ 2),80.0\%,—
+$\kappa$ (annotator 1 vs.\ consolidated label),0.851,almost perfect
+$\kappa$ (annotator 2 vs.\ consolidated label),0.852,almost perfect
+Annotated sample size,500,stratified
