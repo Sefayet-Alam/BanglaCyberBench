@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-07-06T00:00:00.000Z" agent="Claude" version="24.0.0" type="device">
+  <diagram id="d3-worked-example" name="Worked Example">
+    <mxGraphModel dx="1600" dy="900" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0" background="none">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Title -->
+        <mxCell id="title" value="&lt;b style=&quot;font-size:20px;color:#1e2838;&quot;&gt;How One Comment Becomes a Label&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:12px;color:#6a7280;&quot;&gt;the same pipeline traced on a Romanized and a Bangla-script comment&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="24" width="900" height="48" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= ROW A: Romanized ================= -->
+        <mxCell id="rowA" value="" style="rounded=1;fillColor=#fff7ed;strokeColor=#e8a95f;strokeWidth=1.5;dashed=0;verticalAlign=top;align=left;fontStyle=1;fontColor=#9a5b12;fontSize=13;spacingLeft=12;spacingTop=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="92" width="1520" height="330" as="geometry"/>
+        </mxCell>
+        <mxCell id="rowAlab" value="Romanized comment&#160;&#160;·&#160;&#160;s(x) = rom&#160;&#160;→&#160;&#160;BanglaBERT is masked out" style="text;html=1;align=left;fillColor=none;strokeColor=none;fontStyle=1;fontColor=#9a5b12;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="54" y="100" width="700" height="22" as="geometry"/>
+        </mxCell>
+
+        <!-- A0 input -->
+        <mxCell id="a0" value="&lt;b&gt;Input&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-family:monospace;font-size:12px;&quot;&gt;&quot;tui akta faltu manush&quot;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;color:#6a7280;&quot;&gt;(you are a worthless person)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e8a95f;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="150" width="180" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- A1 tokenize -->
+        <mxCell id="a1" value="&lt;b&gt;Tokenize + Embed&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-family:monospace;font-size:9.5px;&quot;&gt;[CLS] tui akta fal ##tu manush [SEP]&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;color:#6a7280;&quot;&gt;e ∈ R&lt;sup&gt;T×768&lt;/sup&gt; (token + position)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e8a95f;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="285" y="150" width="215" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- A2 encoders -->
+        <mxCell id="a2" value="&lt;b&gt;3 active encoders&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10.5px;&quot;&gt;BanglishBERT · MuRIL · XLM-R&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;color:#b91c1c;&quot;&gt;BanglaBERT → 0 (masked)&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;color:#6a7280;&quot;&gt;12 blocks · self-attention&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e8a95f;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="545" y="150" width="205" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- A3 FGM -->
+        <mxCell id="a3" value="&lt;b&gt;CE + FGM (train)&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;color:#6a7280;&quot;&gt;perturb faltu, manush&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-family:monospace;font-size:10px;&quot;&gt;r = ε·g/‖g‖&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;color:#6a7280;&quot;&gt;learns meaning, not spelling&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3e2;strokeColor=#e8a95f;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="795" y="150" width="180" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- A4 per-encoder logits -->
+        <mxCell id="a4" value="&lt;b&gt;Pooled head → logits&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;color:#6a7280;&quot;&gt;per active encoder, z ∈ R&lt;sup&gt;5&lt;/sup&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-family:monospace;font-size:9px;&quot;&gt;[ab .61 · no .20 · re .04&lt;br&gt;· se .11 · th .04]&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e8a95f;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="150" width="190" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- A5 fusion -->
+        <mxCell id="a5" value="&lt;b&gt;Weighted-logit fusion&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;color:#6a7280;&quot;&gt;9 members · renormalised&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-family:monospace;font-size:10px;&quot;&gt;argmax&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#e8a95f;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1255" y="150" width="170" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- A6 decision -->
+        <mxCell id="a6" value="&lt;b style=&quot;font-size:13px;&quot;&gt;abusive&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d97706;strokeColor=#b45309;strokeWidth=2;fontSize=12;fontColor=#ffffff;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="165" width="95" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- A note -->
+        <mxCell id="anote" value="On a Romanized comment the three script-capable encoders decide; the Bangla-script specialist contributes nothing." style="text;html=1;align=left;fillColor=none;strokeColor=none;fontSize=10.5;fontColor=#9a5b12;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="255" width="900" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- Row A arrows -->
+        <mxCell id="ea01" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#c98a3f;strokeWidth=1.5;html=1;" edge="1" parent="1" source="a0" target="a1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ea12" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#c98a3f;strokeWidth=1.5;html=1;" edge="1" parent="1" source="a1" target="a2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ea23" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#c98a3f;strokeWidth=1.5;html=1;" edge="1" parent="1" source="a2" target="a3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ea34" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#c98a3f;strokeWidth=1.5;html=1;" edge="1" parent="1" source="a3" target="a4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ea45" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#c98a3f;strokeWidth=1.5;html=1;" edge="1" parent="1" source="a4" target="a5"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="ea56" style="edgeStyle=none;rounded=0;endArrow=block;endFill=1;strokeColor=#c98a3f;strokeWidth=1.5;html=1;" edge="1" parent="1" source="a5" target="a6"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- ================= ROW B: Bangla ================= -->
+        <mxCell id="rowB" value="" style="rounded=1;fillColor=#eef4fb;strokeColor=#6c8ebf;strokeWidth=1.5;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="452" width="1520" height="330" as="geometry"/>
+        </mxCell>
+        <mxCell id="rowBlab" value="Bangla-script comment&#160;&#160;·&#160;&#160;s(x) = bn&#160;&#160;→&#160;&#160;all four encoders active" style="text;html=1;align=left;fillColor=none;strokeColor=none;fontStyle=1;fontColor=#2c5486;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="54" y="460" width="700" height="22" as="geometry"/>
+        </mxCell>
+
+        <!-- B0 input -->
+        <mxCell id="b0" value="&lt;b&gt;Input&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:13px;&quot;&gt;তুই একটা বাজে লোক&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;color:#6a7280;&quot;&gt;(you are a bad person)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="60" y="510" width="180" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- B1 tokenize -->
+        <mxCell id="b1" value="&lt;b&gt;Tokenize + Embed&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:11px;&quot;&gt;[CLS] তুই একটা বাজে লোক [SEP]&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;color:#6a7280;&quot;&gt;e ∈ R&lt;sup&gt;T×768&lt;/sup&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="285" y="510" width="215" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- B2 encoders -->
+        <mxCell id="b2" value="&lt;b&gt;4 active encoders&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;color:#166534;&quot;&gt;BanglaBERT specialist active&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;&quot;&gt;+ BanglishBERT · MuRIL · XLM-R&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;color:#6a7280;&quot;&gt;12 blocks · self-attention&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="545" y="510" width="205" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- B3 FGM -->
+        <mxCell id="b3" value="&lt;b&gt;CE + FGM (train)&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;color:#6a7280;&quot;&gt;perturb বাজে, লোক&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-family:monospace;font-size:10px;&quot;&gt;r = ε·g/‖g‖&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;color:#6a7280;&quot;&gt;robust to spelling noise&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#eaf1f9;strokeColor=#6c8ebf;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="795" y="510" width="180" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- B4 logits -->
+        <mxCell id="b4" value="&lt;b&gt;Pooled head → logits&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;color:#6a7280;&quot;&gt;per active encoder, z ∈ R&lt;sup&gt;5&lt;/sup&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-family:monospace;font-size:9px;&quot;&gt;[ab .58 · no .28 · re .05&lt;br&gt;· se .06 · th .03]&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="510" width="190" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- B5 fusion -->
+        <mxCell id="b5" value="&lt;b&gt;Weighted-logit fusion&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size:10px;color:#6a7280;&quot;&gt;all 12 members&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-family:monospace;font-size:10px;&quot;&gt;argmax&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#6c8ebf;strokeWidth=1.5;fontSize=11;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1255" y="510" width="170" height="90" as="geometry"/>
+        </mxCell>
+
+        <!-- B6 decision -->
+        <mxCell id="b6" value="&lt;b style=&quot;font-size:13px;&quot;&gt;abusive&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2f6fb0;strokeColor=#255a8f;strokeWidth=2;fontSize=12;fontColor=#ffffff;align=center;" vertex="1" parent="1">
+          <mxGeometry x="1450" y="525" width="95" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="bnote" value="On a Bangla-script comment all four encoders vote; the specialist adds the cleanest read of the majority script." style="text;html=1;align=left;fillColor=none;strokeColor=none;fontSize=10.5;fontColor=#2c5486;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="615" width="900" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- Row B arrows -->
+        <mxCell id="eb01" style="edgeStyle=none;endArrow=block;endFill=1;strokeColor=#6c8ebf;strokeWidth=1.5;html=1;" edge="1" parent="1" source="b0" target="b1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="eb12" style="edgeStyle=none;endArrow=block;endFill=1;strokeColor=#6c8ebf;strokeWidth=1.5;html=1;" edge="1" parent="1" source="b1" target="b2"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="eb23" style="edgeStyle=none;endArrow=block;endFill=1;strokeColor=#6c8ebf;strokeWidth=1.5;html=1;" edge="1" parent="1" source="b2" target="b3"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="eb34" style="edgeStyle=none;endArrow=block;endFill=1;strokeColor=#6c8ebf;strokeWidth=1.5;html=1;" edge="1" parent="1" source="b3" target="b4"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="eb45" style="edgeStyle=none;endArrow=block;endFill=1;strokeColor=#6c8ebf;strokeWidth=1.5;html=1;" edge="1" parent="1" source="b4" target="b5"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="eb56" style="edgeStyle=none;endArrow=block;endFill=1;strokeColor=#6c8ebf;strokeWidth=1.5;html=1;" edge="1" parent="1" source="b5" target="b6"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <!-- stage labels across top -->
+        <mxCell id="s1" value="raw text" style="text;html=1;align=center;fillColor=none;strokeColor=none;fontSize=9.5;fontColor=#9aa2ad;" vertex="1" parent="1"><mxGeometry x="60" y="132" width="180" height="14" as="geometry"/></mxCell>
+        <mxCell id="s2" value="subword ids" style="text;html=1;align=center;fillColor=none;strokeColor=none;fontSize=9.5;fontColor=#9aa2ad;" vertex="1" parent="1"><mxGeometry x="285" y="132" width="215" height="14" as="geometry"/></mxCell>
+        <mxCell id="s3" value="contextual states" style="text;html=1;align=center;fillColor=none;strokeColor=none;fontSize=9.5;fontColor=#9aa2ad;" vertex="1" parent="1"><mxGeometry x="545" y="132" width="205" height="14" as="geometry"/></mxCell>
+        <mxCell id="s4" value="objective" style="text;html=1;align=center;fillColor=none;strokeColor=none;fontSize=9.5;fontColor=#9aa2ad;" vertex="1" parent="1"><mxGeometry x="795" y="132" width="180" height="14" as="geometry"/></mxCell>
+        <mxCell id="s5" value="logits" style="text;html=1;align=center;fillColor=none;strokeColor=none;fontSize=9.5;fontColor=#9aa2ad;" vertex="1" parent="1"><mxGeometry x="1020" y="132" width="190" height="14" as="geometry"/></mxCell>
+        <mxCell id="s6" value="fusion" style="text;html=1;align=center;fillColor=none;strokeColor=none;fontSize=9.5;fontColor=#9aa2ad;" vertex="1" parent="1"><mxGeometry x="1255" y="132" width="170" height="14" as="geometry"/></mxCell>
+        <mxCell id="s7" value="label" style="text;html=1;align=center;fillColor=none;strokeColor=none;fontSize=9.5;fontColor=#9aa2ad;" vertex="1" parent="1"><mxGeometry x="1450" y="132" width="95" height="14" as="geometry"/></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
