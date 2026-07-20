@@ -1,356 +1,109 @@
-<!-- README.md -->
+# BanglaCyberBench
 
-<h1 align="center">BanglaCyberBench</h1>
+**A dual-script benchmark and a script-aware ensemble for Bengali cyberbullying detection**
 
-<p align="center">
-  <b>A Dual-Script Benchmark and a Script-Aware Ensemble<br/>
-  for Bengali Cyberbullying Detection</b>
-</p>
+This repository contains the code, notebooks, manifests, paper assets, and
+evaluation artefacts for the BanglaCyberBench study. The benchmark consolidates
+four public Bengali sources into 94,323 deduplicated comments covering Bangla
+and Romanized Bangla. The proposed system is a four-backbone ensemble trained
+with cross-entropy plus FGM and evaluated with random-split, script-aware, and
+source-held-out protocols.
 
-<p align="center">
-  <img alt="Python" src="https://img.shields.io/badge/python-3.10%2B-blue">
-  <img alt="PyTorch" src="https://img.shields.io/badge/PyTorch-2.x-ee4c2c">
-  <img alt="Transformers" src="https://img.shields.io/badge/%F0%9F%A4%97%20Transformers-4.44%2B-yellow">
-  <img alt="Status" src="https://img.shields.io/badge/experiments-complete-brightgreen">
-  <img alt="Task" src="https://img.shields.io/badge/task-Bengali%20cyberbullying%20detection-purple">
-  <img alt="License" src="https://img.shields.io/badge/license-research--only-lightgrey">
-</p>
+The accompanying paper is the authoritative description of the taxonomy,
+deduplication rule, splits, training configuration, ablations, and limitations.
+The published comparator is the eight-backbone transformer-stacking study; it
+does not use FGM. The FGM results in this repository refer to the proposed
+system only.
 
----
+## Reproducibility levels
 
-## Overview
+### Level 1: reproduce the reported metrics (recommended first check)
 
-**BanglaCyberBench** is a deduplicated, multi-source, dual-script benchmark for fine-grained Bengali cyberbullying detection. It merges four public Bengali abuse-detection datasets into one corpus of **94,323 unique comments** (from 135,575 raw rows), covering both **Bangla script** and **Romanized Bangla** (*Banglish*).
-
-Prior Bengali cyberbullying work shares three limitations that this project takes up directly:
-
-1. Datasets are almost always **single-source**, so models learn one platform's quirks rather than the phenomenon.
-2. Evaluation is almost always **Bangla-script only**, leaving the ubiquitous Romanized script untested.
-3. Evaluation almost always stops at a **random in-domain split**, so nothing measures transfer under distribution shift.
-
-The repository contains the full research pipeline:
-
-```text
-dataset inventory → EDA / preprocessing → label consolidation → splits
-→ classical + transformer baselines → proposed script-aware ensemble
-→ component / taxonomy / script-mask ablations → cross-source robustness
-→ base-paper comparison → statistical analysis → paper-ready figures & tables
-```
-
-The proposed system is a **script-aware weighted-logit transformer ensemble** over BanglishBERT, BanglaBERT, MuRIL, and XLM-R. On the official 20% in-domain test split it reaches:
-
-> **Macro-F1 0.8225** &nbsp;·&nbsp; **Weighted-F1 0.8332** &nbsp;·&nbsp; **Accuracy 0.8339** &nbsp;·&nbsp; **MCC 0.7452** &nbsp;·&nbsp; **Macro-AUROC 0.9626**
->
-> 95% bootstrap CI on Macro-F1: **[0.8151, 0.8298]** (B = 2,000).
-
----
-
-## Key Contributions
-
-1. **BanglaCyberBench benchmark** — four public sources unified, deduplicated to **94,323** unique comments, dual-script (Bangla 60.4% / Romanized 39.6%), under one schema: `text`, `text_clean`, `label_binary`, `label_type`, `label5`, `source`, `script`, `uid`. A hard `uid` intersection assertion guarantees no comment leaks across splits.
-
-2. **Documented 5-class taxonomy** — 89 raw label strings folded into `none`, `abusive`, `sexual`, `religious`, `threat` by an explicit priority rule:
-
-   ```text
-   threat > sexual > religious > abusive > none
-   ```
-
-   Label quality was verified with a two-stage check: an LLM screened every consolidated label against its text, and the flagged/borderline cases were manually adjudicated by the authors.
-
-3. **Script-aware ensemble with a lean, ablation-chosen recipe** — each of the four encoders is fine-tuned with **cross-entropy + FGM adversarial training** (3 seeds each); the twelve logit vectors are fused by a validation-optimised weighted-logit rule. BanglaBERT is a **Bangla-script specialist**, masked off on Romanized rows.
-
-4. **Cross-source robustness study** — each of the three Bangla-script sources is held out in turn (train on the other two, test on the held-out one), with error bars over three seeds. The Romanized source is treated separately as a coupled source-plus-script shift.
-
-5. **Same-protocol base-paper comparison** — retrained under Hoque et al.'s Facebook-44K, native 5-class protocol; competitive overall and clearly stronger on the safety-critical `Threat` class.
-
-6. **Statistically grounded reporting** — bootstrap 95% confidence intervals on every headline and per-class metric; benchmark, splits, and code released.
-
----
-
-## Final Benchmark Summary
-
-### Sources (after deduplication)
-
-| Source | Script | Origin | Final samples |
-|---|---|---|---:|
-| `facebook_44001` | Bangla | Mendeley | 43,078 |
-| `banth` | Romanized | Kaggle | 37,334 |
-| `multilabel_12557` | Bangla | Kaggle | 8,882 |
-| `bd_shs` | Bangla | Mendeley | 5,029 |
-| **Total** | — | — | **94,323** |
-
-### Script Distribution
-
-| Script | Samples | Share |
-|---|---:|---:|
-| Bangla script | 56,989 | 60.4% |
-| Romanized Bangla | 37,334 | 39.6% |
-| **Total** | **94,323** | **100.0%** |
-
-### Class Distribution
-
-| Class | Samples | Share |
-|---|---:|---:|
-| `none` | 47,312 | 50.2% |
-| `abusive` | 24,963 | 26.5% |
-| `sexual` | 10,822 | 11.5% |
-| `religious` | 8,032 | 8.5% |
-| `threat` | 3,194 | 3.4% |
-| **Total** | **94,323** | **100.0%** |
-
-The corpus is strongly imbalanced (≈14.8:1 between `none` and `threat`), which is why **Macro-F1** is the primary metric.
-
----
-
-## Splits
-
-Main in-domain setting: stratified **70/10/20** split on `label5`.
-
-| Split | Samples |
-|---|---:|
-| Train | 66,026 |
-| Validation | 9,432 |
-| Test | 18,865 |
-| **Total** | **94,323** |
-
-Robustness protocol:
-
-| Protocol | Description |
-|---|---|
-| Source-held-out (×3) | Train on two Bangla-script sources, test on the third; `banth` excluded from the pool |
-
-Every configuration re-runs a hard `uid` intersection assertion, so cross-split leakage is impossible by construction.
-
----
-
-## Proposed Model
-
-```mermaid
-flowchart TD
-  A["Input comment (text_clean + script tag)"] --> R{"Script?"}
-  R -->|Bangla| B["All four encoders active"]
-  R -->|Romanized| C["BanglaBERT masked (weight = 0)"]
-
-  B --> E1["BanglishBERT"]
-  B --> E2["BanglaBERT (specialist)"]
-  B --> E3["MuRIL"]
-  B --> E4["XLM-R"]
-  C --> E1
-  C --> E3
-  C --> E4
-
-  E1 --> D["Per-run logits (4 encoders × 3 seeds)"]
-  E2 --> D
-  E3 --> D
-  E4 --> D
-
-  D --> F["Validation-optimised weighted-logit fusion (Nelder–Mead)"]
-  F --> G["Final 5-class prediction"]
-```
-
-### Encoder Roles
-
-| Encoder | Hugging Face ID | Role |
-|---|---|---|
-| BanglishBERT | `csebuetnlp/banglishbert` | Bilingual Bangla + Romanized workhorse |
-| BanglaBERT | `csebuetnlp/banglabert` | Bangla-script specialist (masked off Romanized rows) |
-| MuRIL | `google/muril-base-cased` | Multilingual / transliteration-aware |
-| XLM-R | `xlm-roberta-base` | Multilingual baseline |
-
-### Training Recipe
-
-| Component | Setting |
-|---|---|
-| Loss | Label-smoothed cross-entropy (s = 0.03) |
-| Adversarial training | FGM (ε = 1.0) |
-| Optimiser | AdamW, encoder LR 2e-5 / head LR 8e-5, no decay |
-| Seeds | 42, 123, 456 |
-| Max length | 128 |
-| Precision | fp16 mixed precision |
-| Hardware | 1 × NVIDIA A6000 (48 GB), 32 GB RAM |
-| Fusion | Validation-optimised weighted-logit (Nelder–Mead) |
-| Primary metric | Macro-F1 |
-
----
-
-## Main Results
-
-### Official 20% In-Domain Test (n = 18,865)
-
-| System | Macro-F1 | Weighted-F1 | Accuracy | MCC | Macro-AUROC |
-|---|---:|---:|---:|---:|---:|
-| Best non-transformer baseline | 0.7674 | 0.7889 | 0.7933 | 0.6788 | 0.9418 |
-| **Proposed model** | **0.8225** | **0.8332** | **0.8339** | **0.7452** | **0.9626** |
-
-Bootstrap 95% CIs: Macro-F1 [0.8151, 0.8298] · Weighted-F1 [0.8277, 0.8384] · Accuracy [0.8285, 0.8392] · MCC [0.7369, 0.7530].
-
-### Per-Class F1 (with 95% CI)
-
-| Class | Precision | Recall | F1 | 95% CI | Support |
-|---|---:|---:|---:|---|---:|
-| `religious` | 0.9221 | 0.8848 | 0.9031 | [0.8924, 0.9143] | 1,606 |
-| `none` | 0.8622 | 0.8925 | 0.8771 | [0.8719, 0.8819] | 9,463 |
-| `sexual` | 0.8359 | 0.8120 | 0.8238 | [0.8107, 0.8356] | 2,165 |
-| `threat` | 0.7878 | 0.7508 | 0.7689 | [0.7429, 0.7951] | 638 |
-| `abusive` | 0.7532 | 0.7266 | 0.7397 | [0.7301, 0.7486] | 4,993 |
-
-### Confusion Matrix (20% test)
-
-| True \ Predicted | abusive | none | religious | sexual | threat |
-|---|---:|---:|---:|---:|---:|
-| abusive | 3,628 | 1,081 | 28 | 195 | 61 |
-| none | 856 | 8,446 | 45 | 91 | 25 |
-| religious | 60 | 78 | 1,421 | 26 | 21 |
-| sexual | 225 | 143 | 17 | 1,758 | 22 |
-| threat | 48 | 48 | 30 | 33 | 479 |
-
-Errors concentrate on the `abusive` ↔ `none` boundary — an intent-level overlap, not a data-scarcity problem.
-
----
-
-## Ablations
-
-### Component Ablation (BanglishBERT, 3 seeds, mean ± std)
-
-| Configuration | Macro-F1 | Δ vs CE |
-|---|---:|---:|
-| CE only (reference) | 0.7961 ± 0.0022 | +0.0000 |
-| **+ FGM** | **0.8071 ± 0.0009** | **+0.0110** |
-| + focal + class weights | 0.8055 ± 0.0012 | +0.0094 |
-| + balanced sampler | 0.7995 ± 0.0026 | +0.0034 |
-| + multi-sample dropout | 0.8068 ± 0.0014 | +0.0107 |
-| + R-Drop | 0.8083 ± 0.0006 | +0.0123 |
-| + EMA | 0.8093 ± 0.0004 | +0.0132 |
-| Full stack (all on) | 0.8042 ± 0.0019 | +0.0081 |
-
-FGM is the decisive gain (≈5× the seed noise). EMA/R-Drop add small further gains that the ensemble's seed-averaging already captures; the balanced sampler and full stack regress. The proposed model fine-tunes each backbone with **CE + FGM** and stops there.
-
-### Taxonomy Ablation
-
-| Taxonomy | Macro-F1 | Weighted-F1 |
-|---|---:|---:|
-| 5-class (headline) | 0.8073 | 0.8203 |
-| 9-class (ablation) | 0.6140 | 0.8020 |
-
-Macro-F1 crashes under 9 classes while Weighted-F1 barely moves — the finer taxonomy is not learnable at this data scale.
-
-### Script Mask (Romanized subset)
-
-| Setting | Romanized Macro-F1 |
-|---|---:|
-| No script mask (all backbones vote) | 0.4568 |
-| **Script-aware mask (proposed)** | **0.4774** |
-
-Masking the Bangla-script specialist off Romanized comments lifts Romanized Macro-F1 by +0.0206. The absolute level is low because Romanized is the minority, data-poor script — the mask makes it measurably less so.
-
----
-
-## Cross-Source Robustness (3 Bangla-script hold-outs, 4 encoders, 3 seeds)
-
-| Held-out source | Test samples | Macro-F1 | Weighted-F1 | Accuracy | MCC | Macro-AUROC |
-|---|---:|---:|---:|---:|---:|---:|
-| Facebook-44K | 43,078 | 0.5850 ± 0.0075 | 0.6294 | 0.6419 | 0.5291 | 0.8736 |
-| Multilabel-12.5K | 8,882 | 0.5601 ± 0.0123 | 0.5594 | 0.5911 | 0.4515 | 0.8657 |
-| BD-SHS | 5,029 | 0.4612 ± 0.0039 | 0.5793 | 0.5531 | 0.4088 | 0.8314 |
-
-In-domain reference Macro-F1 = 0.8225. Transfer to an unseen source costs **24–36 Macro-F1 points**; AUROC stays high (0.83–0.87), so the ranking survives the shift but the decision threshold no longer fits the shifted class balance. This is the study's central message: in-domain accuracy overstates cross-source readiness.
-
-> **Note.** The `banth` (Romanized) hold-out is deliberately excluded from the source-shift analysis because it changes source *and* script at once; its number cannot be attributed to either factor alone. Cross-script transfer is treated as an open problem, not a solved result.
-
----
-
-## Base-Paper Comparison (Facebook-44K, native 5-class protocol)
-
-Separate protocol — not comparable to the merged-benchmark numbers above.
-
-| System | Macro-F1 | Weighted-F1 | Accuracy | MCC | Macro-AUROC |
-|---|---:|---:|---:|---:|---:|
-| Base paper (Hoque et al., 2025) | 0.8923 | — | — | — | — |
-| **Proposed model** | 0.8679 | 0.8736 | 0.8737 | 0.8314 | 0.9747 |
-
-### Per-Class F1
-
-| Class | Base paper | Proposed model | Δ |
-|---|---:|---:|---:|
-| Not Bully | 0.9151 | 0.8891 | −0.0260 |
-| Religious | 0.9374 | 0.9302 | −0.0072 |
-| Sexual | 0.8845 | 0.8720 | −0.0125 |
-| Troll | 0.8446 | 0.8192 | −0.0254 |
-| **Threat** | 0.7579 | **0.8292** | **+0.0713** |
-
-The proposed model trades a little on the easy classes for a **+7.1-point gain on `Threat`**, the class a moderator can least afford to miss — with four backbones against the base paper's stacked three.
-
----
-
-## Repository Structure
-
-```text
-BanglaCyberBench/
-├── data/
-│   ├── merged/
-│   ├── processed/            # benchmark_cleaned.csv (master, one row per comment)
-│   └── splits/               # random_{train,val,test}.csv + source_holdout_bangla_only/
-│
-├── notebooks/
-│   ├── 01_dataset_inventory.ipynb
-│   ├── 02_preprocessing_and_consolidation.ipynb
-│   ├── 03_data_splits.ipynb
-│   ├── 04_baselines.ipynb
-│   ├── 05_advanced_finetuning.ipynb
-│   ├── 06_ensemble.ipynb
-│   ├── 07_robustness.ipynb
-│   ├── 08_ablation_upd.ipynb
-│   ├── 09_basepaper_comparison.ipynb
-│   ├── 10_analysis_and_assets.ipynb
-│   └── 12_paper_asset_creation.ipynb
-│
-├── outputs/
-│   ├── baselines/
-│   ├── models_main/
-│   ├── ensemble/
-│   ├── robustness/
-│   ├── ablation/
-│   ├── basepaper/
-│   └── paper_q1/
-│       ├── figures/
-│       └── tables/
-│
-├── paper/                    # main.tex, references.bib, figures/
-├── experiment_logs_v3.md
-├── README.md
-└── LICENSE
-```
-
----
-
-## Key Output Files
-
-| File | Description |
-|---|---|
-| `outputs/ensemble/ensemble_test_metrics.json` | Final proposed-model in-domain test metrics |
-| `outputs/ensemble/test_pred.npy`, `test_proba.npy` | Per-example predictions and probabilities |
-| `outputs/models_main/per_run_summary.csv` | Per-backbone, per-seed transformer results |
-| `outputs/robustness/robustness_summary.csv` | Source-held-out robustness (mean ± std) |
-| `outputs/robustness/robustness_perseed.csv` | Per-seed robustness rows |
-| `outputs/ablation/component_ablation.csv` | Component ablation (CE-only reference) |
-| `outputs/ablation/taxonomy_ablation.csv` | 5-class vs 9-class ablation |
-| `outputs/paper_q1/figures/` · `tables/` | Paper-ready figures and LaTeX tables |
-
----
-
-## Reproducing the Pipeline
-
-### Environment
+This path does not require a GPU, model checkpoints, or raw comment text. It
+uses the retained final prediction/probability arrays and recomputes the
+headline metrics, confidence intervals, and script-specific scores.
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate       # Windows: .\.venv\Scripts\Activate.ps1
-pip install torch transformers scikit-learn pandas numpy scipy matplotlib seaborn sentencepiece accelerate
+source .venv/bin/activate                 # Windows: .venv\\Scripts\\activate
+python -m pip install -r requirements-repro.txt
+
+python scripts/reproduce_metrics.py \\
+  --pred outputs/test_pred.npy \\
+  --proba outputs/test_proba.npy \\
+  --meta outputs/fusion_meta.npz \\
+  --bootstrap 2000 \\
+  --seed 42 \\
+  --check
 ```
 
-Experiments were run on a single **NVIDIA A6000 (48 GB)** with fp16 mixed precision.
+The script should report values within `1e-4` of:
 
-### Run Order
+| Metric | Expected value |
+|---|---:|
+| Macro-F1 | 0.8225 |
+| Weighted-F1 | 0.8332 |
+| Accuracy | 0.8339 |
+| MCC | 0.7452 |
+| Macro-AUROC | 0.9626 |
+
+The overall test split contains 18,865 examples. The script also reports the
+five-class Romanized Macro-F1 using the paper's explicit convention: a class
+with zero gold support contributes F1 = 0. It additionally prints the
+supported-class-only value so the two quantities cannot be confused.
+
+### Level 2: verify the release snapshot
+
+After cloning the tagged release, verify the files and record their hashes:
+
+```bash
+git checkout v1.0.0
+python scripts/make_checksums.py --root . --output SHA256SUMS
+git status --short
+```
+
+The release used for the paper should contain a committed `SHA256SUMS` file.
+Do not regenerate it after publication unless you create a new version tag.
+
+### Level 3: rebuild the benchmark
+
+The four source datasets remain third-party materials. Download them from the
+authoritative links listed in `DATA_LICENSE.md`, place them in the paths
+documented by the preprocessing notebook, and execute the notebooks in the
+numbered order shown below. Do not commit raw text unless the original source
+licence explicitly permits redistribution.
+
+The rebuild must reproduce these invariants:
+
+```text
+raw rows before consolidation:       135,575
+unique cleaned comments:              94,323
+train / validation / test:       66,026 / 9,432 / 18,865
+UID intersection across splits:             0
+Bangla-script comments:                56,989
+Romanized comments:                    37,334
+```
+
+The deduplication audit should also report 1,287 cleaned-text groups spanning
+multiple sources, 661 groups with conflicting five-class labels, and 271 groups
+with conflicting binary flags. The retained source is the first source in the
+deterministic merge order; it is a provenance field, not a claim of original
+authorship.
+
+### Level 4: retrain the models
+
+Retraining requires a CUDA-capable GPU, the original source data, the four
+pretrained model identifiers, and the exact training environment. Use
+`requirements-full.txt` as a functional environment specification. Before a
+camera-ready release, export the actual RunPod environment and commit it as
+`requirements-training-lock.txt`:
+
+```bash
+python -m pip freeze > requirements-training-lock.txt
+```
+
+Do not claim bit-for-bit training reproducibility unless that lock file and the
+pretrained model revisions are archived. Notebook execution order is:
 
 ```text
 01_dataset_inventory.ipynb
@@ -359,69 +112,87 @@ Experiments were run on a single **NVIDIA A6000 (48 GB)** with fp16 mixed precis
 04_baselines.ipynb
 05_advanced_finetuning.ipynb
 06_ensemble.ipynb
-07_robustness.ipynb            # 3 Bangla-script source hold-outs (banth excluded)
-08_ablation_upd.ipynb          # CE-only reference + component/taxonomy/script-mask
+07_robustness.ipynb
+08_ablation_upd.ipynb
 09_basepaper_comparison.ipynb
-12_paper_asset_creation.ipynb  # writes all paper_q1 figures & tables
+10_analysis_and_assets.ipynb
+12_paper_asset_creation.ipynb
+13_annotation_sample.ipynb
+14a_kappa_and_llm_baseline.ipynb
 ```
 
-`07_robustness.ipynb` and `08_ablation_upd.ipynb` are standalone: they build their own splits from `data/processed/benchmark_cleaned.csv` and write directly into `outputs/paper_q1/`. Set the `PROJECT_ROOT` (and, if needed, `MASTER_DATASET`) environment variable if your tree differs from the default.
+The less-data exploratory notebook is not part of the final evidence chain and
+should be labelled as exploratory if retained in the repository.
 
----
+## Repository map
 
-## Notes on Evaluation
+```text
+paper/ or root                 LaTeX manuscript and bibliography
+project_sources/               numbered notebooks and analysis code
+data/                          source data or download instructions
+outputs/                       predictions, probabilities, fusion metadata,
+                              tables, figures, and model-selection records
+scripts/reproduce_metrics.py  deterministic metric and bootstrap check
+scripts/make_checksums.py     SHA-256 manifest generator
+DATA_LICENSE.md               third-party data/model restrictions
+CITATION.cff                  citation metadata
+```
 
-- **Macro-F1** is primary because the corpus is imbalanced and the rare classes are the safety-critical ones.
-- The proposed-model headline uses the 20% in-domain test set (**18,865** comments).
-- The Facebook-44K base-paper comparison is a **separate protocol** and must not be mixed with the merged-benchmark result.
-- Robustness covers only the **three Bangla-script** sources; `banth` (Romanized) is excluded from source-shift analysis because it couples source and script shift.
-- Cross-script transfer to Romanized Bangla remains the main open challenge.
+If the current repository keeps files in different directories, preserve the
+same logical names in the command examples or update the paths in this README.
 
----
+## Exact evaluation conventions
 
-## Data Availability and Ethics
+- Label order is `[abusive, none, religious, sexual, threat]`.
+- Overall Macro-F1 is the unweighted mean over all five classes.
+- Script-specific Macro-F1 also uses all five classes and `zero_division=0`.
+- Bootstrap intervals use 2,000 resamples, NumPy `default_rng(42)`, and the
+  2.5th/97.5th percentiles.
+- Test predictions are never used to fit ensemble weights or early stopping.
+- Source-held-out results are compound source-shift measurements. The BanTH
+  hold-out is not interpreted as a pure script-transfer experiment because it
+  couples source and script.
 
-The benchmark is assembled from public datasets released through Kaggle and Mendeley. Please cite the original sources and respect their individual licenses. To comply with the most restrictive source terms, the release provides preprocessing/consolidation/split code, per-source download instructions, and `uid`-level split manifests so the benchmark can be rebuilt exactly; raw comment text is redistributed only where the source license permits.
+## Data and model licensing
 
-This repository is for research on detecting and mitigating online harm. The data contains offensive, abusive, and harmful language by necessity, and must not be used to target, profile, harass, or discriminate against individuals or groups.
+Original repository code is MIT-licensed. Dataset text, pretrained models, and
+third-party material are not covered by that licence. Read `DATA_LICENSE.md`
+before downloading, redistributing, or publishing any raw comment text.
 
----
+## Release procedure
+
+1. Merge the final manuscript and reproducibility files into the release branch.
+2. Run Level 1 from a clean environment and save the JSON output.
+3. Run the notebook/output consistency checks and inspect the compiled PDF.
+4. Commit `requirements-training-lock.txt`, `SHA256SUMS`, and the final paper.
+5. Create an annotated tag and GitHub release:
+
+```bash
+git add README.md LICENSE DATA_LICENSE.md CITATION.cff \\
+  requirements-repro.txt requirements-full.txt environment.yml \\
+  scripts/ requirements-training-lock.txt SHA256SUMS
+git commit -m "Prepare BanglaCyberBench v1.0.0 reproducibility release"
+git tag -a v1.0.0 -m "Camera-ready reproducibility release"
+git push origin main
+git push origin v1.0.0
+gh release create v1.0.0 \\
+  --title "BanglaCyberBench v1.0.0" \\
+  --notes-file RELEASE_NOTES.md
+```
+
+Use the release URL, not the mutable `main` branch, in the paper. If GitHub
+immutable releases are enabled for the repository, publish the release only
+after all assets and notes are correct.
 
 ## Citation
 
-```bibtex
-@misc{alam2026banglacyberbench,
-  title        = {BanglaCyberBench: A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection},
-  author       = {Alam, Sefayet and Parvez, Naim and Rahman, A. F. M. Minhazur},
-  year         = {2026},
-  note         = {Preprint},
-  howpublished = {\url{https://github.com/Sefayet-Alam/BanglaCyberBench}}
-}
-```
+Use the `CITATION.cff` file or cite the paper associated with the tagged
+release. After enabling the repository in Zenodo, add the DOI to this section
+and to the paper's Data and Code Availability statement.
 
-Base paper used for comparison:
+## Responsible use
 
-```bibtex
-@article{hoque2025transformerstacking,
-  title   = {Advancing cyberbullying detection in low-resource languages: a transformer-stacking framework for Bengali},
-  author  = {Hoque, Md. Nesarul and Nath, Rudra Pratap Deb and Chy, Abu Nowshed and Ghose, Debasish and Seddiqui, Md. Hanif},
-  journal = {Frontiers in Artificial Intelligence},
-  volume  = {8},
-  year    = {2025},
-  doi     = {10.3389/frai.2025.1679962}
-}
-```
-
----
-
-## Authors and Contact
-
-- **Sefayet Alam** — `sefayetalam14@gmail.com`
-- **Md. Naim Parvez**
-- **A. F. M. Minhazur Rahman** — Department of Computer Science and Engineering, Rajshahi University of Engineering & Technology (RUET)
-
----
-
-## License
-
-Code is released for research use. Dataset redistribution is subject to the licenses of the original source datasets. See `LICENSE`.
+The corpus contains offensive language. It is intended for research on abuse
+detection and moderation, not for harassment, profiling, surveillance, or
+generation of abusive content. Users are responsible for complying with the
+source licences, applicable law, and institutional policies.

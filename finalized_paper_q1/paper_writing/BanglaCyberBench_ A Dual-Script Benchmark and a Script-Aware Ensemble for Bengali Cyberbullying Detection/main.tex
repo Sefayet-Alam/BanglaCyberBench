@@ -84,7 +84,7 @@
 \fancyhf{}
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
-\fancyhead[L]{\small\itshape S.\,Alam, N.\,Parvez, A.\,F.\,M.\,M.\,Rahman}
+\fancyhead[L]{\small\itshape K.\ S.\,Alam, N.\,Parvez, A.\,F.\,M.\,M.\,Rahman}
 \fancyhead[R]{\small\itshape BanglaCyberBench}
 \fancyfoot[C]{\thepage}
 
@@ -212,7 +212,7 @@ Ensemble for Bengali Cyberbullying Detection\par}
 \vspace{0.6em}
 
 % --- Authors ---
-{Sefayet Alam\textsuperscript{1,$\ast$},\quad
+{Khandoker Sefayet Alam\textsuperscript{1,$\ast$},\quad
 Naim Parvez\textsuperscript{1},\quad
 A.\,F.\,M.~Minhazur Rahman\textsuperscript{1}\par}
 \vspace{0.3em}
@@ -222,7 +222,7 @@ A.\,F.\,M.~Minhazur Rahman\textsuperscript{1}\par}
 Rajshahi University of Engineering \& Technology (RUET), Rajshahi-6204, Bangladesh\par}
 \vspace{0.2em}
 
-{\small\textsuperscript{$\ast$}\textbf{Corresponding author:} Sefayet Alam;
+{\small\textsuperscript{$\ast$}\textbf{Corresponding author:} Khandoker Sefayet Alam;
 \href{mailto:sefayetalam14@gmail.com}{\texttt{sefayetalam14@gmail.com}}\par}
 
 \vspace{0.5em}
@@ -404,7 +404,7 @@ Threat & 3{,}194 & 3.39 \\
 
 The buckets are as follows. \emph{None} folds in \texttt{none} and \texttt{not-bully}. \emph{Abusive} is the catch-all for general offence: abusive/violence, troll, personal offence, body-shaming, origin-based slurs, slander, spam, political abuse, and miscellaneous. \emph{Sexual} folds sexual and gender-based (misogynistic) harassment, \emph{Religious} folds religion-directed abuse, and \emph{Threat} folds explicit threats and calls to violence. \Cref{tab:consolidation} gives the full map. Two consistency rules run alongside it: an unrecognised component under a comment flagged abusive is sent to \emph{abusive} rather than dropped, and the binary flag has the final say, so a comment flagged non-abusive resolves to \emph{none} and one flagged abusive but resolving to \emph{none} is moved to \emph{abusive}.
 
-To confirm the mechanical rule yields semantically sensible labels and not merely internally consistent ones, we measured inter-annotator agreement on 500 comments drawn with a fixed seed, stratified jointly on class and script in proportion to each stratum's share with a floor of three per stratum so thin cells such as Romanized \emph{threat} appear. Two of the authors (S.\ Alam and N.\ Parvez) labelled the sample independently, blind to the consolidated label and to each other. They agreed substantially, Cohen's $\kappa$~\citep{cohen1960kappa} $= 0.709$ at 80.0\% raw agreement (\cref{tab:iaa}), and each matched the consolidated \texttt{label5} at $\kappa \approx 0.85$, so the priority rule stays close to human judgement. Agreement was highest on \emph{none} and thinnest on \emph{threat}, the rarest class and one of the two the model itself scores lowest on (\cref{sec:perclass-results}); \emph{sexual} and \emph{religious} sat between. Two readers of one guideline diverge exactly where the boundary is thin, so the residual disagreement traces the ambiguity of those categories rather than an artefact of the mapping. Disagreements were left unadjudicated by design: the aim was to measure convergence on the consolidated scheme, not to build a corrected gold set. A larger study with more annotators, adjudication, and an interval estimate for $\kappa$ is future work (\cref{sec:limitations}).
+To confirm the mechanical rule yields semantically sensible labels and not merely internally consistent ones, we measured inter-annotator agreement on 500 comments drawn with a fixed seed, stratified jointly on class and script in proportion to each stratum's share with a floor of three per stratum so thin cells such as Romanized \emph{threat} appear. Two of the authors (K.\ S.\ Alam and N.\ Parvez) labelled the sample independently, blind to the consolidated label and to each other. They agreed substantially, Cohen's $\kappa$~\citep{cohen1960kappa} $= 0.709$ at 80.0\% raw agreement (\cref{tab:iaa}), and each matched the consolidated \texttt{label5} at $\kappa \approx 0.85$, so the priority rule stays close to human judgement. Agreement was highest on \emph{none} and thinnest on \emph{threat}, the rarest class and one of the two the model itself scores lowest on (\cref{sec:perclass-results}); \emph{sexual} and \emph{religious} sat between. Two readers of one guideline diverge exactly where the boundary is thin, so the residual disagreement traces the ambiguity of those categories rather than an artefact of the mapping. Disagreements were left unadjudicated by design: the aim was to measure convergence on the consolidated scheme, not to build a corrected gold set. A larger study with more annotators, adjudication, and an interval estimate for $\kappa$ is future work (\cref{sec:limitations}).
 
 \begin{table}[!htbp]
 \centering
@@ -664,7 +664,7 @@ For the Bangla-script comment $x_2 = $ \bn{তুই একটা বাজে �
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.99\textwidth]{D3_Worked_Example.png}
+\includegraphics[width=1.01\textwidth]{D3_Worked_Example.png}
 \caption{One comment traced through the system in each script. Top: a Romanized comment, where the Bangla-script specialist is masked out and nine members decide. Bottom: a Bangla-script comment, where all twelve members vote. Every other stage, tokenisation, embedding, encoding, the CE$+$FGM objective, pooling, and weighted-logit fusion, is identical across the two scripts.}
 \label{fig:worked}
 \end{figure}
