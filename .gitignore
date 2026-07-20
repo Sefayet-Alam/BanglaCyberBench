@@ -1,0 +1,32 @@
+# ---
+# EXCLUDE HEAVY MODEL FILES FIRST (so they stay ignored)
+# ---
+.gitignore
+*.pt
+*.pth
+*.pth.tar
+*.bin
+*.safetensors
+*.h5
+*.onnx
+03_models/
+*optimizer*
+*trainer_state.json
+*rng_state.pth
+/*.pt        # ADD THIS - catches .pt files in any subdirectory
+/*.pth       # ADD THIS - catches .pth files in any subdirectory
+# ---
+# SYSTEM & IDE FILES
+# ---
+.DS_Store
+pycache/
+*.pyc
+.ipynb_checkpoints/
+.idea/
+.vscode/
+
+.env
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
