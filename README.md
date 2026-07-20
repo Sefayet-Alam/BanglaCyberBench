@@ -57,7 +57,7 @@ supported-class-only value so the two quantities cannot be confused.
 After cloning the tagged release, verify the files and record their hashes:
 
 ```bash
-git checkout v1.0.0
+git checkout v1.0.1
 python scripts/make_checksums.py --root . --output SHA256SUMS
 git status --short
 ```
@@ -96,10 +96,10 @@ Retraining requires a CUDA-capable GPU, the original source data, the four
 pretrained model identifiers, and the exact training environment. Use
 `requirements-full.txt` as a functional environment specification. Before a
 camera-ready release, export the actual RunPod environment and commit it as
-`requirements-training-lock.txt`:
+`requirements-mac-lock.txt`:
 
 ```bash
-python -m pip freeze > requirements-training-lock.txt
+python -m pip freeze > requirements-mac-lock.txt
 ```
 
 Do not claim bit-for-bit training reproducibility unless that lock file and the
@@ -164,19 +164,19 @@ before downloading, redistributing, or publishing any raw comment text.
 1. Merge the final manuscript and reproducibility files into the release branch.
 2. Run Level 1 from a clean environment and save the JSON output.
 3. Run the notebook/output consistency checks and inspect the compiled PDF.
-4. Commit `requirements-training-lock.txt`, `SHA256SUMS`, and the final paper.
+4. Commit `requirements-mac-lock.txt`, `SHA256SUMS`, and the final paper.
 5. Create an annotated tag and GitHub release:
 
 ```bash
 git add README.md LICENSE DATA_LICENSE.md CITATION.cff \\
   requirements-repro.txt requirements-full.txt environment.yml \\
-  scripts/ requirements-training-lock.txt SHA256SUMS
-git commit -m "Prepare BanglaCyberBench v1.0.0 reproducibility release"
-git tag -a v1.0.0 -m "Camera-ready reproducibility release"
+  scripts/ requirements-mac-lock.txt SHA256SUMS
+git commit -m "Prepare BanglaCyberBench v1.0.1 reproducibility release"
+git tag -a v1.0.1 -m "Camera-ready reproducibility release"
 git push origin main
-git push origin v1.0.0
-gh release create v1.0.0 \\
-  --title "BanglaCyberBench v1.0.0" \\
+git push origin v1.0.1
+gh release create v1.0.1 \\
+  --title "BanglaCyberBench v1.0.1" \\
   --notes-file RELEASE_NOTES.md
 ```
 

@@ -1,6 +1,6 @@
 # Functional environment for notebook re-execution. Before publishing a
 # camera-ready release, record the exact RunPod environment with:
-#   python -m pip freeze > requirements-training-lock.txt
+#   python -m pip freeze > requirements-mac-lock.txt
 # and commit that lock file alongside this specification.
 numpy>=1.26,<3
 pandas>=2.0,<3

@@ -1,6 +1,10 @@
 ./.DS_Store
-./gpt_critics.txt
-./Readme.md
+./requirements-full.txt
+./LICENSE
+./environment.yml
+./DATA_LICENSE.md
+./CITATION.cff
+./README.md
 ./finalized_paper_q1/tables/table_dataset_script_composition.csv
 ./finalized_paper_q1/tables/table_fusion_ablation.csv
 ./finalized_paper_q1/tables/table7_ensemble_weights.csv
@@ -82,6 +86,25 @@
 ./finalized_paper_q1/diagrams/D1_Benchmark_Construction.png
 ./finalized_paper_q1/diagrams/D3_Worked_Example.png
 ./finalized_paper_q1/diagrams/Reame.md
+./finalized_paper_q1/paper_writing/archives/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/References.bib
+./finalized_paper_q1/paper_writing/archives/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/main.tex
+./finalized_paper_q1/paper_writing/archives/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/D2_Script_Aware_Ensemble.png
+./finalized_paper_q1/paper_writing/archives/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig02_main_results.png
+./finalized_paper_q1/paper_writing/archives/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig08_robustness.png
+./finalized_paper_q1/paper_writing/archives/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig03_per_class_f1.png
+./finalized_paper_q1/paper_writing/archives/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig09_basepaper_comparison.png
+./finalized_paper_q1/paper_writing/archives/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig05_top_confusions.png
+./finalized_paper_q1/paper_writing/archives/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig04_confusion_matrix.png
+./finalized_paper_q1/paper_writing/archives/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig11_bootstrap_ci.png
+./finalized_paper_q1/paper_writing/archives/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/D1_Benchmark_Construction.png
+./finalized_paper_q1/paper_writing/archives/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig06_component_ablation.png
+./finalized_paper_q1/paper_writing/archives/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig_dataset_composition_pies.png
+./finalized_paper_q1/paper_writing/archives/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/D3_Worked_Example.png
+./finalized_paper_q1/paper_writing/archives/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig04b_confusion_matrix_normalized.png
+./finalized_paper_q1/paper_writing/archives/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig01_class_distribution.png
+./finalized_paper_q1/paper_writing/archives/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig10_ensemble_weights.png
+./finalized_paper_q1/paper_writing/archives/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig07_taxonomy_ablation.png
+./finalized_paper_q1/paper_writing/archives/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection.pdf
 ./finalized_paper_q1/figures/fig02_main_results.png
 ./finalized_paper_q1/figures/fig08_robustness.png
 ./finalized_paper_q1/figures/fig03_per_class_f1.png
@@ -122,27 +145,13 @@
 ./other_papers/cyberbully_paper2.pdf
 ./other_papers/cyberbullyPaper.pdf
 ./other_papers/cyberbullypaper3.pdf
-./paper_writing/gpt_critics.txt
-./paper_writing/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/References.bib
-./paper_writing/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/main.tex
-./paper_writing/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/D2_Script_Aware_Ensemble.png
-./paper_writing/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig02_main_results.png
-./paper_writing/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig08_robustness.png
-./paper_writing/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig03_per_class_f1.png
-./paper_writing/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig09_basepaper_comparison.png
-./paper_writing/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig05_top_confusions.png
-./paper_writing/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig04_confusion_matrix.png
-./paper_writing/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig11_bootstrap_ci.png
-./paper_writing/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/D1_Benchmark_Construction.png
-./paper_writing/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig06_component_ablation.png
-./paper_writing/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig_dataset_composition_pies.png
-./paper_writing/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/D3_Worked_Example.png
-./paper_writing/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig04b_confusion_matrix_normalized.png
-./paper_writing/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig01_class_distribution.png
-./paper_writing/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig10_ensemble_weights.png
-./paper_writing/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection/figures/fig07_taxonomy_ablation.png
-./paper_writing/BanglaCyberBench_ A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection.pdf
 ./.gitignore
+./scripts/make_checksums.py
+./scripts/__pycache__/reproduce_metrics.cpython-312.pyc
+./scripts/__pycache__/make_checksums.cpython-312.pyc
+./scripts/reproduce_metrics.py
+./RELEASE_NOTES.md
+./requirements-repro.txt
 ./precheck/xlmr_seed42/results.json
 ./precheck/ensemble_metrics.json
 ./precheck/banglishbert_seed42/results.json
@@ -173,10 +182,12 @@
 ./.git/objects/95/30b1afbade053e11bb3b6f009eb00f1f3e21d3
 ./.git/objects/59/4db30d2439996e2111fecf0ef1bd27a3205ce9
 ./.git/objects/59/e0b78f1f7df933dc55c2b65943a006d5f662dc
+./.git/objects/59/034de4fb5156ab433d9680c8af14e49558c0eb
 ./.git/objects/59/f67710324f2ddad6b80e846ff6dc37cb0fb8b4
 ./.git/objects/59/29a9fe8e3f36d9c52f8959953e12cbb225cf06
 ./.git/objects/59/5a56ec990a9a44f32d564640aeefb9a1788102
 ./.git/objects/92/faacfc6341c6a86de3977e50bcffde5e6502fc
+./.git/objects/92/8917a1297a6b7aade028b882619d0f454f4ff8
 ./.git/objects/92/eb4270e86838270d9cac2fc60b9c6f8974a80c
 ./.git/objects/0c/359ca013976f03514f3c19b011eba40464b829
 ./.git/objects/0c/de2ab25652f88882f9e4e2185d4d68746b02d6
@@ -198,9 +209,11 @@
 ./.git/objects/66/c38d12a1d9a0d0f6e8f4235b10334df185b3c6
 ./.git/objects/3e/82d9adae054ba3a6bf83229a2cce709f64b592
 ./.git/objects/3e/7f8dc6d6539959dd26c037eb75dd2653b12bd7
+./.git/objects/3e/5f063fc34c73840dc1a8d58558c3465eeeaba9
 ./.git/objects/3e/ad9503f78054491499c4900af01ccf3c95e624
 ./.git/objects/3e/b5516b2176efaafcc10ff09faf2fcae7daae6f
 ./.git/objects/50/1e6457a9686f5af75ba46bc370eca284ddc295
+./.git/objects/50/5439870f937350f1e2c1888f9ca83a4007bb5b
 ./.git/objects/68/053be489ddb51d92f9801cc400243fe4e682f7
 ./.git/objects/68/c848a456de0c179985a43531bae8c6a1f760a2
 ./.git/objects/68/c5bf314dd14828346300725d3c779b1b89ba41
@@ -208,6 +221,7 @@
 ./.git/objects/68/172fa76ae48a678ba1e9760d0e86cc4e092ea3
 ./.git/objects/57/5fc14c133a2904090e56855c6a11d67c86ca8f
 ./.git/objects/57/17b84c0a8083b76c7381c7da228ecad73911a9
+./.git/objects/57/54e343e530d1d006cc4091d4b57a9e45f207c9
 ./.git/objects/3b/435158775ee06c77f6f111ea93c9491b6a86a6
 ./.git/objects/3b/78fe551e09436a80f975ed18eb03a7c7072ca2
 ./.git/objects/3b/28b4737d210b003ce2ffa5a70165de1d105a4e
@@ -224,6 +238,7 @@
 ./.git/objects/03/55a422b032cb4d89b2ed90db268c9894b7bf4e
 ./.git/objects/03/b86819f7854151c870cef832d392103fac099e
 ./.git/objects/03/cb7e8091b43be9dfcc4dfc837efc2b27513bc0
+./.git/objects/03/f90127d36f526a038339c4c1fe05c6395802ef
 ./.git/objects/03/a3c6e181eb3e9d2c9688ccdf8ee036cc1cb781
 ./.git/objects/03/7148fa881158af1e9eb2eb5f209e3442c8bf8a
 ./.git/objects/03/5d94edb8879e18c4f51a1690fbb67ab81dee9e
@@ -275,9 +290,11 @@
 ./.git/objects/69/9ca223f01f28c4a5900e8c994ef7821ccce4cb
 ./.git/objects/3c/94cbd61f78c62ef5618531c1a0ae7fe48e560c
 ./.git/objects/3c/11734e62e9a6bb2cfcdc3638179e050a1c1b9f
+./.git/objects/3c/f2eeb26520f7903d09a98038310a26d77a4be3
 ./.git/objects/3c/ff1d8cfd3d7e6e4f97d0ed357c6209ac8a5b9a
 ./.git/objects/56/0e42c955a7bac9723a629785cdaddbf194c403
 ./.git/objects/56/7da02fe8296ed4928a66c2c9837d733d76d178
+./.git/objects/56/6a8525f8fb09cc35b6482837a71b8bf4bdaf48
 ./.git/objects/56/d6aa8a44f20ce56d6703dc22a64cef0983e462
 ./.git/objects/56/0bbfacf0cedefdee553517a932e9db1b76135e
 ./.git/objects/56/02ff065ec27c221adfde34fe67fe8603a33b7d
@@ -315,6 +332,7 @@
 ./.git/objects/93/2485cc7ea5db7d4316697eba679d077bdc6329
 ./.git/objects/93/0ddfe3f386d0b5f9fa3ab97108db274207f453
 ./.git/objects/94/5f767061d50d2427e1f3fa2dc98c5defc7308f
+./.git/objects/94/a1cac5dabbd78da76519fb002a390adc071ffa
 ./.git/objects/94/e065afea465e0fb4daf6518288e225b054f2de
 ./.git/objects/0e/8670f67ead171395d714bac6f55db17609673d
 ./.git/objects/0e/c9aac4aece4e8b9052257997cd4899fab51c65
@@ -361,6 +379,7 @@
 ./.git/objects/a4/34d31def076e42b4187b9d3afb652efa0fc8c9
 ./.git/objects/a4/03094f8865f3951116cb7e64c960659478620c
 ./.git/objects/a4/dc768babf0592ddc5fceb2e9406c7943ffa027
+./.git/objects/a4/e4c8c46fe49f61106dc604d74dfacf2c40f8aa
 ./.git/objects/a3/705fc7678ce81d9b5575762ed3190c29cc3f79
 ./.git/objects/a3/c4f626166fcec4eeab1cdd463c1710c55ae5e8
 ./.git/objects/a3/4a1440bbd51747d16c46b046197021203b0c71
@@ -369,6 +388,7 @@
 ./.git/objects/a3/7fb57e9bc92fe4630603c9bb66b25dd90efd9f
 ./.git/objects/a3/54f51a9bb89e655b758b581c9d7d344dd5ca5d
 ./.git/objects/a3/7d7d7b87e41076ff243412d3d81f28b40459d8
+./.git/objects/a3/b47b9e6998ea528c5ea023c21b76d1bb04ddf2
 ./.git/objects/b5/b20ceada5a70cc97e0220a5dfb0c716c583463
 ./.git/objects/b5/acff88d8df851647efde241e568a16c58c3b9b
 ./.git/objects/b5/7ae51b1a4727810f9813e90c85187d125a56df
@@ -399,6 +419,8 @@
 ./.git/objects/d0/473cd573c7c4ee33a1b609c8d31194cf2a3ae6
 ./.git/objects/d0/43fcdbd442791ef05628d29af375342a6ce4a6
 ./.git/objects/d0/a1656c56721095c95fecb8c3572aced64716d6
+./.git/objects/be/b6632ea2a4b66cb341a4c7b04abcee0ef8755f
+./.git/objects/be/483eab345de0c045b9f5716278b88b6c946152
 ./.git/objects/be/0d7b287b05c067a390018920d338c25e3bafd1
 ./.git/objects/be/f6af7d21700bbcce18f90f8c4f8c030be814b7
 ./.git/objects/be/69d9b7883342f62051967a86c07a86fe7dc9c0
@@ -448,15 +470,19 @@
 ./.git/objects/bc/f001736abbe8ed8ff4fa2ff601ac12a2b5dcf8
 ./.git/objects/bc/849e7349712e6039afe045d20c46be84c7c35a
 ./.git/objects/bc/4096e67ad4ee9d5264dcef2686abd1c8178ab1
+./.git/objects/bc/3eb2386e0f2d646e58f67e97d1ee896dc0572d
 ./.git/objects/bc/5c8fa9643bc306ca74705bf81498a49ef9924e
+./.git/objects/bc/07d7c57e9ccaa92afa6315b17425c568e6e7c7
 ./.git/objects/bc/3d30240f299e97f210401a3961326bdba61dee
 ./.git/objects/d8/515d22b02a764e4a3bd1f482ab7e2add3c7af5
+./.git/objects/d8/d1270d25f76dc56fca215cd9263e61acd1fa2e
 ./.git/objects/d8/eccf61553dd04f953ba0faf9029fbc91da929f
 ./.git/objects/ab/f015b9f88875e8032b37e281e8d0e57c824c38
 ./.git/objects/ab/7304c97da787b988fc615bc42c4946e9669e93
 ./.git/objects/ab/c8411f820de97e6748f6719e53bad7a740325e
 ./.git/objects/ab/0c4dfe41b14809422a56f6ed31a85813b2aad7
 ./.git/objects/e5/a14ebd30a2c489b364fb71c8bc7c4d10f93495
+./.git/objects/e5/7ffdf9c83a15f8b8d31638c405fb3909f26c84
 ./.git/objects/e5/f137e4f8f18117bf8a645e089adc1642a8c864
 ./.git/objects/e2/b4efabb354759f184c8aea58f51fb43a9058dd
 ./.git/objects/e2/a9228c7928d3d5e84f3425d7069ac2a656deac
@@ -491,6 +517,7 @@
 ./.git/objects/c7/e9eb8aac8075db91a63c66c06ef19764f0d2f7
 ./.git/objects/c7/c5c8194c24cdaba04894a1d9b141398d9d6620
 ./.git/objects/c0/d622e028f98aa7716c813dd9809396676026bc
+./.git/objects/c0/aace66f58abda918819584878354cefc9d7daf
 ./.git/objects/c0/5e6e70a76829badfc6b0b5e6c3157219f761f3
 ./.git/objects/c0/dafb6261fd86f41dc936145222661d787db306
 ./.git/objects/ee/aee65eee454494b3c005af170a9cac213e2eea
@@ -514,6 +541,7 @@
 ./.git/objects/f5/dfd8538ef872eee1ce9b62c3c6df5788c2711c
 ./.git/objects/f5/030d102c61fbd838cc6a49bce2b5307e874a84
 ./.git/objects/f5/cc5d8da5f1c8fc47a644ffc9562a275f29e2d2
+./.git/objects/f5/8ada8085cf29116dbf9b405a78e50e9da41a52
 ./.git/objects/f5/d896d32ef38c4afe47c4ae2cfd601d644ea8a3
 ./.git/objects/f5/829166ad08a5b40c5c5dbcb396967da98cd14a
 ./.git/objects/f5/eed2f63f5614fef1b558ef89f89ebd4e006c2e
@@ -527,6 +555,7 @@
 ./.git/objects/cf/62518598af88f9f0d13ad89d3d2d634877359e
 ./.git/objects/cf/02cf36ac8bf42f447be7effe0e601a9f50a3f1
 ./.git/objects/cf/e4351a9f7315aa24c3028a0883d6245950bb37
+./.git/objects/cf/c7a56cea29b3d48a430f7e712ab930a9fa3002
 ./.git/objects/cf/132a6e88e1a1e557f7686ad3f1bc4facf655a3
 ./.git/objects/cf/4f6e26d5f1330537aa826a0be4c90469003a80
 ./.git/objects/cf/363e135ecc67ad3b0eef6b6d6c3f89d974515b
@@ -565,6 +594,8 @@
 ./.git/objects/c1/fd6f80fbad24d91969d129f9b1c6d26d2662f1
 ./.git/objects/c6/9ff0511ecbdd33c9cb13b4923624a407de1ae1
 ./.git/objects/c6/c56513ff58e968d6e4b42d6b1ea8fd2be3d5e4
+./.git/objects/c6/54b0ddb9aa8039272c4a98c70aac79f73d9c55
+./.git/objects/c6/00c0cc12e810ba6dbb8a3900ea7376dc829167
 ./.git/objects/c6/ad3e54e15a0552416567a8d8530ccfd8433028
 ./.git/objects/ec/4a70e58562ab1d6bfa88e3b89495277829d3ca
 ./.git/objects/ec/46456501101473b6afea855c79a9c322600a9a
@@ -610,6 +641,7 @@
 ./.git/objects/7d/0b52bd056327301688e8fb6a9020676ebb9dc8
 ./.git/objects/7d/bcb33b2711df125a3a1700cbeb207e50992f1f
 ./.git/objects/7d/359d38eda46345221f5dd72a81c675ca5304cd
+./.git/objects/7d/70e3fba0e951f13c9bece6f0263cc326185466
 ./.git/objects/29/72171336510cb5f4bc04243107cfc02b9f3088
 ./.git/objects/29/c6ad3e208e7fdcd1dfbb1e4c70924a7cf3c1c9
 ./.git/objects/29/335e44c15e6791061084e9f5137ddde944fba9
@@ -642,6 +674,7 @@
 ./.git/objects/89/7278059a767f5a1823b70b41188f6bf0761269
 ./.git/objects/89/144e2fc8e531328249835cf6981e40193bee7b
 ./.git/objects/45/6348b8d2609f57718c28ce2d2b7a0116274983
+./.git/objects/45/4beb70b9eed79fd4f122c608b71aee70b19c7e
 ./.git/objects/45/305a9e836a5b12a7795f61e9dbd375176d010f
 ./.git/objects/45/acf357ab96f438318c019fb4e1d33a2982a275
 ./.git/objects/45/fd848ad8d5c8790b1532d24ddbf330a0e831f0
@@ -731,6 +764,7 @@
 ./.git/objects/26/7391d1c070c664a039fd75828da48d1319634c
 ./.git/objects/21/b5583162d5cf7fe5109c7333dda09c35be4759
 ./.git/objects/21/e608fbff18db96d52b28500506fa3762eb1411
+./.git/objects/21/2f056dcacbc0982b4e41bd556221e67dbf92a6
 ./.git/objects/21/0f4dd356893d48e6aba8b753abdac97ab1205c
 ./.git/objects/21/15caf421fbfd0b24587fcd474697963e803186
 ./.git/objects/21/8b22c5231a767865a7056e601f3920497d64ce
@@ -780,6 +814,7 @@
 ./.git/objects/43/540b287ba131a19bab6fa94402dde046f42da5
 ./.git/objects/43/1be07d6409c6433930645b669366d5bc7fe81f
 ./.git/objects/43/e2c5e22753fccac45141cb983d01d9e5de980f
+./.git/objects/88/b5f2ec4aeacb7fd72ae2a9c001692be6d5297a
 ./.git/objects/88/eb2890952289beb61521975174349054bfa81e
 ./.git/objects/9f/df8587d270f53b4cf73b2db160d13eba5a2b82
 ./.git/objects/9f/e7be14e48d582b4515488d596f369db0481b17
@@ -865,6 +900,7 @@
 ./.git/objects/62/315461a2eedfc365fbdd12bbf428c83edb43d1
 ./.git/objects/96/0f5f37fe6e85646fc42fb5d3986c8c67749851
 ./.git/objects/96/56dab812b8809d39dd76204adaeb47582b10d8
+./.git/objects/96/bac8a3af807c250117550138ac2677ef12734b
 ./.git/objects/3a/c7b4538eacceffb6ffe8756b07d5b813f0fb4b
 ./.git/objects/3a/08e06ccb1eaeb5639c99900f523829d5a5f1a9
 ./.git/objects/3a/972ac82dc07639d860369923ebd59b13c02f15
@@ -926,6 +962,7 @@
 ./.git/objects/6c/4dfce607f8ad49e15e5ee2986d6426617d63ad
 ./.git/objects/6c/26805c790f6d08ceafd99d9835d0a4ff697d86
 ./.git/objects/6c/16b928befdf0d432371bdb8f771907850c91cd
+./.git/objects/39/42fe364a7db7f9aec9b87567d83348b94222d8
 ./.git/objects/39/17393410dbad688ce5ffd080a84418af6603f2
 ./.git/objects/39/8383baf3301ac007170aa2acd4264c818fe4bc
 ./.git/objects/39/d6d572dabea4391b51ae823d12d07f47ca4402
@@ -961,6 +998,7 @@
 ./.git/objects/0f/a715ab5defc24c194b6f03c22d6110a4bf91f8
 ./.git/objects/0f/74f66999588777a1aba7f891c7e8a445acc684
 ./.git/objects/0f/e81f18e214f1efe01c1c9f8fe2491883d0d381
+./.git/objects/0f/f85b3e24309a0ab85d8104b646508e93584b10
 ./.git/objects/0f/b87fce29766b669d66f14b58d03dcc63b0bda6
 ./.git/objects/0f/ab6ed5b571dee3627cd44c50a552da60f5f872
 ./.git/objects/0f/2f0c9d37085e139f5519811652fb0c76cac799
@@ -972,6 +1010,7 @@
 ./.git/objects/90/1939806d7f718b58228ad8f0bbc65873ad3e50
 ./.git/objects/90/1a5834c628330e3ff9dd12e1618467bc291c7e
 ./.git/objects/90/1f3d3fa91db9dd51dd1d3a73dc3213e3e2bc58
+./.git/objects/90/d64661dd155a0eba538eafa67c4785b5e06a3d
 ./.git/objects/90/933e23e12c997905c53ba57935465dc6011840
 ./.git/objects/90/850e98c6a29b288b594970a173cfc6e7b2071a
 ./.git/objects/90/0982f50038c1ad1f502880ec85ea7bf4887bb6
@@ -1004,6 +1043,7 @@
 ./.git/objects/a0/66acd6891f9d81e2f64160ec91f6c7412c983d
 ./.git/objects/a0/b43c94ec4d9bafaa862baa97f5a20d18891503
 ./.git/objects/a0/cc3b27346b18e25823aea2daa9408453b25be9
+./.git/objects/a7/419e59e5d98ffc5e3ca895ec0771ab2c606481
 ./.git/objects/a7/19ca92b2d0573e1dc6d228418f402cb2d8245d
 ./.git/objects/a7/f8f2ff439db2ecf06e3a40b85056133b844ac5
 ./.git/objects/a7/1f0c11628841c06c833574996e790e174a0d15
@@ -1018,6 +1058,7 @@
 ./.git/objects/b8/d76bc8378818320eee5e112d0b738feebc6c11
 ./.git/objects/b8/908e4e222df2178f4fb452bc7a3fa1342aaed0
 ./.git/objects/b8/20fde8a37cdfcca9228c940e9f5e5f3c6d6e39
+./.git/objects/b8/b327c10703dc56bd16dfac8fc47bb5967fd94c
 ./.git/objects/b1/bf45bc599aa943267cf0a9525e9b00b52d6cac
 ./.git/objects/b1/fcff457a3c1175856de0c8a3e953f015322eb4
 ./.git/objects/b1/9f2127f72471596dfe8f769aa839c35a39251e
@@ -1043,6 +1084,7 @@
 ./.git/objects/a9/bea6c69445e617c0724543e1d4a56fd9c536a9
 ./.git/objects/d5/64d0bc3dd917926892c55e3706cc116d5b165e
 ./.git/objects/d5/4b275a0dc6c0cf38ff0fa9c5f6d3309321a68d
+./.git/objects/d5/50f770ba2bcd58aad25a27337709f2621b7a8d
 ./.git/objects/d5/f7779c67d8b6410bf07996c26efe8f66e3a216
 ./.git/objects/d2/1a0fb01d39df1d4956d48c71ce32e9e2093e39
 ./.git/objects/d2/80271bcdd421c6aefec916756f69efe4a1a2e4
@@ -1098,6 +1140,7 @@
 ./.git/objects/b9/7f4634061df6d96f9da43d3790f8400c984772
 ./.git/objects/b9/9ae342281d10a96613d2ade302269701c2e1f7
 ./.git/objects/a1/38f0851c8b2f136dd047e8c204fa37e4899fb4
+./.git/objects/ef/43fffaba79a8244325ab5937bfd28575b4106a
 ./.git/objects/c3/ff6470d366e4edd3ade59e2679d63e0b999c27
 ./.git/objects/c3/22436c3834ddfdd0ef810360f71e1d30439398
 ./.git/objects/c3/83753c20feb834c402ea2af9b6d9c3f3815e45
@@ -1158,6 +1201,7 @@
 ./.git/objects/ff/b307cc8832c6eb2603f4c441eebc837fe83ed8
 ./.git/objects/ff/d73a18a8aedc99f72995f13a4dec9ad1cbef7a
 ./.git/objects/ff/0b9bbfa2b401eb7785f34d1a7cb7e09f0d6dd1
+./.git/objects/c5/2248bc14e6dca25768ab34de56e36ba25e09e2
 ./.git/objects/c5/26ed8afde7eb050f76ffc0e88a62847086b5b8
 ./.git/objects/c5/d4dac6bbd86950bb92a5434767322f7c0fd044
 ./.git/objects/c2/de75c3ffb7ac3d0c8c3607163828f72e273e97
@@ -1199,6 +1243,7 @@
 ./.git/objects/f8/06a04c9ba9786feb108a0d3b876713a3837fb3
 ./.git/objects/f8/757a4e20fb1ca37c2cbc3aef39b3f30ccfa834
 ./.git/objects/f8/92abffcf15acbb69f1160fbaf085ffaa3e6149
+./.git/objects/ce/1252459a1ad46ce39173c396bbfacd057d75b6
 ./.git/objects/ce/d4df0e5d74f905ea85a1986659617184906cc9
 ./.git/objects/ce/7ed4906648d8d5ca1768d4273bb6382be1201f
 ./.git/objects/e0/5137abc6c08896363620166f1977543a0e4b64
@@ -1210,6 +1255,7 @@
 ./.git/objects/46/737a9bb33fbf36d26ef7092ac00483fa50789d
 ./.git/objects/46/d39f470b01993ff84d8b9df4c331155eac4aa6
 ./.git/objects/46/0cb9a8345b73e47c507cd54174dc83be12d769
+./.git/objects/46/65d09e01c59efeb81496f8b2ab381ffaae655a
 ./.git/objects/46/73039427542b906f16338fe0c98d5182733c77
 ./.git/objects/2c/d273ffc2edd9128b9fc351a9296d82e01d4de6
 ./.git/objects/2c/87a418d1332915e49c9fac493d8487ad93ca5b
@@ -1235,6 +1281,7 @@
 ./.git/objects/1b/31793d8a88a6535b21281336884dd3be33ba07
 ./.git/objects/1b/dd12828df6a6d178c3cf0829f36c59c0527093
 ./.git/objects/1b/695a3dd2f50b582f9514ab6d6930c8b5025334
+./.git/objects/1b/8af264cd1fa8c060166bb94c58fb045a18900b
 ./.git/objects/1b/b3c6c970f61138cd6296ea629533aedb0802ee
 ./.git/objects/1b/f927617df8f5cc4c3cf9f21d7aa3a390af51b2
 ./.git/objects/77/cca9c00167efb443cbb87d3d9a232b07751986
@@ -1304,6 +1351,7 @@
 ./.git/objects/85/9d94c25473cba1ad0851a59044be489f78c10b
 ./.git/objects/85/71ec9da6e84271bf0d61bce8ad06b9220c6f97
 ./.git/objects/1d/a421afdec35f689be37aec6c600002fe66f67e
+./.git/objects/1d/9b2b4b13c68397c1b302214c8f09f61fb1b478
 ./.git/objects/1d/fdba39b467afc36589f19772c6b694053f26b0
 ./.git/objects/1d/a1cf4ac1128a897e0e5596740f8c3b2a52bb1a
 ./.git/objects/71/1f9e5cb0d6b8a172e6d9b76c561b020edb8937
@@ -1391,6 +1439,7 @@
 ./.git/objects/14/8f48d1ad662e88576c529be48bf10c0472f70a
 ./.git/objects/14/2bbda3e6c984ed0d6231e837811b6375ff80eb
 ./.git/objects/8e/a7445a450017ed37876a3eb565776afe595b4f
+./.git/objects/8e/d5fc2670c30b2f82a2c428983c9de41035e10f
 ./.git/objects/8e/7cf5edfcf560afdd02001f806f10142bf2c4a0
 ./.git/objects/8e/540e7302af44b465dcb065b2ca4b175ca093e1
 ./.git/objects/8e/2e60f630c22087fa070c1b60210f2b5f1198e0
@@ -1437,12 +1486,15 @@
 ./.git/hooks/push-to-checkout.sample
 ./.git/refs/heads/my-local-backup
 ./.git/refs/heads/main
+./.git/refs/tags/v1.0.1
+./.git/refs/tags/v1.0.0
 ./.git/refs/remotes/origin/HEAD
 ./.git/refs/remotes/origin/main
 ./.git/index
 ./.git/COMMIT_EDITMSG
 ./.git/FETCH_HEAD
 ./.vscode/settings.json
+./requirements-mac-lock.txt
 ./all_dir.txt
 ./data/splits_basepaper/val.csv
 ./data/splits_basepaper/test.csv
@@ -1471,11 +1523,13 @@
 ./data/splits/source_holdout_bangla_only/source_holdout_facebook_44001_train.csv
 ./data/splits/source_holdout_bangla_only/source_holdout_multilabel_12557_val.csv
 ./data/splits/source_holdout_bangla_only/split_manifest.json
+./SHA256SUMS
 ./outputs/dataset_file_tree.csv
 ./outputs/ensemble/cm_ensemble_20pct.png
 ./outputs/ensemble/ensemble_test_metrics.json
 ./outputs/ensemble/test_proba.npy
 ./outputs/ensemble/test_pred.npy
+./outputs/fusion_meta.npz
 ./outputs/models_main/xlmr_seed42/results.json
 ./outputs/models_main/per_run_summary.csv
 ./outputs/models_main/banglishbert_seed42/results.json
@@ -1503,6 +1557,7 @@
 ./outputs/ablation/taxonomy_ablation.csv
 ./outputs/ablation/component_ablation.csv
 ./outputs/ablation/component_ablation_perseed.csv
+./outputs/test_proba.npy
 ./outputs/paper_q1/tables/table8_bootstrap_overall.tex
 ./outputs/paper_q1/tables/table_iaa_kappa.tex
 ./outputs/paper_q1/tables/table_dataset_script_composition.csv
@@ -1620,6 +1675,7 @@
 ./outputs/paper_q1/figures/fig07_taxonomy_ablation.pdf
 ./outputs/paper_q1/figures/fig07_taxonomy_ablation.png
 ./outputs/dataset_inventory_summary.csv
+./outputs/test_pred.npy
 ./outputs/baselines/baseline_results.csv
 ./notebooks/12_paper_asset_creation.ipynb
 ./notebooks/07_robustness.ipynb
