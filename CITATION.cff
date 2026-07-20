@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use BanglaCyberBench, please cite the accompanying paper and this release."
+title: "BanglaCyberBench: A Dual-Script Benchmark and a Script-Aware Ensemble for Bengali Cyberbullying Detection"
+type: software
+version: "1.0.0"
+date-released: 2026-07-20
+authors:
+  - family-names: Alam
+    given-names: Sefayet
+    email: sefayetalam14@gmail.com
+    affiliation: "Rajshahi University of Engineering & Technology"
+repository-code: "https://github.com/Sefayet-Alam/BanglaCyberBench"
+repository: "https://github.com/Sefayet-Alam/BanglaCyberBench"
+keywords:
+  - Bengali NLP
+  - cyberbullying detection
+  - Romanized Bangla
+  - hate speech
+  - benchmark
+  - robustness
+license: MIT
+abstract: >-
+  A deduplicated four-source benchmark spanning Bangla and Romanized Bangla,
+  with a script-aware transformer ensemble, deterministic split manifests,
+  prediction artefacts, and reproducibility utilities.
