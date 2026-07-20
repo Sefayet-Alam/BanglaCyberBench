@@ -1,4 +1,4 @@
-# BanglaCyberBench v1.0.1
+# BanglaCyberBench v1.0.2
 
 Camera-ready reproducibility release accompanying:
 
