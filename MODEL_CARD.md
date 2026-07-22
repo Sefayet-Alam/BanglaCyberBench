@@ -39,10 +39,13 @@ explicitly because a single headline number hides them.
   Accuracy 0.8339, MCC 0.7452, Macro-AUROC 0.9626. Percentile-bootstrap 95% CIs
   (B = 2,000, seed 42) accompany the headline and every per-class F1. These CIs
   capture test-resampling only — not training-seed, split, or annotation variance.
-- **By script (final test arrays):** Bangla-script five-class Macro-F1 0.8303
-  (n = 11,406); Romanized five-class Macro-F1 **0.3900** (n = 7,459), with a
-  four-supported-class mean of 0.4875. Romanized gold has no `threat` support, which
-  caps its five-class Macro-F1 at 0.80 by construction.
+- **By script (script-mask ablation, verified):** Romanized is the harder slice.
+  Letting every backbone vote gives Romanized five-class Macro-F1 0.4568; masking the
+  Bangla-script specialist off Romanized rows raises it to **0.4774**, while overall
+  Macro-F1 is essentially unchanged (0.8183 → 0.8176). Romanized gold has no `threat`
+  support, which caps its five-class Macro-F1 at 0.80 by construction. A per-script
+  breakdown on the final retained test arrays is computed at runtime by
+  `scripts/reproduce_metrics.py`; read that script's output rather than a stored value.
 - **Cross-source (held-out source):** Macro-F1 collapses to 0.46–0.59
   (Facebook-44K 0.5850, Multilabel-12.5K 0.5601, BD-SHS 0.4612). This is a compound
   source shift (platform, period, sampling, annotation policy), not a single factor.

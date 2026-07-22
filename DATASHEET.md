@@ -83,8 +83,9 @@ solicited for this benchmark.
 - **Out of scope / discouraged:** harassment, profiling, surveillance, generation
   of abusive content, or deployment as a moderation system without target-domain
   validation. Source-held-out Macro-F1 falls to 0.46–0.59, so in-domain accuracy is
-  not a proxy for deployment readiness. Romanized five-class Macro-F1 is ~0.39, so
-  the resource exposes a script gap rather than demonstrating dual-script competence.
+  not a proxy for deployment readiness. Romanized remains the hard slice (five-class
+  Macro-F1 in the mid-0.4s in the script-mask ablation, well below the ~0.82 overall),
+  so the resource exposes a script gap rather than demonstrating dual-script competence.
 - **Known biases:** heavy class imbalance (~14.8:1 between the most and least
   frequent class); label definitions inherited from four different annotation teams;
   `gender` folded under `sexual` and `origin`-based slurs folded into generic
