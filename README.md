@@ -197,3 +197,25 @@ detection and moderation, not for harassment, profiling, surveillance, or
 generation of abusive content. Users are responsible for complying with the
 source licences, applicable law, and institutional policies.
 !!
+
+
+<!-- Append the following to RELEASE_NOTES.md, then cut a new tag (e.g. v1.0.3)
+     so these files are captured in an immutable release. Update the paper's
+     \reporelease macro to match the new tag. -->
+
+## Governance artifacts
+
+This release adds a datasheet (`DATASHEET.md`) and a model card (`MODEL_CARD.md`)
+documenting the benchmark and the reference ensemble, including the known Romanized
+performance gap and the cross-source transfer drop. Per-source licensing is in
+`DATA_LICENSE.md`; file integrity is covered by `SHA256SUMS`.
+
+## Third-party processing notice
+
+The zero-shot large-language-model reference in the paper sent the 18,865 test
+comments to Google's Gemini (`google/gemini-2.5-flash`) through the OpenRouter API.
+This is a one-off evaluation step, not part of benchmark construction: reconstructing
+BanglaCyberBench never contacts a third-party API. The transfer was assessed against
+the source-dataset licences (`DATA_LICENSE.md`) and the provider's stated retention
+terms. Users who redistribute or re-run this baseline are responsible for the same
+check under their own agreements.
