@@ -57,7 +57,7 @@ supported-class-only value so the two quantities cannot be confused.
 After cloning the tagged release, verify the files and record their hashes:
 
 ```bash
-git checkout v1.0.2
+git checkout v1.0.3
 python scripts/make_checksums.py --root . --output SHA256SUMS
 git status --short
 ```
@@ -171,12 +171,12 @@ before downloading, redistributing, or publishing any raw comment text.
 git add README.md LICENSE DATA_LICENSE.md CITATION.cff \\
   requirements-repro.txt requirements-full.txt environment.yml \\
   scripts/ requirements-mac-lock.txt SHA256SUMS
-git commit -m "Prepare BanglaCyberBench v1.0.2 reproducibility release"
-git tag -a v1.0.2 -m "Camera-ready reproducibility release"
+git commit -m "Prepare BanglaCyberBench v1.0.3 reproducibility release"
+git tag -a v1.0.3 -m "Camera-ready reproducibility release"
 git push origin main
-git push origin v1.0.2
-gh release create v1.0.2 \\
-  --title "BanglaCyberBench v1.0.2" \\
+git push origin v1.0.3
+gh release create v1.0.3 \\
+  --title "BanglaCyberBench v1.0.3" \\
   --notes-file RELEASE_NOTES.md
 ```
 

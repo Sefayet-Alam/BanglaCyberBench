@@ -164,7 +164,7 @@ pandas-datareader==0.10.0
 pandas-profiling==3.2.0
 parso==0.8.5
 pathspec==0.12.1
-patsy==1.0.2
+patsy==1.0.3
 pbr==7.0.3
 pexpect==4.9.0
 phik==0.12.5
