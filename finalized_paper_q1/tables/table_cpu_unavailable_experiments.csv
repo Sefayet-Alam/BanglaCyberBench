@@ -1,0 +1,5 @@
+Experiment,Status,Reason
+Prior correction / temperature scaling,Unavailable,No retained held-out logits or predictions for the source-shift runs.
+Ensemble vs best-member paired test,Unavailable,Main-run per-member predictions/logits were not retained.
+Masked vs unmasked paired bootstrap,Unavailable,Only aggregate ablation values remain; paired predictions are absent.
+Retraining after corrected ingestion,Excluded from this notebook,Requires rebuilding the corpus and GPU transformer training.

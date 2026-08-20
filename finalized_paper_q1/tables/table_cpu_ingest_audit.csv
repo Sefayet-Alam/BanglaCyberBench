@@ -1,0 +1,5 @@
+Source,Expected raw rows,Observed merged rows,Difference
+facebook_44001,44001,44001,0
+banth,37350,73999,36649
+multilabel_12557,12557,12546,-11
+bd_shs,50281,5029,-45252

@@ -30,3 +30,9 @@ pycache/
 __pycache__/
 *.pyc
 .venv/
+
+# Keep local paper archives out of version control
+/finalized_paper_q1/paper_writing/archives/
+/finalized_paper_q1/paper_writing/reviews/
+# Local manuscript-revision handoff; never publish this review document
+/finalized_paper_q1/paper_writing/reviews/BanglaCyberBench_manuscript_revision_guide.md

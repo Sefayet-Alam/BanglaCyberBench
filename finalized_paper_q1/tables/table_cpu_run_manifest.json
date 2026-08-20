@@ -1,0 +1,30 @@
+{
+  "status": "completed",
+  "runtime_seconds": 26.15,
+  "device": "CPU only",
+  "bootstrap_B": 2000,
+  "kappa_bootstrap_B": 5000,
+  "generated_figures": [
+    "fig_dataset_composition_pies",
+    "fig02_main_results",
+    "fig03_per_class_f1",
+    "fig04_confusion_matrix",
+    "fig05_top_confusions",
+    "fig06_component_ablation",
+    "fig07_taxonomy_ablation",
+    "fig08_robustness",
+    "fig09_basepaper_comparison",
+    "fig10_ensemble_weights",
+    "fig11_bootstrap_ci"
+  ],
+  "diagrams_touched": [],
+  "analysis_tables": [
+    "class_by_script_support",
+    "iaa_kappa_bootstrap",
+    "main_bootstrap_ci",
+    "main_per_class_by_script",
+    "main_results_by_script",
+    "source_holdout_priors",
+    "source_holdout_sizes"
+  ]
+}

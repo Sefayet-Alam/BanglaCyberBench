@@ -3,37 +3,36 @@
 **A dual-script benchmark and a script-aware ensemble for Bengali cyberbullying detection**
 
 This repository contains the code, notebooks, manifests, paper assets, and
-evaluation artefacts for the BanglaCyberBench study. The benchmark consolidates
-four public Bengali sources into 94,323 deduplicated comments covering Bangla
-and Romanized Bangla. The proposed system is a four-backbone ensemble trained
-with cross-entropy plus FGM and evaluated with random-split, script-aware, and
-source-held-out protocols.
+evaluation artifacts for the BanglaCyberBench study. The benchmark contains
+94,323 deduplicated comments in Bangla and Romanized Bangla.
+The proposed system is a four-backbone ensemble trained with cross-entropy and
+the Fast Gradient Method (FGM) and evaluated with random-split,
+script-stratified, and source-held-out protocols.
 
-The accompanying paper is the authoritative description of the taxonomy,
-deduplication rule, splits, training configuration, ablations, and limitations.
-The published comparator is the eight-backbone transformer-stacking study; it
-does not use FGM. The FGM results in this repository refer to the proposed
-system only.
+The manuscript describes the taxonomy, deduplication rule, splits, training
+configuration, ablations, and limitations. The published comparator is the
+eight-backbone transformer-stacking study and does not use FGM. FGM results in
+this repository refer only to the proposed system.
 
 ## Reproducibility levels
 
-### Level 1: reproduce the reported metrics (recommended first check)
+### Level 1: reproduce the reported metrics
 
 This path does not require a GPU, model checkpoints, or raw comment text. It
-uses the retained final prediction/probability arrays and recomputes the
-headline metrics, confidence intervals, and script-specific scores.
+uses the retained prediction and probability arrays to recompute the headline
+metrics, confidence intervals, and script-specific scores.
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate                 # Windows: .venv\\Scripts\\activate
+source .venv/bin/activate                 # Windows: .venv\Scripts\activate
 python -m pip install -r requirements-repro.txt
 
-python scripts/reproduce_metrics.py \\
-  --pred outputs/test_pred.npy \\
-  --proba outputs/test_proba.npy \\
-  --meta outputs/fusion_meta.npz \\
-  --bootstrap 2000 \\
-  --seed 42 \\
+python scripts/reproduce_metrics.py \
+  --pred outputs/test_pred.npy \
+  --proba outputs/test_proba.npy \
+  --meta outputs/fusion_meta.npz \
+  --bootstrap 2000 \
+  --seed 42 \
   --check
 ```
 
@@ -47,33 +46,34 @@ The script should report values within `1e-4` of:
 | MCC | 0.7452 |
 | Macro-AUROC | 0.9626 |
 
-The overall test split contains 18,865 examples. The script also reports the
+The retained test split contains 18,865 examples. The script reports
 five-class Romanized Macro-F1 using the paper's explicit convention: a class
-with zero gold support contributes F1 = 0. It additionally prints the
-supported-class-only value so the two quantities cannot be confused.
+with zero gold support contributes F1 = 0. It also reports the
+supported-class-only value. Romanized Threat support is zero in this split.
 
-### Level 2: verify the release snapshot
+### Level 2: verify a release snapshot
 
-After cloning the tagged release, verify the files and record their hashes:
+Use the checksum file committed with a tagged release. Do not regenerate the
+manifest before checking it, because that would replace the values being
+verified. On macOS, run:
 
 ```bash
-git checkout v1.0.3
-python scripts/make_checksums.py --root . --output SHA256SUMS
-git status --short
+shasum -a 256 -c SHA256SUMS
 ```
 
-The release used for the paper should contain a committed `SHA256SUMS` file.
-Do not regenerate it after publication unless you create a new version tag.
+The next release must contain a newly generated `SHA256SUMS` that covers only
+the intended public files. Development files, environment files, caches,
+third-party papers, and local manuscript archives must not be included.
 
 ### Level 3: rebuild the benchmark
 
-The four source datasets remain third-party materials. Download them from the
-authoritative links listed in `DATA_LICENSE.md`, place them in the paths
-documented by the preprocessing notebook, and execute the notebooks in the
-numbered order shown below. Do not commit raw text unless the original source
-licence explicitly permits redistribution.
+The four source datasets are third-party materials. Download them from the
+authoritative references in `DATA_LICENSE.md`, confirm their licences, and
+place them in the paths documented by the preprocessing notebook. Raw or
+derived comment text must not be redistributed unless the applicable source
+terms explicitly permit it.
 
-The rebuild must reproduce these invariants:
+The repository snapshot uses these reproducibility invariants:
 
 ```text
 raw rows before consolidation:       135,575
@@ -84,26 +84,24 @@ Bangla-script comments:                56,989
 Romanized comments:                    37,334
 ```
 
-The deduplication audit should also report 1,287 cleaned-text groups spanning
-multiple sources, 661 groups with conflicting five-class labels, and 271 groups
-with conflicting binary flags. The retained source is the first source in the
-deterministic merge order; it is a provenance field, not a claim of original
-authorship.
+Both split manifests are intentional:
+
+- `data/splits/split_manifest.json` describes the random in-domain split.
+- `data/splits/source_holdout_bangla_only/split_manifest.json` describes the
+  Bangla-script source-held-out experiments.
+
+The manifests describe different evaluation protocols and should both be kept.
 
 ### Level 4: retrain the models
 
 Retraining requires a CUDA-capable GPU, the original source data, the four
-pretrained model identifiers, and the exact training environment. Use
-`requirements-full.txt` as a functional environment specification. Before a
-camera-ready release, export the actual RunPod environment and commit it as
-`requirements-mac-lock.txt`:
+pretrained model revisions, and the recorded training environment. Use
+`requirements-full.txt` as the functional environment specification and
+`requirements-mac-lock.txt` as the retained environment snapshot. Do not claim
+bit-for-bit training reproducibility unless the environment and model revisions
+used for the reported run are archived.
 
-```bash
-python -m pip freeze > requirements-mac-lock.txt
-```
-
-Do not claim bit-for-bit training reproducibility unless that lock file and the
-pretrained model revisions are archived. Notebook execution order is:
+The original training sequence is:
 
 ```text
 01_dataset_inventory.ipynb
@@ -121,74 +119,79 @@ pretrained model revisions are archived. Notebook execution order is:
 14a_kappa_and_llm_baseline.ipynb
 ```
 
+After the retained model outputs exist, run the CPU review notebook:
+
+```text
+15_cpu_review_experiments_and_fixed_figures.ipynb
+```
+
+Notebook 15 computes bootstrap confidence intervals, annotation-agreement
+uncertainty, script-stratified metrics, class supports, and source-held-out
+split summaries from retained project outputs. It also regenerates
+code-generated paper figures. It does not retrain transformer models, compare
+the project data with external source counts, or modify diagrams.
+
 The less-data exploratory notebook is not part of the final evidence chain and
-should be labelled as exploratory if retained in the repository.
+should be labelled as exploratory if retained.
 
 ## Repository map
 
 ```text
-paper/ or root                 LaTeX manuscript and bibliography
-project_sources/               numbered notebooks and analysis code
-data/                          source data or download instructions
-outputs/                       predictions, probabilities, fusion metadata,
-                              tables, figures, and model-selection records
-scripts/reproduce_metrics.py  deterministic metric and bootstrap check
-scripts/make_checksums.py     SHA-256 manifest generator
-DATA_LICENSE.md               third-party data/model restrictions
-CITATION.cff                  citation metadata
+notebooks/                     numbered experiments and CPU review audit
+src/                           reusable preprocessing and evaluation code
+data/                          source references, metadata, and split manifests
+outputs/                       retained predictions and fusion metadata
+finalized_paper_q1/figures/    code-generated manuscript figures
+finalized_paper_q1/tables/     manuscript tables and CPU audit outputs
+scripts/reproduce_metrics.py   deterministic metric and bootstrap check
+scripts/make_checksums.py      SHA-256 manifest generator
+DATA_LICENSE.md                third-party data and model restrictions
+DATASHEET.md                   benchmark documentation and limitations
+MODEL_CARD.md                  reference-model documentation
+CITATION.cff                   citation metadata
 ```
-
-If the current repository keeps files in different directories, preserve the
-same logical names in the command examples or update the paths in this README.
 
 ## Exact evaluation conventions
 
 - Label order is `[abusive, none, religious, sexual, threat]`.
 - Overall Macro-F1 is the unweighted mean over all five classes.
 - Script-specific Macro-F1 also uses all five classes and `zero_division=0`.
+- Supported-class Macro-F1 excludes classes with zero gold support in the
+  evaluated subset and is always labelled separately.
 - Bootstrap intervals use 2,000 resamples, NumPy `default_rng(42)`, and the
-  2.5th/97.5th percentiles.
-- Test predictions are never used to fit ensemble weights or early stopping.
+  2.5th and 97.5th percentiles.
+- Test predictions are not used to fit ensemble weights or early stopping.
 - Source-held-out results are compound source-shift measurements. The BanTH
-  hold-out is not interpreted as a pure script-transfer experiment because it
+  holdout is not interpreted as a pure script-transfer experiment because it
   couples source and script.
 
 ## Data and model licensing
 
 Original repository code is MIT-licensed. Dataset text, pretrained models, and
 third-party material are not covered by that licence. Read `DATA_LICENSE.md`
-before downloading, redistributing, or publishing any raw comment text.
+before downloading, redistributing, or publishing comment text. The presence
+of a file in this repository does not grant additional rights to the underlying
+dataset. A public release should contain raw or derived text only when explicit
+redistribution permission has been verified for that source.
 
-## Release procedure
+## Release integrity
 
-1. Merge the final manuscript and reproducibility files into the release branch.
-2. Run Level 1 from a clean environment and save the JSON output.
-3. Run the notebook/output consistency checks and inspect the compiled PDF.
-4. Commit `requirements-mac-lock.txt`, `SHA256SUMS`, and the final paper.
-5. Create an annotated tag and GitHub release:
+Before creating the next release:
 
-```bash
-git add README.md LICENSE DATA_LICENSE.md CITATION.cff \\
-  requirements-repro.txt requirements-full.txt environment.yml \\
-  scripts/ requirements-mac-lock.txt SHA256SUMS
-git commit -m "Prepare BanglaCyberBench v1.0.3 reproducibility release"
-git tag -a v1.0.3 -m "Camera-ready reproducibility release"
-git push origin main
-git push origin v1.0.3
-gh release create v1.0.3 \\
-  --title "BanglaCyberBench v1.0.3" \\
-  --notes-file RELEASE_NOTES.md
-```
+1. Reproduce the reported metrics from a clean CPU environment.
+2. Verify that the public tree excludes local archives, third-party papers,
+   environment files, editor settings, caches, and other development files.
+3. Confirm source-by-source redistribution permissions.
+4. Generate `SHA256SUMS` from the final public tree and verify it independently.
+5. Check the release archive anonymously before citing it in the manuscript.
 
-Use the release URL, not the mutable `main` branch, in the paper. If GitHub
-immutable releases are enabled for the repository, publish the release only
-after all assets and notes are correct.
+Use a tagged release rather than the mutable `main` branch in the paper.
 
 ## Citation
 
-Use the `CITATION.cff` file or cite the paper associated with the tagged
-release. After enabling the repository in Zenodo, add the DOI to this section
-and to the paper's Data and Code Availability statement.
+Use `CITATION.cff` or cite the paper associated with the tagged release. If the
+repository is archived through Zenodo, add the DOI here and to the paper's Data
+and Code Availability statement.
 
 ## Responsible use
 
@@ -196,26 +199,19 @@ The corpus contains offensive language. It is intended for research on abuse
 detection and moderation, not for harassment, profiling, surveillance, or
 generation of abusive content. Users are responsible for complying with the
 source licences, applicable law, and institutional policies.
-!!
-
-
-<!-- Append the following to RELEASE_NOTES.md, then cut a new tag (e.g. v1.0.3)
-     so these files are captured in an immutable release. Update the paper's
-     \reporelease macro to match the new tag. -->
 
 ## Governance artifacts
 
-This release adds a datasheet (`DATASHEET.md`) and a model card (`MODEL_CARD.md`)
-documenting the benchmark and the reference ensemble, including the known Romanized
-performance gap and the cross-source transfer drop. Per-source licensing is in
-`DATA_LICENSE.md`; file integrity is covered by `SHA256SUMS`.
+The datasheet (`DATASHEET.md`) and model card (`MODEL_CARD.md`) document the
+benchmark, reference ensemble, Romanized performance gap, and cross-source
+transfer drop. Per-source licensing information is maintained in
+`DATA_LICENSE.md`.
 
 ## Third-party processing notice
 
-The zero-shot large-language-model reference in the paper sent the 18,865 test
-comments to Google's Gemini (`google/gemini-2.5-flash`) through the OpenRouter API.
-This is a one-off evaluation step, not part of benchmark construction: reconstructing
-BanglaCyberBench never contacts a third-party API. The transfer was assessed against
-the source-dataset licences (`DATA_LICENSE.md`) and the provider's stated retention
-terms. Users who redistribute or re-run this baseline are responsible for the same
-check under their own agreements.
+The historical zero-shot language-model evaluation sent the retained test
+comments to a third-party API. This step is not part of benchmark construction,
+and the local metric-reproduction workflow does not contact an external
+service. Before repeating that evaluation, researchers must verify the source
+dataset licences and the provider's current privacy, retention, and processing
+terms.
