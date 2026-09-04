@@ -261,7 +261,7 @@ Perturbing continuous word-embedding parameters during training is an inexpensiv
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=0.98\textwidth]{D1_Benchmark_Construction.png}
-\caption{Benchmark construction pipeline. Four sources are mapped to a common representation, normalised, deduplicated on cleaned text ($135{,}575 \rightarrow 94{,}323$), consolidated from 89 raw label strings into five classes by a priority rule, and split into a stratified random 70/10/20 partition and three source-held-out configurations. Every configuration asserts an empty intersection of comment identifiers between training and test.}
+\caption{Benchmark construction pipeline. Four sources are mapped to a common representation, normalised, deduplicated on cleaned text ($135{,}575 \rightarrow 94{,}323$), consolidated from 89 raw label strings into five classes by a priority rule, and split into a stratified random 70/10/20 partition. The source-held-out configurations are described in \cref{sec:splits}.}
 \label{fig:pipeline}
 \end{figure}
 
@@ -971,7 +971,7 @@ Nelder--Mead weighted (validation-selected) & 0.8193 \\
 \subsection{Cross-Source Robustness}
 \label{sec:robustness-results}
 
-Random-split evaluation measures generalisation to unseen comments from the same mixture. The source-held-out protocol of \cref{sec:splits} measures generalisation to an unseen source. Each of the three Bangla-script sources is held out in turn as the complete test set, the other two are split into training and validation, and the identifier-intersection assertion confirms that no comment appears in two partitions. BanTH is excluded because it supplies the benchmark's Romanized data, so holding it out would confound source and script shift. \Cref{tab:robustness} reports the three configurations with their split sizes, and \cref{fig:robustness} plots them against the in-domain value.
+Random-split evaluation measures generalisation to unseen comments from the same mixture. The source-held-out protocol of \cref{sec:splits} measures generalisation to an unseen source. Each of the three Bangla-script sources is held out in turn as the complete test set, the other two are split into training and validation, and the identifier-intersection assertion confirms that no comment appears in two partitions. \Cref{tab:robustness} reports the three configurations with their split sizes, and \cref{fig:robustness} plots them against the in-domain value.
 
 \begin{table}[!htbp]
 \centering
